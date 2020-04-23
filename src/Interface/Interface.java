@@ -25,7 +25,7 @@ public class Interface {
     }
 
     public static void drawShip(char key){
-        TUI.paddingLeft(TUI.TOPLINE, key, 1 );
+        TUI.paddingLeft(TUI.TOPLINE, key, 1);
     }
 
     public static void drawMainMenu(){
@@ -42,7 +42,7 @@ public class Interface {
     }
 
     public static void drawScore(int score){
-        TUI.paddingLeft(TUI.BOTTOMLINE, "" + score, 7);
+        TUI.paddingLeft(TUI.BOTTOMLINE, "" + score, 6);
     }
 
     public static void drawSaveScore(){

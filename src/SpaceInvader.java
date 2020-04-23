@@ -5,9 +5,10 @@ import isel.leic.utils.Time;
 
 public class SpaceInvader {
     private static int score = 0;
-    private static char[] screenState = new char[TUI.COLUMNS];
-    private static final char cannon = ']';
-    private static final char ship = 0;
+    private static char[] enemyState = new char[TUI.COLUMNS - 2];
+    private static final char cannonChar = ']';
+    private static final char shipChar = 0;
+    private static char cannon = cannonChar;
     private static Scores leaderboard = new Scores();
     private static int scoreCounter = 1;
 
@@ -34,22 +35,22 @@ public class SpaceInvader {
     }
 
     public static void prepareShot(char key) {
-        if (key == '*' && screenState[0] >= '0' && screenState[0] <= '9') {
-            seekAndDestroy(screenState[0]);
-            screenState[0] = cannon;
+        if (key == '*' && cannon >= '0' && cannon <= '9') {
+            seekAndDestroy(cannon);
+            cannon = cannonChar;
         } else if (key == '#' || key == '*') {
-            screenState[0] = cannon;
+            cannon = cannonChar;
         } else if (key >= '0' && key <= '9') {
-            screenState[0] = key;
+            cannon = key;
         }
-        updateGame();
+        Interface.drawCannon(cannon);
     }
 
     public static void seekAndDestroy(char enemy) {
-        for (int i = 2; i < screenState.length; i++) {
-            if (screenState[i] != ' ') {
-                if (screenState[i] == enemy) {
-                    screenState[i] = ' ';
+        for (int i = 2; i < enemyState.length; i++) {
+            if (enemyState[i] != ' ') {
+                if (enemyState[i] == enemy) {
+                    enemyState[i] = ' ';
                     score += 1 + (enemy - '0');
                     Interface.drawScore(score);
                 }
@@ -59,19 +60,14 @@ public class SpaceInvader {
     }
 
 
-    private static void updateGame() {
-        TUI.alignLeft(TUI.TOPLINE, screenStateToString());
-    }
-
-
     private static int initSaveScore(String initialName) {
-        String initialWord = "Name: ";
+        String initialWord = "Name:";
         TUI.clearLine(TUI.TOPLINE);
         TUI.showCursor();
         TUI.alignLeft(TUI.TOPLINE, initialWord);
         TUI.paddingLeft(TUI.TOPLINE, initialName, initialWord.length());
-        TUI.moveCursor(TUI.TOPLINE, initialWord.length());
-        return initialWord.length();
+        TUI.moveCursor(TUI.TOPLINE, initialWord.length() + initialName.length());
+        return initialWord.length() + initialName.length();
     }
 
     private static void teste(String name, int padding, int cursorPosition) {
@@ -151,18 +147,15 @@ public class SpaceInvader {
 
     public static void resetGame() {
         score = 0;
-        screenState[0] = cannon;
-        screenState[1] = ship;
-        for (int i = 2; i < screenState.length; i++) {
-            screenState[i] = ' ';
+        for (int i = 0; i < enemyState.length; i++) {
+            enemyState[i] = ' ';
         }
-        updateGame();
         Time.sleep(1000);
     }
 
     public static void startGame() {
         long time = Time.getTimeInMillis();
-        Interface.drawGame(cannon, ship);
+        Interface.drawGame(cannonChar, shipChar);
         resetGame();
         char key;
         while (true) {
@@ -186,27 +179,27 @@ public class SpaceInvader {
     }
 
     private static boolean checkGameOver() {
-        return screenState[2] != ' ';
+        return enemyState[0] != ' ';
     }
 
     private static void addEnemy() {
         char enemy = (char) ('0' + (Math.random() * 10));
-        screenState[screenState.length - 1] = enemy;
+        enemyState[enemyState.length - 1] = enemy;
     }
 
     private static void shiftGameState() {
-        for (int i = 2; i < screenState.length - 1; i++) {
-            screenState[i] = screenState[i + 1];
-            screenState[i + 1] = ' ';
+        System.out.printf(screenStateToString());
+        for (int i = 0; i < enemyState.length - 1; i++) {
+            enemyState[i] = enemyState[i + 1];
+            enemyState[i + 1] = ' ';
         }
-        updateGame();
+        Interface.drawEnemies(screenStateToString());
     }
 
     private static String screenStateToString() {
         String screeState = "";
-
-        for (int i = 0; i < screenState.length; i++) {
-            screeState += screenState[i];
+        for (int i = 0; i < enemyState.length; i++) {
+            screeState += enemyState[i];
         }
         return screeState;
     }

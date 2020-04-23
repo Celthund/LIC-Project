@@ -73,7 +73,7 @@ public class TUI {
         /**
          Writes the String with a certain distance for the Left margin of the LCD.
          **/
-        LCD.cursor(line, padding);
+        LCD.cursor(line, padding + 1);
         LCD.write(data);
     }
 
@@ -81,7 +81,7 @@ public class TUI {
         /**
          Writes the char with a certain distance for the Left margin of the LCD.
          **/
-        LCD.cursor(line, padding);
+        LCD.cursor(line, padding + 1);
         LCD.write(data);
     }
 
@@ -89,7 +89,7 @@ public class TUI {
         /**
          Writes the String with a certain distance for the Right margin of the LCD.
          **/
-        LCD.cursor(line, COLUMNS - padding);
+        LCD.cursor(line, COLUMNS - padding - 1);
         LCD.write(data);
     }
 
@@ -97,7 +97,7 @@ public class TUI {
         /**
          Writes the char with a certain distance for the Right margin of the LCD.
          **/
-        LCD.cursor(line, COLUMNS - padding);
+        LCD.cursor(line, COLUMNS - padding - 1);
         LCD.write(data);
     }
 

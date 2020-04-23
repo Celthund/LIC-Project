@@ -42,7 +42,7 @@ public class Scores {
         /**
             Saves the current leaderboard to a file.
          **/
-        ArrayList<String> text= new ArrayList();
+        ArrayList<String> text = new ArrayList();
         for(Entry entry: leaderBoard){
             text.add(entry.score + ";" + entry.name + "\n");
         }
