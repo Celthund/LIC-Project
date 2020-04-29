@@ -164,16 +164,16 @@ public class SpaceInvader {
         long time = Time.getTimeInMillis();
         Interface.drawGame(cannonChar, shipChar);
         clearEnemyState();
+        boolean gameOver = false;
         char key;
-        while (true) {
+        while (!gameOver) {
             key = TUI.readInput(100);
             if (key != 0) {
                 prepareShot(key);
                 Time.sleep(100);
             }
             if (Time.getTimeInMillis() - time >= 1000) {
-                if (checkGameOver() == true)
-                    break;
+                gameOver = checkGameOver();
                 time = Time.getTimeInMillis();
                 shiftGameState();
                 if (Math.random() < 0.5)
