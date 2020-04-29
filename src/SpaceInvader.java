@@ -14,11 +14,13 @@ public class SpaceInvader {
 
 
     public static void main(String[] args) {
+        /**
+         Main cycle that handles the initial menu of the application.
+         **/
         long time = Time.getTimeInMillis();
         TUI.init();
         Interface.drawMainMenu();
         char key;
-
         while (true) {
             key = TUI.readInput(100);
             if (key == '*') {
@@ -35,6 +37,9 @@ public class SpaceInvader {
     }
 
     public static void prepareShot(char key) {
+        /**
+         Handles key presses in-game.
+         **/
         if (key == '*' && cannon >= '0' && cannon <= '9') {
             seekAndDestroy(cannon);
             cannon = cannonChar;
@@ -47,45 +52,38 @@ public class SpaceInvader {
     }
 
     public static void seekAndDestroy(char enemy) {
+        /**
+         Remove the first char different from ' ' and removes if it matches with method parameter enemy.
+         After removing increase score by a specific amount and call drawScoreLine and drawEnemies.
+         **/
         for (int i = 2; i < enemyState.length; i++) {
             if (enemyState[i] != ' ') {
                 if (enemyState[i] == enemy) {
                     enemyState[i] = ' ';
                     score += 1 + (enemy - '0');
-                    Interface.drawScore(score);
+                    Interface.drawScoreLine(score);
+                    Interface.drawEnemies(String.valueOf(enemyState));
                 }
                 break;
             }
         }
     }
 
-
-    private static int initSaveScore(String initialName) {
-        String initialWord = "Name:";
-        TUI.clearLine(TUI.TOPLINE);
-        TUI.showCursor();
-        TUI.alignLeft(TUI.TOPLINE, initialWord);
-        TUI.paddingLeft(TUI.TOPLINE, initialName, initialWord.length());
-        TUI.moveCursor(TUI.TOPLINE, initialWord.length() + initialName.length());
-        return initialWord.length() + initialName.length();
-    }
-
-    private static void teste(String name, int padding, int cursorPosition) {
-        TUI.paddingLeft(TUI.TOPLINE, name, padding);
-        TUI.moveCursor(TUI.TOPLINE, padding + cursorPosition);
-    }
-
-
     public static void saveScore() {
-        // 2 change letter to the next one
-        // 8 change letter to the previous one
-        // 6 shifts cursor right
-        // 4 shifts cursor left
-        // 5 accepts the word
-        // * deletes if cursor is position in last letter
-        // 8 chars max
+        /**
+         Handles key presses in save score menu.
+         The keys follow the following actions:
+         // 2 change letter to the next one
+         // 8 change letter to the previous one
+         // 6 shifts cursor right
+         // 4 shifts cursor left
+         // 5 accepts the word
+         // * deletes if cursor is position in last letter
+         // 8 chars max
+         **/
         StringBuilder name = new StringBuilder().append('A');
-        int padding = initSaveScore(name.toString());
+        Interface.drawSaveScoreInput();
+        Interface.drawSaveScoreName(name.toString());
         int cursorPosition = name.length() - 1;
         char key;
         while (true) {
@@ -96,32 +94,32 @@ public class SpaceInvader {
                 case '2':
                     if (name.charAt(cursorPosition) < 'Z') {
                         name.setCharAt(cursorPosition, (char) (name.charAt(cursorPosition) + 1));
-                        teste(name.toString(), padding, cursorPosition);
+                        Interface.drawSaveScoreName(name.toString());
                     }
                     break;
                 case '8':
                     if (name.charAt(cursorPosition) > 'A') {
                         name.setCharAt(cursorPosition, (char) (name.charAt(cursorPosition) - 1));
-                        teste(name.toString(), padding, cursorPosition);
+                        Interface.drawSaveScoreName(name.toString());
                     }
                     break;
                 case '4':
                     if (cursorPosition > 0)
-                        TUI.moveCursor(TUI.TOPLINE, padding + --cursorPosition);
+                        TUI.moveCursor(TUI.TOPLINE, Interface.savePrefix.length() + --cursorPosition);
                     break;
                 case '6':
                     if (cursorPosition < 7) {
-                        TUI.moveCursor(TUI.TOPLINE, padding + ++cursorPosition);
+                        TUI.moveCursor(TUI.TOPLINE, Interface.savePrefix.length() + ++cursorPosition);
                         if (cursorPosition > name.length() - 1) {
                             name.append('A');
-                            teste(name.toString(), padding, cursorPosition);
+                            Interface.drawSaveScoreName(name.toString());
                         }
                     }
                     break;
                 case '*':
                     if (cursorPosition == name.length() - 1 && cursorPosition > 0) {
                         name.deleteCharAt(cursorPosition--);
-                        teste(name.toString() + " ", padding, cursorPosition);
+                        Interface.drawSaveScoreName(name.toString());
                     }
                     break;
             }
@@ -133,6 +131,9 @@ public class SpaceInvader {
 
 
     public static void showScore() {
+        /**
+        Handle showing the score in main menu.
+         **/
         String leftText = "";
         String rightText = Integer.toString(leaderboard.getScore(scoreCounter));
         if (scoreCounter < 10)
@@ -145,7 +146,10 @@ public class SpaceInvader {
             scoreCounter++;
     }
 
-    public static void resetGame() {
+    public static void clearEnemyState() {
+        /**
+        Clear enemyState array.
+         **/
         score = 0;
         for (int i = 0; i < enemyState.length; i++) {
             enemyState[i] = ' ';
@@ -154,9 +158,12 @@ public class SpaceInvader {
     }
 
     public static void startGame() {
+        /**
+         Handles key presses in game.
+         **/
         long time = Time.getTimeInMillis();
         Interface.drawGame(cannonChar, shipChar);
-        resetGame();
+        clearEnemyState();
         char key;
         while (true) {
             key = TUI.readInput(100);
@@ -167,10 +174,11 @@ public class SpaceInvader {
             if (Time.getTimeInMillis() - time >= 1000) {
                 if (checkGameOver() == true)
                     break;
-                shiftGameState();
                 time = Time.getTimeInMillis();
+                shiftGameState();
                 if (Math.random() < 0.5)
                     addEnemy();
+                Interface.drawEnemies(String.valueOf(enemyState));
             }
         }
         TUI.clearLine(TUI.TOPLINE);
@@ -179,28 +187,27 @@ public class SpaceInvader {
     }
 
     private static boolean checkGameOver() {
+        /**
+         Checks if game is over by validating if the first position is diferent ' '.
+         **/
         return enemyState[0] != ' ';
     }
 
     private static void addEnemy() {
+        /**
+         Add a random number between 0-9 to the end of the enemyState array.
+         **/
         char enemy = (char) ('0' + (Math.random() * 10));
         enemyState[enemyState.length - 1] = enemy;
     }
 
     private static void shiftGameState() {
-        System.out.printf(screenStateToString());
+        /**
+         Shifts to the left all chars in enemyState array, discarding the first position.
+         **/
         for (int i = 0; i < enemyState.length - 1; i++) {
             enemyState[i] = enemyState[i + 1];
             enemyState[i + 1] = ' ';
         }
-        Interface.drawEnemies(screenStateToString());
-    }
-
-    private static String screenStateToString() {
-        String screeState = "";
-        for (int i = 0; i < enemyState.length; i++) {
-            screeState += enemyState[i];
-        }
-        return screeState;
     }
 }
