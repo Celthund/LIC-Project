@@ -35,7 +35,7 @@ public class Interface {
 
     public static void drawCannon(char key){
         /**
-         Draw enemy line
+         Draw cannon char
          Example:
          ______________________
          |]___________________|
@@ -46,7 +46,7 @@ public class Interface {
 
     public static void drawShip(char key){
         /**
-         Draw enemy line
+         Draw ship char
          Example:
          ______________________
          |_}__________________|
