@@ -1,0 +1,1 @@
+vhdtdtfi -prj SpaceInvaders -o C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/Register_D.tfi -module Register_D -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work Register_D.vhd 

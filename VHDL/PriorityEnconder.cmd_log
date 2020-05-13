@@ -1,0 +1,4 @@
+vhdtdtfi -prj SpaceInvaders -o C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/PriorityEnconder.tfi -module PriorityEnconder -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work PriorityEnconder.vhd 
+vhdtdtfi -lib work PriorityEnconder.vhd -prj SpaceInvaders -o PriorityEnconder.spl -module PriorityEnconder -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 PriorityEnconder.spl C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/PriorityEnconder.sym 
+vhdtdtfi -prj SpaceInvaders -o C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/PriorityEnconder.tfi -module PriorityEnconder -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work PriorityEnconder.vhd 

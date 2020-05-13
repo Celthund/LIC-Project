@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+Register_D instance_name (
+    .CLK(CLK), 
+    .RST(RST), 
+    .D(D), 
+    .Q(Q)
+    );
+
+

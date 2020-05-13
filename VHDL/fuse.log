@@ -1,0 +1,35 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/testbench_isim_beh.exe -prj C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/testbench_beh.prj work.testbench 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/Register_T.vhd" into library work
+Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/Register_D.vhd" into library work
+Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/PriorityEnconder.vhd" into library work
+Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/Decoder.vhd" into library work
+Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/Counter2bit.vhd" into library work
+WARNING:HDLCompiler:946 - "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/Counter2bit.vhd" Line 70: Actual for formal port t is neither a static name nor a globally static expression
+Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.vhd" into library work
+WARNING:HDLCompiler:946 - "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.vhd" Line 110: Actual for formal port i0 is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.vhd" Line 111: Actual for formal port i1 is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.vhd" Line 112: Actual for formal port i2 is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.vhd" Line 113: Actual for formal port i3 is neither a static name nor a globally static expression
+Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScanTest.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity Register_T [\Register_T(1)\]
+Compiling architecture structural of entity Counter2bit [counter2bit_default]
+Compiling architecture behavioral of entity Register_D [\Register_D(2)\]
+Compiling architecture behavioral of entity Decoder [decoder_default]
+Compiling architecture behavioral of entity PriorityEnconder [priorityenconder_default]
+Compiling architecture structural of entity KeyScan [keyscan_default]
+Compiling architecture behavior of entity testbench
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 16 VHDL Units
+Built simulation executable C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/testbench_isim_beh.exe
+Fuse Memory Usage: 35564 KB
+Fuse CPU Usage: 531 ms

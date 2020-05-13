@@ -1,0 +1,6 @@
+vhdl work "Register_T.vhd"
+vhdl work "Register_D.vhd"
+vhdl work "PriorityEnconder.vhd"
+vhdl work "Decoder.vhd"
+vhdl work "Counter2bit.vhd"
+vhdl work "KeyScan.vhd"

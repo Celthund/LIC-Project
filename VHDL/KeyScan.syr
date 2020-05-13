@@ -1,0 +1,558 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: KeyScan.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "KeyScan.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "KeyScan"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : KeyScan
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Register_T.vhd" into library work
+Parsing entity <Register_T>.
+INFO:HDLCompiler:1676 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Register_T.vhd" Line 40. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+Parsing architecture <Behavioral> of entity <register_t>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Register_D.vhd" into library work
+Parsing entity <Register_D>.
+Parsing architecture <Behavioral> of entity <register_d>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\PriorityEnconder.vhd" into library work
+Parsing entity <PriorityEnconder>.
+Parsing architecture <Behavioral> of entity <priorityenconder>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Decoder.vhd" into library work
+Parsing entity <Decoder>.
+Parsing architecture <Behavioral> of entity <decoder>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Counter2bit.vhd" into library work
+Parsing entity <Counter2bit>.
+INFO:HDLCompiler:1676 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Counter2bit.vhd" Line 36. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+Parsing architecture <Structural> of entity <counter2bit>.
+INFO:HDLCompiler:1676 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Counter2bit.vhd" Line 48. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Counter2bit.vhd" Line 70: Actual for formal port t is neither a static name nor a globally static expression
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\KeyScan.vhd" into library work
+Parsing entity <KeyScan>.
+INFO:HDLCompiler:1676 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\KeyScan.vhd" Line 40. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+Parsing architecture <Structural> of entity <keyscan>.
+INFO:HDLCompiler:1676 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\KeyScan.vhd" Line 78. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\KeyScan.vhd" Line 110: Actual for formal port i0 is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\KeyScan.vhd" Line 111: Actual for formal port i1 is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\KeyScan.vhd" Line 112: Actual for formal port i2 is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\KeyScan.vhd" Line 113: Actual for formal port i3 is neither a static name nor a globally static expression
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <KeyScan> (architecture <Structural>) from library <work>.
+
+Elaborating entity <Counter2bit> (architecture <Structural>) from library <work>.
+
+Elaborating entity <Register_T> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Register_D> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Decoder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PriorityEnconder> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <KeyScan>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\KeyScan.vhd".
+    Summary:
+	no macro.
+Unit <KeyScan> synthesized.
+
+Synthesizing Unit <Counter2bit>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Counter2bit.vhd".
+    Summary:
+	no macro.
+Unit <Counter2bit> synthesized.
+
+Synthesizing Unit <Register_T>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Register_T.vhd".
+        WIDTH = 1
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Register_T> synthesized.
+
+Synthesizing Unit <Register_D>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Register_D.vhd".
+        WIDTH = 2
+    Found 2-bit register for signal <Q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <Register_D> synthesized.
+
+Synthesizing Unit <Decoder>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\Decoder.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <O<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <O<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <O<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Latch(s).
+	inferred   2 Multiplexer(s).
+Unit <Decoder> synthesized.
+
+Synthesizing Unit <PriorityEnconder>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvaders\PriorityEnconder.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <PriorityEnconder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 3
+ 1-bit register                                        : 2
+ 2-bit register                                        : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 3
+# Multiplexers                                         : 4
+ 1-bit 2-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Multiplexers                                         : 4
+ 1-bit 2-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    O_2 in unit <Decoder>
+    O_1 in unit <Decoder>
+    O_0 in unit <Decoder>
+
+
+Optimizing unit <KeyScan> ...
+
+Optimizing unit <Decoder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block KeyScan, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : KeyScan.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 12
+#      INV                         : 3
+#      LUT2                        : 6
+#      LUT3                        : 2
+#      LUT4                        : 1
+# FlipFlops/Latches                : 7
+#      FDC                         : 4
+#      LD                          : 3
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 14
+#      IBUF                        : 6
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               5  out of  126800     0%  
+ Number of Slice LUTs:                   12  out of  63400     0%  
+    Number used as Logic:                12  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     12
+   Number with an unused Flip Flop:       7  out of     12    58%  
+   Number with an unused LUT:             0  out of     12     0%  
+   Number of fully used LUT-FF pairs:     5  out of     12    41%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    210     7%  
+    IOB Flip Flops/Latches:               2
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 2     |
+KScan<0>                           | BUFGP                  | 2     |
+U2/O_0_G(U2/O_0_G:O)               | NONE(*)(U2/O_2)        | 3     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 0.868ns (Maximum Frequency: 1151.543MHz)
+   Minimum input arrival time before clock: 0.643ns
+   Maximum output required time after clock: 1.144ns
+   Maximum combinational path delay: 0.934ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 0.868ns (frequency: 1151.543MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               0.868ns (Levels of Logic = 1)
+  Source:            U0/U1/Q_0 (FF)
+  Destination:       U0/U1/Q_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: U0/U1/Q_0 to U0/U1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.361   0.402  U0/U1/Q_0 (U0/U1/Q_0)
+     LUT3:I1->O            1   0.097   0.000  U0/U1/Mxor_Q[0]_T[0]_XOR_1_o_xo<0>1 (U0/U1/Q[0]_T[0]_XOR_1_o)
+     FDC:D                     0.008          U0/U1/Q_0
+    ----------------------------------------
+    Total                      0.868ns (0.466ns logic, 0.402ns route)
+                                       (53.7% logic, 46.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              0.643ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       U0/U1/Q_0 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RST to U0/U1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.001   0.293  RST_IBUF (RST_IBUF)
+     FDC:CLR                   0.349          U0/U1/Q_0
+    ----------------------------------------
+    Total                      0.643ns (0.350ns logic, 0.293ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'KScan<0>'
+  Total number of paths / destination ports: 7 / 4
+-------------------------------------------------------------------------
+Offset:              0.643ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       U1/Q_1 (FF)
+  Destination Clock: KScan<0> rising
+
+  Data Path: RST to U1/Q_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.001   0.293  RST_IBUF (RST_IBUF)
+     FDC:CLR                   0.349          U1/Q_0
+    ----------------------------------------
+    Total                      0.643ns (0.350ns logic, 0.293ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.668ns (Levels of Logic = 1)
+  Source:            U0/U0/Q_0 (FF)
+  Destination:       K<2> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: U0/U0/Q_0 to K<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.361   0.307  U0/U0/Q_0 (U0/U0/Q_0)
+     OBUF:I->O                 0.000          K_2_OBUF (K<2>)
+    ----------------------------------------
+    Total                      0.668ns (0.361ns logic, 0.307ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'KScan<0>'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 1)
+  Source:            U1/Q_1 (FF)
+  Destination:       K<1> (PAD)
+  Source Clock:      KScan<0> rising
+
+  Data Path: U1/Q_1 to K<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.361   0.279  U1/Q_1 (U1/Q_1)
+     OBUF:I->O                 0.000          K_1_OBUF (K<1>)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U2/O_0_G'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              1.144ns (Levels of Logic = 2)
+  Source:            U2/O_2 (LATCH)
+  Destination:       DEC_OUT<2> (PAD)
+  Source Clock:      U2/O_0_G falling
+
+  Data Path: U2/O_2 to DEC_OUT<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.279  U2/O_2 (U2/O_2)
+     INV:I->O              1   0.113   0.279  DEC_OUT<2>1_INV_0 (DEC_OUT_2_OBUF)
+     OBUF:I->O                 0.000          DEC_OUT_2_OBUF (DEC_OUT<2>)
+    ----------------------------------------
+    Total                      1.144ns (0.585ns logic, 0.559ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Delay:               0.934ns (Levels of Logic = 3)
+  Source:            PENC_IN<0> (PAD)
+  Destination:       KPress (PAD)
+
+  Data Path: PENC_IN<0> to KPress
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.556  PENC_IN_0_IBUF (PENC_IN_0_IBUF)
+     LUT4:I0->O            1   0.097   0.279  U3/GS1 (KPress_OBUF)
+     OBUF:I->O                 0.000          KPress_OBUF (KPress)
+    ----------------------------------------
+    Total                      0.934ns (0.098ns logic, 0.836ns route)
+                                       (10.5% logic, 89.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    0.868|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U2/O_0_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    0.865|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.55 secs
+ 
+--> 
+
+Total memory usage is 4625792 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

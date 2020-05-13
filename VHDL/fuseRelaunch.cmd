@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/testbench_isim_beh.exe" -prj "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/testbench_beh.prj" "work.testbench" 

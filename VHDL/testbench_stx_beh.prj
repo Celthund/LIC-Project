@@ -1,0 +1,7 @@
+vhdl isim_temp "Register_T.vhd"
+vhdl isim_temp "Register_D.vhd"
+vhdl isim_temp "PriorityEnconder.vhd"
+vhdl isim_temp "Decoder.vhd"
+vhdl isim_temp "Counter2bit.vhd"
+vhdl isim_temp "KeyScan.vhd"
+vhdl isim_temp "KeyScanTest.vhd"

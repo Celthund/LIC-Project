@@ -1,0 +1,140 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml KeyScan.twx KeyScan.ncd -o KeyScan.twr KeyScan.pcf
+
+Design file:              KeyScan.ncd
+Physical constraint file: KeyScan.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+KScan<1>    |   -0.384(R)|      FAST  |    2.613(R)|      SLOW  |CLK_BUFGP         |   0.000|
+RST         |   -0.430(R)|      FAST  |    2.244(R)|      SLOW  |CLK_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock KScan<0>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |   -0.486(R)|      FAST  |    2.441(R)|      SLOW  |KScan_0_BUFGP     |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock KScan<0> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+K<0>        |         6.379(R)|      SLOW  |         2.792(R)|      FAST  |KScan_0_BUFGP     |   0.000|
+K<1>        |         6.380(R)|      SLOW  |         2.794(R)|      FAST  |KScan_0_BUFGP     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    0.814|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock KScan<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+PENC_IN<0>     |         |    0.906|         |         |
+PENC_IN<1>     |         |    0.906|         |         |
+PENC_IN<2>     |         |    0.906|         |         |
+PENC_IN<3>     |         |    0.906|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PENC_IN<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+PENC_IN<1>     |         |         |    0.477|    0.477|
+PENC_IN<2>     |         |         |    0.538|    0.538|
+PENC_IN<3>     |         |         |    0.562|    0.562|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PENC_IN<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+PENC_IN<1>     |         |         |    0.262|    0.262|
+PENC_IN<2>     |         |         |    0.323|    0.323|
+PENC_IN<3>     |         |         |    0.347|    0.347|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PENC_IN<2>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+PENC_IN<1>     |         |         |    0.368|    0.368|
+PENC_IN<2>     |         |         |    0.429|    0.429|
+PENC_IN<3>     |         |         |    0.453|    0.453|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PENC_IN<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+PENC_IN<1>     |         |         |    0.459|    0.459|
+PENC_IN<2>     |         |         |    0.520|    0.520|
+PENC_IN<3>     |         |         |    0.544|    0.544|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+PENC_IN<0>     |KPress         |    5.102|
+PENC_IN<1>     |KPress         |    5.378|
+PENC_IN<2>     |KPress         |    5.240|
+PENC_IN<3>     |KPress         |    5.122|
+---------------+---------------+---------+
+
+
+Analysis completed Wed May 13 20:49:38 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5003 MB
+
+
+

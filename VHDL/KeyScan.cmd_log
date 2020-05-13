@@ -1,0 +1,32 @@
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 KeyScan.ngc KeyScan.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o KeyScan_map.ncd KeyScan.ngd KeyScan.pcf 
+par -w -intstyle ise -ol high -mt off KeyScan_map.ncd KeyScan.ncd KeyScan.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml KeyScan.twx KeyScan.ncd -o KeyScan.twr KeyScan.pcf 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvaders/KeyScan.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 KeyScan.ngc KeyScan.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o KeyScan_map.ncd KeyScan.ngd KeyScan.pcf 
