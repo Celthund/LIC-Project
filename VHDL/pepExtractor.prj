@@ -1,5 +1,7 @@
 work	"Counter2bit.vhd"
 work	"Decoder.vhd"
+work	"KeyControl.vhd"
+work	"KeyDecoder.vhd"
 work	"KeyScan.vhd"
 work	"PriorityEnconder.vhd"
 work	"Register_D.vhd"

@@ -4,10 +4,10 @@
   USE ieee.std_logic_1164.ALL;
   USE ieee.numeric_std.ALL;
 
-  ENTITY testbench IS
-  END testbench;
+  ENTITY KS_TEST IS
+  END KS_TEST;
 
-  ARCHITECTURE behavior OF testbench IS 
+  ARCHITECTURE behavior OF KS_TEST IS 
 
   -- Component Declaration
           COMPONENT KeyScan
@@ -38,7 +38,7 @@
   BEGIN
 
   -- Component Instantiation
-          uut:  KeyScan PORT MAP(
+          uud:  KeyScan PORT MAP(
 					RST => RST,
 					CLK => CLK,
 					KScan => KScan,
@@ -80,6 +80,15 @@
 			wait for CLK_period;
 			KScan <= "01";
 			wait for CLK_period * 10; -- K <= "0001"
+			
+			PENC_IN <= "1111";
+			KScan <= "10";
+			wait for CLK_period * 10; -- Reset; Kpress <= '0'
+			
+			-- Test for key presses in first column
+			PENC_IN <= "1110";
+			KScan <= "01";
+			wait for CLK_period * 10; -- K <= "0000"; KPress <= '1'
 			
 			PENC_IN <= "1111";
 			KScan <= "00";

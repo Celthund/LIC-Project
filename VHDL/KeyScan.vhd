@@ -116,8 +116,6 @@ begin
 	);
 	K(2) <= QS(0);
 	K(3) <= QS(1);
-	
-	
 	DEC_OUT <= not NOT_DECOUT;
 end Structural;
 

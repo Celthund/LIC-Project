@@ -1,0 +1,29 @@
+Command line:
+   KD_TEST_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  59664
+
+Sat May 16 17:25:06 2020
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5159.69 Meg
+
+ Total Signals          : 64
+ Total Nets             : 32
+ Total Signal Drivers   : 23
+ Total Blocks           : 12
+ Total Primitive Blocks : 8
+ Total Processes        : 21
+ Total Traceable Variables  : 17
+ Total Scalar Nets and Variables : 519
+Total Line Count : 54
+
+ Total Simulation Time: 3.07813 sec
+
+ Current Memory Usage: 4687.84 Meg
+
+Sat May 16 17:40:54 2020
+
