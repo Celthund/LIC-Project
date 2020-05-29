@@ -53,7 +53,7 @@ begin
 		end if;
 	end process;
 	
-	Next_State_Evaluation : process(CLK, RST)
+	Next_State_Evaluation : process(CS, KPress , KAck)
 	begin
 		case (CS) is 
 			when STATE_IDLE => if (KPress = '1') then NS <= STATE_KEY_PRESSED; else NS <= STATE_IDLE; end if;

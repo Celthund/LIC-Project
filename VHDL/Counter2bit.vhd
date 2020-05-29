@@ -33,7 +33,7 @@ entity Counter2bit is
     Port ( CE : in  STD_LOGIC;
            CLK : in  STD_LOGIC;
            RST : in  STD_LOGIC;
-           Q : buffer STD_LOGIC_VECTOR (1 downto 0));
+           Q : out STD_LOGIC_VECTOR (1 downto 0));
 end Counter2bit;
 
 architecture Structural of Counter2bit is
@@ -48,9 +48,9 @@ architecture Structural of Counter2bit is
 			Q : buffer std_logic_vector(WIDTH-1 downto 0)
 		);
 	END COMPONENT;
-
+	Signal IQ: STD_LOGIC_VECTOR (1 downto 0);
 begin
-	U0 : Register_T 
+	RegisterT1 : Register_T 
 	GENERIC MAP(
 		WIDTH => 1
 	)
@@ -58,17 +58,18 @@ begin
 			CLK => CLK,
 			RST => RST,
 			T(0) =>  CE,
-			Q(0) => Q(0)
+			Q(0) => IQ(0)
 	);
-	U1 : Register_T 
+	RegisterT2 : Register_T 
 	GENERIC MAP(
 		WIDTH => 1
 	)
 	PORT MAP(
 			CLK => CLK,
 			RST => RST,
-			T(0) => CE and Q(0),
-			Q(0) => Q(1)
+			T(0) => CE and IQ(0),
+			Q(0) => IQ(1)
 	);
+	Q <= IQ;
 end Structural;
 

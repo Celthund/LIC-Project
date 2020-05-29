@@ -37,7 +37,7 @@ entity KeyDecoder is
 			KVal: out STD_LOGIC;
 			K : out  STD_LOGIC_VECTOR (3 downto 0);
 			PENC_IN: in  STD_LOGIC_VECTOR (3 downto 0);
-			DEC_OUT : buffer STD_LOGIC_VECTOR (2 downto 0)
+			DEC_OUT : out STD_LOGIC_VECTOR (2 downto 0)
 	 );
 end KeyDecoder;
 
@@ -60,13 +60,14 @@ architecture Structural of KeyDecoder is
 			K : out  STD_LOGIC_VECTOR (3 downto 0);
 			PENC_IN: in  STD_LOGIC_VECTOR (3 downto 0);
 			KPress : out  STD_LOGIC;
-			DEC_OUT : buffer STD_LOGIC_VECTOR (2 downto 0)
+			DEC_OUT : out STD_LOGIC_VECTOR (2 downto 0)
 	 );
 	END COMPONENT;
 	Signal KScan : STD_LOGIC_VECTOR (1 downto 0);
-   Signal KPress: STD_LOGIC;
+   Signal KPress, NCLK: STD_LOGIC;
 begin
-	U1 : KeyControl 
+	NCLK <= not CLK;
+	KeyCtrl : KeyControl 
 	PORT MAP(
 			RST => RST,
 			CLK => CLK,
@@ -75,10 +76,10 @@ begin
 			KVal => KVal,
 			KScan => KScan
 	);
-	U2 : KeyScan 
+	KeyScanner : KeyScan 
 	PORT MAP(
 			RST => RST,
-			CLK => CLK,
+			CLK => NCLK,
 			KScan => KScan,
 			K => K,
 			PENC_IN => PENC_IN,

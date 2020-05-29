@@ -37,7 +37,7 @@ entity KeyScan is
 			K : out  STD_LOGIC_VECTOR (3 downto 0);
 			PENC_IN: in  STD_LOGIC_VECTOR (3 downto 0);
 			KPress : out  STD_LOGIC;
-			DEC_OUT : buffer STD_LOGIC_VECTOR (2 downto 0)
+			DEC_OUT : out STD_LOGIC_VECTOR (2 downto 0)
 	 );
 end KeyScan;
 
@@ -75,20 +75,20 @@ architecture Structural of KeyScan is
 			  CE : in  STD_LOGIC;
            CLK : in  STD_LOGIC;
            RST : in  STD_LOGIC;
-           Q : buffer  STD_LOGIC_VECTOR (1 downto 0)
+           Q : out  STD_LOGIC_VECTOR (1 downto 0)
 	 );
 	END COMPONENT;
 	SIGNAL QS, YReg : STD_LOGIC_VECTOR (1 downto 0);
 	SIGNAL NOT_DECOUT : STD_LOGIC_VECTOR (2 downto 0);
 begin
-	U0 : Counter2bit 
+	CounterBit: Counter2bit 
 	PORT MAP(
 			CE => KScan(1),
 			RST => RST,
 			CLK =>  CLK,
 			Q => QS
 	);
-	U1 : Register_D 
+	RegisterD : Register_D 
 	GENERIC MAP(
 		WIDTH => 2
 	)
@@ -99,13 +99,13 @@ begin
 			Q(0) => K(0),
 			Q(1) => K(1)
 	);
-	U2 : Decoder 
+	DEC : Decoder 
 	PORT MAP(
 			S0 => QS(0),
 			S1 => QS(1),
 		   O => NOT_DECOUT
 	);
-	U3 : PriorityEnconder 
+	PENC : PriorityEnconder 
 	PORT MAP(
 			  I0 => not PENC_IN(0),
            I1 => not PENC_IN(1),

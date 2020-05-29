@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KD_TEST_isim_beh.exe -prj C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KD_TEST_beh.prj work.KD_TEST 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/keyboardReaderWrapper_tb_isim_beh.exe -prj C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/keyboardReaderWrapper_tb_beh.prj work.keyboardReaderWrapper_tb 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -16,12 +16,13 @@ WARNING:HDLCompiler:946 - "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/S
 WARNING:HDLCompiler:946 - "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyScan.vhd" Line 113: Actual for formal port i3 is neither a static name nor a globally static expression
 Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyControl.vhd" into library work
 Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.vhd" into library work
-Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder_Test.vhd" into library work
+Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyboardReaderWrapper.vhd" into library work
+Parsing VHDL file "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyboardReaderWrapper_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package numeric_std
+Compiling package math_real
 Compiling architecture behavioral of entity KeyControl [keycontrol_default]
 Compiling architecture behavioral of entity Register_T [\Register_T(1)\]
 Compiling architecture structural of entity Counter2bit [counter2bit_default]
@@ -30,10 +31,11 @@ Compiling architecture behavioral of entity Decoder [decoder_default]
 Compiling architecture behavioral of entity PriorityEnconder [priorityenconder_default]
 Compiling architecture structural of entity KeyScan [keyscan_default]
 Compiling architecture structural of entity KeyDecoder [keydecoder_default]
-Compiling architecture behavior of entity kd_test
+Compiling architecture behavioral of entity KeyboardReaderWrapper [keyboardreaderwrapper_default]
+Compiling architecture behavior of entity keyboardreaderwrapper_tb
 Time Resolution for simulation is 1ps.
-Waiting for 3 sub-compilation(s) to finish...
-Compiled 20 VHDL Units
-Built simulation executable C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KD_TEST_isim_beh.exe
-Fuse Memory Usage: 35620 KB
-Fuse CPU Usage: 577 ms
+Waiting for 5 sub-compilation(s) to finish...
+Compiled 22 VHDL Units
+Built simulation executable C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/keyboardReaderWrapper_tb_isim_beh.exe
+Fuse Memory Usage: 30736 KB
+Fuse CPU Usage: 499 ms

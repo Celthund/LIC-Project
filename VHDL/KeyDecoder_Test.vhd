@@ -17,7 +17,7 @@
 					KVal: out STD_LOGIC;
 					K : out  STD_LOGIC_VECTOR (3 downto 0);
 					PENC_IN: in  STD_LOGIC_VECTOR (3 downto 0);
-					DEC_OUT : buffer STD_LOGIC_VECTOR (2 downto 0)
+					DEC_OUT : out STD_LOGIC_VECTOR (2 downto 0)
           );
           END COMPONENT;
 				

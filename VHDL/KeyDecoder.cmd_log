@@ -13,3 +13,12 @@ xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/Spac
 xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.syr" 
 xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.syr" 
 xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 KeyDecoder.ngc KeyDecoder.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o KeyDecoder_map.ncd KeyDecoder.ngd KeyDecoder.pcf 
+par -w -intstyle ise -ol high -mt off KeyDecoder_map.ncd KeyDecoder.ncd KeyDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml KeyDecoder.twx KeyDecoder.ncd -o KeyDecoder.twr KeyDecoder.pcf 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 KeyDecoder.ngc KeyDecoder.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o KeyDecoder_map.ncd KeyDecoder.ngd KeyDecoder.pcf 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.syr" 
