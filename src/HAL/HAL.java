@@ -3,8 +3,12 @@ package HAL;
 import isel.leic.UsbPort;
 
 public class HAL {
-    private static final int ZEROS = 0x00;
+    private static final int ZEROS = 0xFF;
     private static int state = 0xAF;
+
+    public static void main(String[] args) {
+        init();
+    }
 
     public static void init() {
         /**
@@ -34,8 +38,8 @@ public class HAL {
          Set bits to value restricted by a given mask
          Ex.: mask 0xAA (1010 1010) value 7 will change the bits to (0-0- 0-1-)
          **/
-        clrBits(mask);
-        setBits(mask & value);
+        state = (state & ~mask) | (mask & value);
+        setBits(state);
     }
 
     public static void setBits(int mask) {

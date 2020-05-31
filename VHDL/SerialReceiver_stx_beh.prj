@@ -1,0 +1,7 @@
+vhdl isim_temp "Register_T.vhd"
+vhdl isim_temp "Register_D.vhd"
+vhdl isim_temp "ShiftRegister.vhd"
+vhdl isim_temp "SerialControl.vhd"
+vhdl isim_temp "ParityCheck.vhd"
+vhdl isim_temp "Counter3bit.vhd"
+vhdl isim_temp "SerialReceiver.vhd"

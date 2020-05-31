@@ -1,0 +1,29 @@
+Command line:
+   SerialReceiver_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  53422
+
+Sun May 31 20:07:04 2020
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 5159.67 Meg
+
+ Total Signals          : 63
+ Total Nets             : 36
+ Total Signal Drivers   : 18
+ Total Blocks           : 10
+ Total Primitive Blocks : 7
+ Total Processes        : 18
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 402
+Total Line Count : 35
+
+ Total Simulation Time: 0.4375 sec
+
+ Current Memory Usage: 4687.81 Meg
+
+Sun May 31 20:16:05 2020
+

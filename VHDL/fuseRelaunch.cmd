@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/keyboardReaderWrapper_tb_isim_beh.exe" -prj "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/keyboardReaderWrapper_tb_beh.prj" "work.keyboardReaderWrapper_tb" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SerialReceiver_isim_beh.exe" -prj "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SerialReceiver_beh.prj" "work.SerialReceiver" 

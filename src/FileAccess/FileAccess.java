@@ -1,13 +1,16 @@
 package FileAccess;
 
-import Scores.Scores;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileAccess {
     private String file;
+
+    public void main(String[] args) {
+        ArrayList data = read();
+        write(data);
+    }
 
     public FileAccess(String file) {
         this.file = file;

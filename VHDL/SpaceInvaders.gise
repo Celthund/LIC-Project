@@ -23,6 +23,7 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Counter2bit_isim_beh.exe"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Counter3bit_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="KD_TEST_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="KeyBuffer.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="KeyBuffer.lso"/>
@@ -32,6 +33,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="KeyBuffer.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="KeyBuffer.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="KeyBuffer.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="KeyBuffer_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="KeyBuffer_xst.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="KeyDecoder.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="KeyDecoder.cmd_log"/>
@@ -114,6 +116,20 @@
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Register_D.stx"/>
     <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="Register_D.tfi"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Register_D.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Register_T_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="SerialReceiver.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="SerialReceiver.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="SerialReceiver.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="SerialReceiver.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SerialReceiver.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="SerialReceiver.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="SerialReceiver.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="SerialReceiver.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SerialReceiver_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SerialReceiver_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="SerialReceiver_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SerialReceiver_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SerialReceiver_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ShiftRegister.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ShiftRegister.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ShiftRegister.ngc"/>
@@ -134,9 +150,7 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="keyboardReaderWrapper_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="keyboardReaderWrapper_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="keyboardReaderWrapper_tb_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testbench_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testbench_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -146,20 +160,17 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1590009397" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1590009397">
+    <transform xil_pn:end_ts="1590948476" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1590948476">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590009824" xil_pn:in_ck="-6549970262649475085" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1590009824">
+    <transform xil_pn:end_ts="1590952020" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1590952019">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Counter2bit.vhd"/>
+      <outfile xil_pn:name="Counter3bit.vhd"/>
       <outfile xil_pn:name="Decoder.vhd"/>
+      <outfile xil_pn:name="KB_TEST.vhd"/>
       <outfile xil_pn:name="KeyBuffer.vhd"/>
       <outfile xil_pn:name="KeyBufferControl.vhd"/>
       <outfile xil_pn:name="KeyControl.vhd"/>
@@ -169,34 +180,33 @@
       <outfile xil_pn:name="KeyScanTest.vhd"/>
       <outfile xil_pn:name="KeyboardReaderWrapper.vhd"/>
       <outfile xil_pn:name="KeyboardReaderWrapper_tb.vhd"/>
+      <outfile xil_pn:name="ParityCheck.vhd"/>
       <outfile xil_pn:name="PriorityEnconder.vhd"/>
       <outfile xil_pn:name="Register_D.vhd"/>
       <outfile xil_pn:name="Register_T.vhd"/>
+      <outfile xil_pn:name="SerialControl.vhd"/>
+      <outfile xil_pn:name="SerialReceiver.vhd"/>
       <outfile xil_pn:name="ShiftRegister.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1590010965" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7557652970531596730" xil_pn:start_ts="1590010965">
+    <transform xil_pn:end_ts="1590950896" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5335778898273263870" xil_pn:start_ts="1590950896">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590010965" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5579322685996393768" xil_pn:start_ts="1590010965">
+    <transform xil_pn:end_ts="1590950896" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8654231127661914084" xil_pn:start_ts="1590950896">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590009397" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7561618120110793192" xil_pn:start_ts="1590009397">
+    <transform xil_pn:end_ts="1590949709" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8942498445791641820" xil_pn:start_ts="1590949709">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1590009824" xil_pn:in_ck="-6549970262649475085" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590009824">
+    <transform xil_pn:end_ts="1590952020" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590952020">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Counter2bit.vhd"/>
+      <outfile xil_pn:name="Counter3bit.vhd"/>
       <outfile xil_pn:name="Decoder.vhd"/>
+      <outfile xil_pn:name="KB_TEST.vhd"/>
       <outfile xil_pn:name="KeyBuffer.vhd"/>
       <outfile xil_pn:name="KeyBufferControl.vhd"/>
       <outfile xil_pn:name="KeyControl.vhd"/>
@@ -206,78 +216,78 @@
       <outfile xil_pn:name="KeyScanTest.vhd"/>
       <outfile xil_pn:name="KeyboardReaderWrapper.vhd"/>
       <outfile xil_pn:name="KeyboardReaderWrapper_tb.vhd"/>
+      <outfile xil_pn:name="ParityCheck.vhd"/>
       <outfile xil_pn:name="PriorityEnconder.vhd"/>
       <outfile xil_pn:name="Register_D.vhd"/>
       <outfile xil_pn:name="Register_T.vhd"/>
+      <outfile xil_pn:name="SerialControl.vhd"/>
+      <outfile xil_pn:name="SerialReceiver.vhd"/>
       <outfile xil_pn:name="ShiftRegister.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1590010968" xil_pn:in_ck="-6549970262649475085" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3527347701477871450" xil_pn:start_ts="1590010965">
+    <transform xil_pn:end_ts="1590952022" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6068084861026006151" xil_pn:start_ts="1590952020">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="SerialReceiver_beh.prj"/>
+      <outfile xil_pn:name="SerialReceiver_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="keyboardReaderWrapper_tb_beh.prj"/>
-      <outfile xil_pn:name="keyboardReaderWrapper_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1590010969" xil_pn:in_ck="-4190055167752311868" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1484503995897998435" xil_pn:start_ts="1590010968">
+    <transform xil_pn:end_ts="1590952023" xil_pn:in_ck="8276559481791299554" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3458376307856332324" xil_pn:start_ts="1590952022">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="SerialReceiver_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="keyboardReaderWrapper_tb_isim_beh.wdb"/>
     </transform>
-    <transform xil_pn:end_ts="1589644921" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1589644921">
+    <transform xil_pn:end_ts="1590949180" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1590949180">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590013234" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="6101632016673164078" xil_pn:start_ts="1590013234">
+    <transform xil_pn:end_ts="1590949180" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5610718132733736676" xil_pn:start_ts="1590949180">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590013234" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-3907082496924914346" xil_pn:start_ts="1590013234">
+    <transform xil_pn:end_ts="1590949180" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8942498445791641820" xil_pn:start_ts="1590949180">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590013234" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1590013234">
+    <transform xil_pn:end_ts="1590949180" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1590949180">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590013234" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-5305493089899368752" xil_pn:start_ts="1590013234">
+    <transform xil_pn:end_ts="1590949180" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="5335778898273263870" xil_pn:start_ts="1590949180">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590013234" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1590013234">
+    <transform xil_pn:end_ts="1590949180" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1590949180">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590013234" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-8488458614555978912" xil_pn:start_ts="1590013234">
+    <transform xil_pn:end_ts="1590949180" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="5892786335769192046" xil_pn:start_ts="1590949180">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590013247" xil_pn:in_ck="5244302081245616452" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-5217653351218612333" xil_pn:start_ts="1590013234">
+    <transform xil_pn:end_ts="1590949698" xil_pn:in_ck="-6215111073513374820" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="5310145718630524129" xil_pn:start_ts="1590949685">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
-      <outfile xil_pn:name="ShiftRegister.lso"/>
-      <outfile xil_pn:name="ShiftRegister.ngc"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="SerialReceiver.lso"/>
+      <outfile xil_pn:name="SerialReceiver.ngc"/>
+      <outfile xil_pn:name="SerialReceiver.ngr"/>
+      <outfile xil_pn:name="SerialReceiver.prj"/>
+      <outfile xil_pn:name="SerialReceiver.stx"/>
+      <outfile xil_pn:name="SerialReceiver.syr"/>
+      <outfile xil_pn:name="SerialReceiver.xst"/>
+      <outfile xil_pn:name="SerialReceiver_stx_beh.prj"/>
+      <outfile xil_pn:name="SerialReceiver_xst.xrpt"/>
       <outfile xil_pn:name="ShiftRegister.ngr"/>
-      <outfile xil_pn:name="ShiftRegister.prj"/>
-      <outfile xil_pn:name="ShiftRegister.stx"/>
-      <outfile xil_pn:name="ShiftRegister.syr"/>
-      <outfile xil_pn:name="ShiftRegister.xst"/>
-      <outfile xil_pn:name="ShiftRegister_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>

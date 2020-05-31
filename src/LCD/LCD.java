@@ -1,6 +1,7 @@
 package LCD;
 
 import HAL.HAL;
+import SerialEmitter.SerialEmitter;
 import isel.leic.utils.Time;
 
 public class LCD {
@@ -8,20 +9,10 @@ public class LCD {
     private static final int MASK_ENABLE = 0x20;
     private static final int MASK_LCD = 0x3F;
     public static final int MIN_LINE = 1, MAX_LINE = 2, MIN_COL = 1, MAX_COL = 16;
-    public static int curLine = MIN_LINE, curCol = MIN_COL;
-    private static final boolean SERIAL_INTERFACE = false;
+    private static final boolean SERIAL_INTERFACE = true;
+    private static final int DATA_SIZE = 5;
 
-    // TODO
-    // Escreve um nibble de comando/dados no LCD em paralelo
-    // private static void writeNibbleParallel(boolean rs, int data) {}
-    // TODO
-    // Escreve um nibble de comando/dados no LCD em série
-    // private static void writeNibbleSerial(boolean rs, int data) {}
-
-    private static void writeNibble(boolean rs, int data) {
-        /**
-         Send 4 bits of data to the LCD.
-         **/
+    private static void writeNibbleParallel(boolean rs, int data) {
         HAL.clrBits(MASK_LCD);
         if (rs)
             HAL.setBits(MASK_RS);
@@ -32,13 +23,30 @@ public class LCD {
         HAL.clrBits(MASK_ENABLE);
     }
 
+    private static void writeNibbleSerial(boolean rs, int data) {
+        SerialEmitter.send(SerialEmitter.Destination.SLCD, DATA_SIZE, (data << 1) | (rs ? 1 : 0));
+    }
+
+    public static void main(String[] args) {
+        init();
+    }
+
+    private static void writeNibble(boolean rs, int data) {
+        /**
+         Send 4 bits of data to the LCD.
+         **/
+        if (SERIAL_INTERFACE)
+            writeNibbleSerial(rs, data);
+        else
+            writeNibbleParallel(rs, data);
+    }
+
     private static void writeByte(boolean rs, int data) {
         /**
          Write a byte by using writeNibble to send 4 bits at time.
          **/
-        writeNibble(rs, data >> 4);
+        writeNibble(rs, (data >> 4));
         writeNibble(rs, data);
-        Time.sleep(2);
     }
 
     private static void writeCMD(int data) {
@@ -53,29 +61,19 @@ public class LCD {
          Sends a byte of data and shifts the position of the cursor.
          If it reaches the end, resets the cursor position.
          **/
+        /* Esta logica devia estar no TUI. */
         writeByte(true, data);
-        curCol++;
-        if (curCol > MAX_COL) {
-            switch (curLine) {
-                case 1:
-                    curLine++;
-                    curCol = MIN_COL;
-                    cursor(curLine, curCol);
-                    break;
-                case 2:
-                    curLine = MIN_LINE;
-                    curCol = MIN_COL;
-                    cursor(curLine, curCol);
-                    break;
-            }
-        }
     }
 
     public static void init() {
         /**
          Initialize LCD with a 4 bit communication, with display on, display cursor off and blinking of cursor off.
          **/
-        HAL.clrBits(0xFF);
+        // HAL.clrBits(MASK_LCD);
+        if (SERIAL_INTERFACE)
+            SerialEmitter.init();
+        else
+            HAL.init();
         Time.sleep(40);
         writeNibble(false, 0x03); // Sets to 4-bit operation
         Time.sleep(5);
@@ -86,7 +84,6 @@ public class LCD {
         writeCMD(0x0C); // Display ON/OFF
         writeCMD(0x01);
         writeCMD(0x06);
-        HAL.clrBits(0xFF);
         createShip();
     }
 
@@ -102,22 +99,16 @@ public class LCD {
          Writes a given String to the LCD, in the current cursor position.
          **/
         for (int i = 0; i < txt.length(); i++) {
-            writeDATA(txt.charAt(i));
+            write(txt.charAt(i));
         }
     }
 
-    public static void cursor(int lin, int col) {
+    public static void cursor(int line, int col) {
         /**
          Changes the position of the cursor in the LCD.
          **/
-        if (lin < MIN_LINE || lin > MAX_LINE)
-            return;
-        if (col < MIN_COL || col > MAX_COL)
-            return;
-        int cmd = 0x80 | ((lin - 1) << 6) | (col - 1);
+        int cmd = 0x80 | ((line - 1) << 6) | (col - 1);
         writeCMD(cmd);
-        curLine = lin;
-        curCol = col;
     }
 
     public static void clear() {
@@ -125,7 +116,6 @@ public class LCD {
          Clears LCD and resets cursor to the first position of the first line.
          **/
         writeCMD(0x01);
-        writeCMD(0x02);
     }
 
     private static void easterEgg() {

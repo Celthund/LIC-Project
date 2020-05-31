@@ -1,0 +1,7 @@
+vhdl work "Register_T.vhd"
+vhdl work "Register_D.vhd"
+vhdl work "ShiftRegister.vhd"
+vhdl work "SerialControl.vhd"
+vhdl work "ParityCheck.vhd"
+vhdl work "Counter3bit.vhd"
+vhdl work "SerialReceiver.vhd"
