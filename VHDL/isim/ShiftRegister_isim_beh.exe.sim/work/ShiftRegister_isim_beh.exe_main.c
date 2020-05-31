@@ -25,16 +25,10 @@ int main(int argc, char **argv)
 
     xsi_register_min_prec_unit(-12);
     ieee_p_2592010699_init();
-    work_a_2090498049_1181938964_init();
-    work_a_1490864250_3212880686_init();
-    work_a_0105572686_3212880686_init();
-    work_a_0943480824_3212880686_init();
-    work_a_2815642428_1181938964_init();
-    work_a_2016930977_3212880686_init();
-    work_a_1900630916_1181938964_init();
+    work_a_0246987756_3212880686_init();
 
 
-    xsi_register_tops("work_a_1900630916_1181938964");
+    xsi_register_tops("work_a_0246987756_3212880686");
 
     STD_STANDARD = xsi_get_engine_memory("std_standard");
     IEEE_P_2592010699 = xsi_get_engine_memory("ieee_p_2592010699");

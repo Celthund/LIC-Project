@@ -139,6 +139,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ShiftRegister.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ShiftRegister.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ShiftRegister_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ShiftRegister_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ShiftRegister_xst.xrpt"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -164,7 +165,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590952020" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1590952019">
+    <transform xil_pn:end_ts="1590954193" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1590954193">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Counter2bit.vhd"/>
@@ -188,11 +189,11 @@
       <outfile xil_pn:name="SerialReceiver.vhd"/>
       <outfile xil_pn:name="ShiftRegister.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1590950896" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5335778898273263870" xil_pn:start_ts="1590950896">
+    <transform xil_pn:end_ts="1590954281" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5335778898273263870" xil_pn:start_ts="1590954281">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590950896" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8654231127661914084" xil_pn:start_ts="1590950896">
+    <transform xil_pn:end_ts="1590954281" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8654231127661914084" xil_pn:start_ts="1590954281">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -200,7 +201,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590952020" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590952020">
+    <transform xil_pn:end_ts="1590954193" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590954193">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Counter2bit.vhd"/>
@@ -224,9 +225,11 @@
       <outfile xil_pn:name="SerialReceiver.vhd"/>
       <outfile xil_pn:name="ShiftRegister.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1590952022" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6068084861026006151" xil_pn:start_ts="1590952020">
+    <transform xil_pn:end_ts="1590954286" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6068084861026006151" xil_pn:start_ts="1590954281">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SerialReceiver_beh.prj"/>
       <outfile xil_pn:name="SerialReceiver_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -234,9 +237,11 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1590952023" xil_pn:in_ck="8276559481791299554" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3458376307856332324" xil_pn:start_ts="1590952022">
+    <transform xil_pn:end_ts="1590954286" xil_pn:in_ck="8276559481791299554" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3458376307856332324" xil_pn:start_ts="1590954286">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SerialReceiver_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>

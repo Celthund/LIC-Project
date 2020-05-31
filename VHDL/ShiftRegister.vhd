@@ -43,6 +43,7 @@ end ShiftRegister;
 architecture Behavioral of ShiftRegister is
 	SIGNAL IQ : STD_LOGIC_VECTOR (WIDTH - 1 downto 0);
 begin
+	Q <= IQ;
 	process(CLK, RST, enableShift)
 	begin
 		if (RST='1') then
@@ -51,6 +52,6 @@ begin
 			IQ <= Data & IQ(WIDTH - 1 downto 1); 
 		end if;
 	end process;	
-	Q <= IQ;
+	
 end Behavioral;
 
