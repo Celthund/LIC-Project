@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: SerialReceiver.prj
 
@@ -271,18 +271,12 @@ FlipFlop ShiftReg/IQ_4 has been replicated 1 time(s) to handle iob=true attribut
 
 Final Macro Processing ...
 
-Processing Unit <SerialReceiver> :
-	Found 2-bit shift register for signal <ShiftReg/IQ_3>.
-Unit <SerialReceiver> processed.
-
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 11
- Flip-Flops                                            : 11
-# Shift Registers                                      : 1
- 2-bit shift register                                  : 1
+# Registers                                            : 13
+ Flip-Flops                                            : 13
 
 =========================================================================
 
@@ -305,19 +299,16 @@ Top Level Output File Name         : SerialReceiver.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 13
-#      GND                         : 1
+# BELS                             : 12
 #      INV                         : 1
-#      LUT2                        : 5
-#      LUT3                        : 1
+#      LUT2                        : 4
+#      LUT3                        : 2
 #      LUT4                        : 2
 #      LUT5                        : 1
 #      LUT6                        : 2
-# FlipFlops/Latches                : 12
+# FlipFlops/Latches                : 13
 #      FDC                         : 7
-#      FDE                         : 5
-# Shift Registers                  : 1
-#      SRLC16E                     : 1
+#      FDCE                        : 6
 # Clock Buffers                    : 2
 #      BUFGP                       : 2
 # IO Buffers                       : 10
@@ -331,16 +322,14 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              11  out of  126800     0%  
- Number of Slice LUTs:                   13  out of  63400     0%  
+ Number of Slice Registers:              12  out of  126800     0%  
+ Number of Slice LUTs:                   12  out of  63400     0%  
     Number used as Logic:                12  out of  63400     0%  
-    Number used as Memory:                1  out of  19000     0%  
-       Number used as SRL:                1
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:     16
-   Number with an unused Flip Flop:       5  out of     16    31%  
-   Number with an unused LUT:             3  out of     16    18%  
+   Number with an unused Flip Flop:       4  out of     16    25%  
+   Number with an unused LUT:             4  out of     16    25%  
    Number of fully used LUT-FF pairs:     8  out of     16    50%  
    Number of unique control sets:         3
 
@@ -385,7 +374,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 1.314ns (Maximum Frequency: 761.035MHz)
+   Minimum period: 1.064ns (Maximum Frequency: 940.115MHz)
    Minimum input arrival time before clock: 1.452ns
    Maximum output required time after clock: 1.272ns
    Maximum combinational path delay: No path found
@@ -396,24 +385,25 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SCLK'
-  Clock period: 1.314ns (frequency: 761.035MHz)
-  Total number of paths / destination ports: 10 / 8
+  Clock period: 1.064ns (frequency: 940.115MHz)
+  Total number of paths / destination ports: 11 / 8
 -------------------------------------------------------------------------
-Delay:               1.314ns (Levels of Logic = 0)
-  Source:            ShiftReg/Mshreg_IQ_3 (FF)
-  Destination:       ShiftReg/IQ_3 (FF)
+Delay:               1.064ns (Levels of Logic = 1)
+  Source:            Counter3/RegisterT1/Q_0 (FF)
+  Destination:       Counter3/RegisterT1/Q_0 (FF)
   Source Clock:      SCLK rising
   Destination Clock: SCLK rising
 
-  Data Path: ShiftReg/Mshreg_IQ_3 to ShiftReg/IQ_3
+  Data Path: Counter3/RegisterT1/Q_0 to Counter3/RegisterT1/Q_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     SRLC16E:CLK->Q        1   1.306   0.000  ShiftReg/Mshreg_IQ_3 (ShiftReg/Mshreg_IQ_3)
-     FDE:D                     0.008          ShiftReg/IQ_3
+     FDC:C->Q              6   0.361   0.302  Counter3/RegisterT1/Q_0 (Counter3/RegisterT1/Q_0)
+     INV:I->O              1   0.113   0.279  Counter3/RegisterT1/Mxor_Q[0]_T[0]_XOR_5_o_xo<0>1_INV_0 (Counter3/RegisterT1/Q[0]_T[0]_XOR_5_o)
+     FDC:D                     0.008          Counter3/RegisterT1/Q_0
     ----------------------------------------
-    Total                      1.314ns (1.314ns logic, 0.000ns route)
-                                       (100.0% logic, 0.0% route)
+    Total                      1.064ns (0.482ns logic, 0.582ns route)
+                                       (45.3% logic, 54.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
@@ -439,23 +429,22 @@ Delay:               1.000ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SCLK'
-  Total number of paths / destination ports: 3 / 3
+  Total number of paths / destination ports: 9 / 9
 -------------------------------------------------------------------------
-Offset:              0.495ns (Levels of Logic = 2)
-  Source:            SDX (PAD)
-  Destination:       ParityChk/RegisterD/Q_0 (FF)
+Offset:              0.666ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       ShiftReg/IQ_4 (FF)
   Destination Clock: SCLK rising
 
-  Data Path: SDX to ParityChk/RegisterD/Q_0
+  Data Path: RST to ShiftReg/IQ_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   0.001   0.389  SDX_IBUF (SDX_IBUF)
-     LUT2:I0->O            1   0.097   0.000  ParityChk/Mxor_Q[0]_Data[0]_XOR_4_o_xo<0>1 (ParityChk/Q[0]_Data[0]_XOR_4_o)
-     FDC:D                     0.008          ParityChk/RegisterD/Q_0
+     IBUF:I->O             9   0.001   0.316  RST_IBUF (RST_IBUF)
+     FDCE:CLR                  0.349          ShiftReg/IQ_0
     ----------------------------------------
-    Total                      0.495ns (0.106ns logic, 0.389ns route)
-                                       (21.4% logic, 78.6% route)
+    Total                      0.666ns (0.350ns logic, 0.316ns route)
+                                       (52.5% logic, 47.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
@@ -491,7 +480,7 @@ Offset:              0.645ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              2   0.361   0.283  ShiftReg/IQ_3 (ShiftReg/IQ_3)
+     FDCE:C->Q             2   0.361   0.283  ShiftReg/IQ_3 (ShiftReg/IQ_3)
      OBUF:I->O                 0.000          D_3_OBUF (D<3>)
     ----------------------------------------
     Total                      0.645ns (0.361ns logic, 0.283ns route)
@@ -536,15 +525,15 @@ Clock to Setup on destination clock SCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    1.507|         |         |         |
-SCLK           |    1.314|         |         |         |
+CLK            |    1.503|         |         |         |
+SCLK           |    1.064|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.70 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.35 secs
  
 --> 
 

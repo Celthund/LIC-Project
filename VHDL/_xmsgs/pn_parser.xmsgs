@@ -8,52 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/Counter2bit.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/Counter3bit.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/Decoder.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyBuffer.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyBufferControl.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyControl.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyDecoder.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyScan.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/KeyboardReader.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/ParityCheck.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/PriorityEnconder.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/Register_D.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/Register_T.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SerialControl.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SerialReceiver.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/ShiftRegister.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SLCDC.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

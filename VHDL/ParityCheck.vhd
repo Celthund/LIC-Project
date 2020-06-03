@@ -63,6 +63,6 @@ begin
 			D => Q xor Data,
 			Q => Q
 	);
-	Err <= Q;
+	Err <= NOT Q;
 end Behavioral;
 

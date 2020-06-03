@@ -1,0 +1,180 @@
+# ISEL uLIC-X Develpment Platform (v17.1) UCF file
+# Created by Tiago M Dias on 2017/03/01
+# Modified by Pedro Miguens Matutino on 2017/03/22
+#
+# This file contains mostly signals/pins that must be mapped to specific
+# locations due to the way the uLIC-X board has been laid out.  You may
+# also add other constraints, in order to access other signals externally.
+#
+# Please note that since the implementation tools are case sensitive, the
+# case that you use for net names in this file MUST match those that are
+# used in creating your design!
+#
+# See Xilinx on-line help for more detailed descriptions of these and
+# other constraints.
+#
+# Note: Both the # sign and // (double slash) are used as comments in the
+# UCF file. The convention used here is that # is used for descriptions,
+# and // is used to comment out examples that you may un-comment to use.
+
+##### Onboad reset push-button
+NET "RST"        LOC = "P99";   # Connected to the global GSR pin
+
+##### Onboard oscillator
+NET "CLK"        LOC = "P22";   # Oscillator output / Global GCK1 pin
+// NET "CLK_F0"     LOC = "P63";   # Control signal for the clock divider
+// NET "CLK_F1"     LOC = "P64";   # Control signal for the clock divider
+
+##### Parallel Input Port
+# Note: Definitions to be considered only for implementations that MAKE USE
+# of the parallel input port.
+// NET "INPORT_0"  LOC = "P52";
+// NET "INPORT_1"  LOC = "P53";
+// NET "INPORT_2"  LOC = "P54";
+// NET "INPORT_3"  LOC = "P55";
+// NET "INPORT_4"  LOC = "P56";
+// NET "INPORT_5"  LOC = "P58";
+// NET "INPORT_6"  LOC = "P59";
+// NET "INPORT_7"  LOC = "P60";
+
+##### Parallel Output Port
+# Note: Definitions to be considered only for implementations that MAKE USE
+# of the parallel output port.
+// NET "OUTPORT_0"   LOC = "P90";
+// NET "OUTPORT_1"   LOC = "P91";
+// NET "OUTPORT_2"   LOC = "P92";
+// NET "OUTPORT_3"   LOC = "P93";
+// NET "OUTPORT_4"   LOC = "P94";
+// NET "OUTPORT_5"   LOC = "P95";
+// NET "OUTPORT_6"   LOC = "P96";
+// NET "OUTPORT_7"   LOC = "P97";
+
+##### User defined LEDs (D1-D16)
+# Note: Definitions to be considered only for implementations that do NOT
+# MAKE USE of the parallel output port, but instead make use of the user
+# user defined LEDs D1-8.
+// NET "LED_D1"     LOC = "P52";
+// NET "LED_D2"     LOC = "P53";
+// NET "LED_D3"     LOC = "P54";
+// NET "LED_D4"     LOC = "P55";
+// NET "LED_D5"     LOC = "P56";
+// NET "LED_D6"     LOC = "P58";
+// NET "LED_D7"     LOC = "P59";
+// NET "LED_D8"     LOC = "P60";
+# Note: Definitions to be considered only for implementations that do NOT
+# MAKE USE of the parallel input port, but instead make use of the user
+# user defined LEDs D9-16.
+// NET "LED_D9"     LOC = "P90";
+// NET "LED_D10"    LOC = "P91";
+// NET "LED_D11"    LOC = "P92";
+// NET "LED_D12"    LOC = "P93";
+// NET "LED_D13"    LOC = "P94";
+// NET "LED_D14"    LOC = "P95";
+// NET "LED_D15"    LOC = "P96";
+// NET "LED_D16"    LOC = "P97";
+
+##### Connector J1 (Header A)
+// NET "J1_1"       LOC = "P4";    # Connected to the global GTS2 pin
+// NET "J1_2"       LOC = "P3";    # Connected to the global GTS1 pin
+// NET "J1_3"       LOC = "P23";   # Connected to the global GCK2 pin
+#  The "J1_4" pin makes available the onboard oscillator CLK signal
+// NET "J1_5"       LOC = "P6";
+// NET "J1_6"       LOC = "P13";
+// NET "J1_7"       LOC = "P7";
+// NET "J1_8"       LOC = "P14";
+// NET "J1_9"       LOC = "P8";
+// NET "J1_10"      LOC = "P15";
+// NET "J1_11"      LOC = "P9";
+// NET "J1_12"      LOC = "P16";
+// NET "J1_13"      LOC = "P10";
+// NET "J1_14"      LOC = "P17";
+// NET "J1_15"      LOC = "P11";
+// NET "J1_16"      LOC = "P18";
+// NET "J1_17"      LOC = "P12";
+// NET "J1_18"      LOC = "P19";
+
+##### Connector J2 (Header B)
+// NET "J2_1"       LOC = "P2";    # Connected to the global GTS4 pin
+// NET "J2_2"       LOC = "P3";    # Connected to the global GTS1 pin
+// NET "J2_3"       LOC = "P23";   # Connected to the global GCK2 pin
+#  The "J2_4" pin makes available the onboard oscillator CLK signal
+// NET "J2_5"       LOC = "P74";   # Connected to the same pin in J3 and J4
+// NET "J2_6"       LOC = "P33";
+// NET "J2_7"       LOC = "P20";
+// NET "J2_8"       LOC = "P34";
+// NET "J2_9"       LOC = "P24";
+// NET "J2_10"      LOC = "P35";
+// NET "J2_11"      LOC = "P25";
+// NET "J2_12"      LOC = "P36";
+// NET "J2_13"      LOC = "P28";
+// NET "J2_14"      LOC = "P37";
+// NET "J2_15"      LOC = "P29";
+// NET "J2_16"      LOC = "P39";
+// NET "J2_17"      LOC = "P32";
+// NET "J2_18"      LOC = "P40";
+
+##### Connector J3 (Header C)
+// NET "J3_1"       LOC = "P1";    # Connected to the global GTS3 pin
+// NET "J3_2"       LOC = "P3";    # Connected to the global GTS1 pin
+// NET "J3_3"       LOC = "P23";   # Connected to the global GCK2 pin
+#  The "J3_4" pin makes available the onboard oscillator CLK signal
+// NET "J3_5"       LOC = "P74";   # Connected to the same pin in J2 and J4
+// NET "J3_6"       LOC = "P61";
+// NET "J3_7"       LOC = "P41";
+// NET "J3_8"       LOC = "P65";
+// NET "J3_9"       LOC = "P42";
+// NET "J3_10"      LOC = "P66";
+// NET "J3_11"      LOC = "P43";
+// NET "J3_12"      LOC = "P67";
+// NET "J3_13"      LOC = "P46";
+// NET "J3_14"      LOC = "P68";
+// NET "J3_15"      LOC = "P49";
+// NET "J3_16"      LOC = "P70";
+// NET "J3_17"      LOC = "P50";
+// NET "J3_18"      LOC = "P71";
+
+##### Connector J4 (Header D)
+// NET "J4_1"       LOC = "P27";   # Connected to the global GCK3 pin
+// NET "J4_2"       LOC = "P3";    # Connected to the global GTS1 pin
+// NET "J4_3"       LOC = "P23";   # Connected to the global GCK2 pin
+#  The "J4_4" pin makes available the onboard oscillator CLK signal
+// NET "J4_5"       LOC = "P74";   # Connected to the same pin in J2 and J3
+// NET "J4_6"       LOC = "P80";
+// NET "J4_7"       LOC = "P72";
+// NET "J4_8"       LOC = "P81";
+// NET "J4_9"       LOC = "P73";
+// NET "J4_10"      LOC = "P82";
+// NET "J4_11"      LOC = "P76";
+// NET "J4_12"      LOC = "P85";
+// NET "J4_13"      LOC = "P77";
+// NET "J4_14"      LOC = "P86";
+// NET "J4_15"      LOC = "P78";
+// NET "J4_16"      LOC = "P87";
+// NET "J4_17"      LOC = "P79";
+// NET "J4_18"      LOC = "P89";
+
+##### User defined pins
+// NET "name"       LOC = "pin";   # Comment
+
+##### Prohibited pins
+CONFIG PROHIBIT = P48;             # JTAG pin - TCK
+CONFIG PROHIBIT = P45;             # JTAG pin - TDI
+CONFIG PROHIBIT = P83;             # JTAG pin - TDO
+CONFIG PROHIBIT = P47;             # JTAG pin - TMS
+CONFIG PROHIBIT = P5;              # VCCINT pin
+CONFIG PROHIBIT = P57;             # VCCINT pin
+CONFIG PROHIBIT = P98;             # VCCINT pins
+CONFIG PROHIBIT = P26;             # VCCIO pin
+CONFIG PROHIBIT = P38;             # VCCIO pin
+CONFIG PROHIBIT = P51;             # VCCIO pin
+CONFIG PROHIBIT = P88;             # VCCIO pin
+CONFIG PROHIBIT = P21;             # GND pin
+CONFIG PROHIBIT = P31;             # GND pin
+CONFIG PROHIBIT = P44;             # GND pin
+CONFIG PROHIBIT = P62;             # GND pin
+CONFIG PROHIBIT = P69;             # GND pin
+CONFIG PROHIBIT = P75;             # GND pin
+CONFIG PROHIBIT = P84;             # GND pin
+CONFIG PROHIBIT = P100;            # GND pin
+
+##### THE END
