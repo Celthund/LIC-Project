@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-06-03T21:42:01</DateModified>
+  <DateModified>2020-06-03T22:11:47</DateModified>
   <ModuleName>SpaceInvaderWrapper</ModuleName>
-  <SummaryTimeStamp>2020-06-03T21:41:00</SummaryTimeStamp>
+  <SummaryTimeStamp>2020-06-03T22:11:42</SummaryTimeStamp>
   <SavedFilePath>C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/iseconfig/SerialReceiver.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL\</ImplementationReportsDirectory>
-  <DateInitialized>2020-06-03T21:42:01</DateInitialized>
+  <DateInitialized>2020-06-03T22:11:47</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

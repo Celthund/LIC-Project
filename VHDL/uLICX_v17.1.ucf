@@ -28,11 +28,11 @@ NET "CLK"        LOC = "P22";   # Oscillator output / Global GCK1 pin
 ##### Parallel Input Port
 # Note: Definitions to be considered only for implementations that MAKE USE
 # of the parallel input port.
-// NET "INPORT_0"  LOC = "P52";
-// NET "INPORT_1"  LOC = "P53";
-// NET "INPORT_2"  LOC = "P54";
-// NET "INPORT_3"  LOC = "P55";
-// NET "INPORT_4"  LOC = "P56";
+NET "INPORT_0"  LOC = "P52";
+NET "INPORT_1"  LOC = "P53";
+NET "INPORT_2"  LOC = "P54";
+NET "INPORT_3"  LOC = "P55";
+NET "INPORT_4"  LOC = "P56";
 // NET "INPORT_5"  LOC = "P58";
 // NET "INPORT_6"  LOC = "P59";
 // NET "INPORT_7"  LOC = "P60";
@@ -41,13 +41,13 @@ NET "CLK"        LOC = "P22";   # Oscillator output / Global GCK1 pin
 # Note: Definitions to be considered only for implementations that MAKE USE
 # of the parallel output port.
 // NET "OUTPORT_0"   LOC = "P90";
-// NET "OUTPORT_1"   LOC = "P91";
-// NET "OUTPORT_2"   LOC = "P92";
-// NET "OUTPORT_3"   LOC = "P93";
+NET "OUTPORT_1"   LOC = "P91";
+NET "OUTPORT_2"   LOC = "P92";
+NET "OUTPORT_3"   LOC = "P93";
 // NET "OUTPORT_4"   LOC = "P94";
 // NET "OUTPORT_5"   LOC = "P95";
 // NET "OUTPORT_6"   LOC = "P96";
-// NET "OUTPORT_7"   LOC = "P97";
+NET "OUTPORT_7"   LOC = "P97";
 
 ##### User defined LEDs (D1-D16)
 # Note: Definitions to be considered only for implementations that do NOT
@@ -102,13 +102,13 @@ NET "CLK"        LOC = "P22";   # Oscillator output / Global GCK1 pin
 // NET "J2_6"       LOC = "P33";
 // NET "J2_7"       LOC = "P20";
 // NET "J2_8"       LOC = "P34";
-// NET "J2_9"       LOC = "P24";
-// NET "J2_10"      LOC = "P35";
-// NET "J2_11"      LOC = "P25";
-// NET "J2_12"      LOC = "P36";
-// NET "J2_13"      LOC = "P28";
-// NET "J2_14"      LOC = "P37";
-// NET "J2_15"      LOC = "P29";
+NET "J2_9"       LOC = "P24";
+NET "J2_10"      LOC = "P35";
+NET "J2_11"      LOC = "P25";
+NET "J2_12"      LOC = "P36";
+NET "J2_13"      LOC = "P28";
+NET "J2_14"      LOC = "P37";
+NET "J2_15"      LOC = "P29";
 // NET "J2_16"      LOC = "P39";
 // NET "J2_17"      LOC = "P32";
 // NET "J2_18"      LOC = "P40";
@@ -142,12 +142,12 @@ NET "CLK"        LOC = "P22";   # Oscillator output / Global GCK1 pin
 // NET "J4_6"       LOC = "P80";
 // NET "J4_7"       LOC = "P72";
 // NET "J4_8"       LOC = "P81";
-// NET "J4_9"       LOC = "P73";
-// NET "J4_10"      LOC = "P82";
-// NET "J4_11"      LOC = "P76";
-// NET "J4_12"      LOC = "P85";
-// NET "J4_13"      LOC = "P77";
-// NET "J4_14"      LOC = "P86";
+NET "J4_9"       LOC = "P73";
+NET "J4_10"      LOC = "P82";
+NET "J4_11"      LOC = "P76";
+NET "J4_12"      LOC = "P85";
+NET "J4_13"      LOC = "P77";
+NET "J4_14"      LOC = "P86";
 // NET "J4_15"      LOC = "P78";
 // NET "J4_16"      LOC = "P87";
 // NET "J4_17"      LOC = "P79";

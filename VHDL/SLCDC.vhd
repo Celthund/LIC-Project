@@ -52,7 +52,9 @@ architecture Structural of SLCDC is
            D : out  STD_LOGIC_VECTOR (4 downto 0);
            DXval : out  STD_LOGIC);
 	END COMPONENT;
+	SIGNAL DXAccept : STD_LOGIC;
 begin
+   WrL <= DXAccept;
 	SerialReceive : SerialReceiver
 	PORT MAP ( 
 			RST => RST,
@@ -60,9 +62,9 @@ begin
 			SDX => SDX,
 			SCLK => SCLK,
 			SS => SS,
-			accept => '1',
+			accept => DXAccept,
 			D => Dout,
-			DXval => WrL
+			DXval => DXAccept
 	 );
 end Structural;
 
