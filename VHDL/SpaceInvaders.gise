@@ -168,26 +168,12 @@
     <transform xil_pn:end_ts="1590954193" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1590954193">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Counter2bit.vhd"/>
-      <outfile xil_pn:name="Counter3bit.vhd"/>
-      <outfile xil_pn:name="Decoder.vhd"/>
-      <outfile xil_pn:name="KB_TEST.vhd"/>
-      <outfile xil_pn:name="KeyBuffer.vhd"/>
-      <outfile xil_pn:name="KeyBufferControl.vhd"/>
-      <outfile xil_pn:name="KeyControl.vhd"/>
-      <outfile xil_pn:name="KeyDecoder.vhd"/>
-      <outfile xil_pn:name="KeyDecoder_Test.vhd"/>
-      <outfile xil_pn:name="KeyScan.vhd"/>
-      <outfile xil_pn:name="KeyScanTest.vhd"/>
-      <outfile xil_pn:name="KeyboardReaderWrapper.vhd"/>
-      <outfile xil_pn:name="KeyboardReaderWrapper_tb.vhd"/>
-      <outfile xil_pn:name="ParityCheck.vhd"/>
-      <outfile xil_pn:name="PriorityEnconder.vhd"/>
-      <outfile xil_pn:name="Register_D.vhd"/>
-      <outfile xil_pn:name="Register_T.vhd"/>
-      <outfile xil_pn:name="SerialControl.vhd"/>
-      <outfile xil_pn:name="SerialReceiver.vhd"/>
-      <outfile xil_pn:name="ShiftRegister.vhd"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590954281" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5335778898273263870" xil_pn:start_ts="1590954281">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -204,47 +190,33 @@
     <transform xil_pn:end_ts="1590954193" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590954193">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Counter2bit.vhd"/>
-      <outfile xil_pn:name="Counter3bit.vhd"/>
-      <outfile xil_pn:name="Decoder.vhd"/>
-      <outfile xil_pn:name="KB_TEST.vhd"/>
-      <outfile xil_pn:name="KeyBuffer.vhd"/>
-      <outfile xil_pn:name="KeyBufferControl.vhd"/>
-      <outfile xil_pn:name="KeyControl.vhd"/>
-      <outfile xil_pn:name="KeyDecoder.vhd"/>
-      <outfile xil_pn:name="KeyDecoder_Test.vhd"/>
-      <outfile xil_pn:name="KeyScan.vhd"/>
-      <outfile xil_pn:name="KeyScanTest.vhd"/>
-      <outfile xil_pn:name="KeyboardReaderWrapper.vhd"/>
-      <outfile xil_pn:name="KeyboardReaderWrapper_tb.vhd"/>
-      <outfile xil_pn:name="ParityCheck.vhd"/>
-      <outfile xil_pn:name="PriorityEnconder.vhd"/>
-      <outfile xil_pn:name="Register_D.vhd"/>
-      <outfile xil_pn:name="Register_T.vhd"/>
-      <outfile xil_pn:name="SerialControl.vhd"/>
-      <outfile xil_pn:name="SerialReceiver.vhd"/>
-      <outfile xil_pn:name="ShiftRegister.vhd"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590954286" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6068084861026006151" xil_pn:start_ts="1590954281">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="SerialReceiver_beh.prj"/>
-      <outfile xil_pn:name="SerialReceiver_isim_beh.exe"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590954286" xil_pn:in_ck="8276559481791299554" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3458376307856332324" xil_pn:start_ts="1590954286">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="SerialReceiver_isim_beh.wdb"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590949180" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1590949180">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -280,27 +252,19 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
-      <outfile xil_pn:name="SerialReceiver.lso"/>
-      <outfile xil_pn:name="SerialReceiver.ngc"/>
-      <outfile xil_pn:name="SerialReceiver.ngr"/>
-      <outfile xil_pn:name="SerialReceiver.prj"/>
-      <outfile xil_pn:name="SerialReceiver.stx"/>
-      <outfile xil_pn:name="SerialReceiver.syr"/>
-      <outfile xil_pn:name="SerialReceiver.xst"/>
-      <outfile xil_pn:name="SerialReceiver_stx_beh.prj"/>
-      <outfile xil_pn:name="SerialReceiver_xst.xrpt"/>
-      <outfile xil_pn:name="ShiftRegister.ngr"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
     </transform>
     <transform xil_pn:end_ts="1589999259" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4839353606473579917" xil_pn:start_ts="1589999258">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
 

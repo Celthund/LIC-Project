@@ -23,8 +23,7 @@ public class SpaceInvader {
         while (true) {
             key = TUI.readUserInput(100);
             if (key == '*') {
-//                startGame();
-                score = 5;
+                startGame();
                 saveScore();
                 TUI.drawMainMenu();
             }

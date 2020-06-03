@@ -12,7 +12,15 @@ public class LCD {
     private static final boolean SERIAL_INTERFACE = true;
     private static final int DATA_SIZE = 5;
 
+    public static void main(String[] args) {
+        init();
+        easterEgg();
+    }
+
     private static void writeNibbleParallel(boolean rs, int data) {
+        /**
+         Uses HAL class to send the data in parallel.
+         **/
         HAL.clrBits(MASK_LCD);
         if (rs)
             HAL.setBits(MASK_RS);
@@ -24,16 +32,15 @@ public class LCD {
     }
 
     private static void writeNibbleSerial(boolean rs, int data) {
+        /**
+         Uses SerialEmitter class to send the data in serial.
+         **/
         SerialEmitter.send(SerialEmitter.Destination.SLCD, DATA_SIZE, (data << 1) | (rs ? 1 : 0));
-    }
-
-    public static void main(String[] args) {
-        init();
     }
 
     private static void writeNibble(boolean rs, int data) {
         /**
-         Send 4 bits of data to the LCD.
+         Send 4 bits of data to the LCD, in serial or in parallel depending on SERIAL_INTERFACE.
          **/
         if (SERIAL_INTERFACE)
             writeNibbleSerial(rs, data);
@@ -61,7 +68,6 @@ public class LCD {
          Sends a byte of data and shifts the position of the cursor.
          If it reaches the end, resets the cursor position.
          **/
-        /* Esta logica devia estar no TUI. */
         writeByte(true, data);
     }
 
@@ -69,7 +75,6 @@ public class LCD {
         /**
          Initialize LCD with a 4 bit communication, with display on, display cursor off and blinking of cursor off.
          **/
-        // HAL.clrBits(MASK_LCD);
         if (SERIAL_INTERFACE)
             SerialEmitter.init();
         else
@@ -122,10 +127,12 @@ public class LCD {
         /**
          Easter egg to test the LCD. Try it at your own risk.
          **/
-        clear();
+        cursor(1,1);
         for (int i = 0; i < 26; i++) {
             write((char) ('A' + i));
-            Time.sleep(200);
+            if (i == 15)
+                cursor(2, 1);
+            Time.sleep(250);
         }
         Time.sleep(500);
         clear();
