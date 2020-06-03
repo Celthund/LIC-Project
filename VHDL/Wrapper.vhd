@@ -58,6 +58,10 @@ architecture Behavioral of Wrapper is
 	END COMPONENT;
 begin
 
-
+	SerialReceive: SerialReceiver
+		MAP PORT (
+			
+	);
+	
 end Behavioral;
 

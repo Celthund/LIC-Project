@@ -31,7 +31,7 @@ kb.DAC -> kbd.ack
 kbd.K[0-3] -> kb.D[0-3]
 kb.K[0-3] -> kit.I[0-3]
 kb.Dval -> kit.I4
-kit.O5 -> kb.ACK
+kit.O7 -> kb.ACK
 
 # SERIAL
 kit.O3 -> srl./SS

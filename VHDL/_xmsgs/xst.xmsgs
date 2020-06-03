@@ -5,13 +5,61 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="946" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\ParityCheck.vhd" Line 63: Actual for formal port <arg fmt="%s" index="1">d</arg> is neither a static name nor a globally static expression
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 46: Syntax error near &quot;<arg fmt="%s" index="1">)</arg>&quot;.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Counter3bit.vhd" Line 70: Actual for formal port <arg fmt="%s" index="1">t</arg> is neither a static name nor a globally static expression
+<msg type="error" file="HDLCompiler" num="854" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 32: Unit &lt;<arg fmt="%s" index="1">spaceinvaderwrapper</arg>&gt; ignored due to previous errors.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Counter3bit.vhd" Line 80: Actual for formal port <arg fmt="%s" index="1">t</arg> is neither a static name nor a globally static expression
+<msg type="error" file="HDLCompiler" num="374" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 49: Entity &lt;<arg fmt="%s" index="1">spaceinvaderwrapper</arg>&gt; is not yet compiled.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 52: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 53: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 54: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 55: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 56: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 57: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 58: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 63: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 64: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 65: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 66: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 67: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 68: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 69: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 75: &lt;<arg fmt="%s" index="1">rst</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" Line 76: &lt;<arg fmt="%s" index="1">clk</arg>&gt; is not declared.
 </msg>
 
 </messages>

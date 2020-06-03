@@ -30,6 +30,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity SLCDC is
+	Port ( 
+			  CLK : in STD_LOGIC;
+			  RST : in STD_LOGIC;
+	        SDX : in  STD_LOGIC;
+           SCLK : in  STD_LOGIC;
+           SS : in  STD_LOGIC;
+           Dout : out  STD_LOGIC_VECTOR (4 downto 0);
+           WrL : out  STD_LOGIC);
 end SLCDC;
 
 architecture Structural of SLCDC is
@@ -45,6 +53,16 @@ architecture Structural of SLCDC is
            DXval : out  STD_LOGIC);
 	END COMPONENT;
 begin
-	
+	SerialReceive : SerialReceiver
+	PORT MAP ( 
+			RST => RST,
+			CLK => CLK,
+			SDX => SDX,
+			SCLK => SCLK,
+			SS => SS,
+			accept => '1',
+			D => Dout,
+			DXval => WrL
+	 );
 end Structural;
 

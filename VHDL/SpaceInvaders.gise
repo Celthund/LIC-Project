@@ -100,6 +100,25 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="KeyScan_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="KeyScan_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="KeyScan_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="KeyboardReader.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="KeyboardReader.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="KeyboardReader.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="KeyboardReader.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="KeyboardReader.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="KeyboardReader.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="KeyboardReader.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="KeyboardReader.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="KeyboardReader.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="KeyboardReader.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="KeyboardReader.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="KeyboardReader.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="KeyboardReader.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="KeyboardReader.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="KeyboardReader.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="KeyboardReader.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="KeyboardReader.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="KeyboardReader.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="KeyboardReader.xst"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="KeyboardReaderWrapper.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="KeyboardReaderWrapper.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="KeyboardReaderWrapper.ngc"/>
@@ -109,6 +128,21 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="KeyboardReaderWrapper.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="KeyboardReaderWrapper.xst"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="KeyboardReaderWrapper_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="KeyboardReader_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="KeyboardReader_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="KeyboardReader_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="KeyboardReader_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="KeyboardReader_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="KeyboardReader_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="KeyboardReader_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="KeyboardReader_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="KeyboardReader_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="KeyboardReader_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="KeyboardReader_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="KeyboardReader_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="KeyboardReader_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="KeyboardReader_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="KeyboardReader_xst.xrpt"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="PriorityEnconder.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="PriorityEnconder.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="PriorityEnconder.tfi"/>
@@ -117,6 +151,17 @@
     <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="Register_D.tfi"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Register_D.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Register_T_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="SLCDC.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="SLCDC.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="SLCDC.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="SLCDC.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SLCDC.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="SLCDC.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="SLCDC.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="SLCDC.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="SLCDC_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="SLCDC_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SLCDC_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="SerialReceiver.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="SerialReceiver.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="SerialReceiver.ngc"/>
@@ -189,6 +234,7 @@
     <transform xil_pn:end_ts="1590949709" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8942498445791641820" xil_pn:start_ts="1590949709">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1590954193" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590954193">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -227,14 +273,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1589999259" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4839353606473579917" xil_pn:start_ts="1589999258">
+    <transform xil_pn:end_ts="1591216667" xil_pn:in_ck="-3874558288190001747" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3299624854185465096" xil_pn:start_ts="1591216667">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
 
