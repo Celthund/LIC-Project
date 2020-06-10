@@ -1,0 +1,883 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: SpaceInvaderWrapper.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SpaceInvaderWrapper.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SpaceInvaderWrapper"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : SpaceInvaderWrapper
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Register_T.vhd" into library work
+Parsing entity <Register_T>.
+INFO:HDLCompiler:1676 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Register_T.vhd" Line 40. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+Parsing architecture <Behavioral> of entity <register_t>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Register_D.vhd" into library work
+Parsing entity <Register_D>.
+Parsing architecture <Behavioral> of entity <register_d>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\PriorityEnconder.vhd" into library work
+Parsing entity <PriorityEnconder>.
+Parsing architecture <Behavioral> of entity <priorityenconder>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Decoder.vhd" into library work
+Parsing entity <Decoder>.
+Parsing architecture <Behavioral> of entity <decoder>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Counter2bit.vhd" into library work
+Parsing entity <Counter2bit>.
+Parsing architecture <Structural> of entity <counter2bit>.
+INFO:HDLCompiler:1676 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Counter2bit.vhd" Line 48. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Counter2bit.vhd" Line 70: Actual for formal port t is neither a static name nor a globally static expression
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\ShiftRegister.vhd" into library work
+Parsing entity <ShiftRegister>.
+Parsing architecture <Behavioral> of entity <shiftregister>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SerialControl.vhd" into library work
+Parsing entity <SerialControl>.
+Parsing architecture <Structural> of entity <serialcontrol>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\ParityCheck.vhd" into library work
+Parsing entity <ParityCheck>.
+Parsing architecture <Behavioral> of entity <paritycheck>.
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\ParityCheck.vhd" Line 63: Actual for formal port d is neither a static name nor a globally static expression
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyScan.vhd" into library work
+Parsing entity <KeyScan>.
+Parsing architecture <Structural> of entity <keyscan>.
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyScan.vhd" Line 110: Actual for formal port i0 is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyScan.vhd" Line 111: Actual for formal port i1 is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyScan.vhd" Line 112: Actual for formal port i2 is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyScan.vhd" Line 113: Actual for formal port i3 is neither a static name nor a globally static expression
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyControl.vhd" into library work
+Parsing entity <KeyControl>.
+Parsing architecture <Behavioral> of entity <keycontrol>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyBufferControl.vhd" into library work
+Parsing entity <KeyBufferControl>.
+Parsing architecture <Behavioral> of entity <keybuffercontrol>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Counter3bit.vhd" into library work
+Parsing entity <Counter3bit>.
+Parsing architecture <Structural> of entity <counter3bit>.
+INFO:HDLCompiler:1676 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Counter3bit.vhd" Line 48. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Counter3bit.vhd" Line 70: Actual for formal port t is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Counter3bit.vhd" Line 80: Actual for formal port t is neither a static name nor a globally static expression
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SerialReceiver.vhd" into library work
+Parsing entity <SerialReceiver>.
+Parsing architecture <Structural> of entity <serialreceiver>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyDecoder.vhd" into library work
+Parsing entity <KeyDecoder>.
+Parsing architecture <Structural> of entity <keydecoder>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyBuffer.vhd" into library work
+Parsing entity <KeyBuffer>.
+Parsing architecture <Structural> of entity <keybuffer>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SLCDC.vhd" into library work
+Parsing entity <SLCDC>.
+Parsing architecture <Structural> of entity <slcdc>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyboardReader.vhd" into library work
+Parsing entity <KeyboardReader>.
+Parsing architecture <Structural> of entity <keyboardreader>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd" into library work
+Parsing entity <SpaceInvaderWrapper>.
+Parsing architecture <Behavioral> of entity <spaceinvaderwrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <SpaceInvaderWrapper> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <KeyboardReader> (architecture <Structural>) from library <work>.
+
+Elaborating entity <KeyDecoder> (architecture <Structural>) from library <work>.
+
+Elaborating entity <KeyControl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <KeyScan> (architecture <Structural>) from library <work>.
+
+Elaborating entity <Counter2bit> (architecture <Structural>) from library <work>.
+
+Elaborating entity <Register_T> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Register_D> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Decoder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PriorityEnconder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <KeyBuffer> (architecture <Structural>) from library <work>.
+
+Elaborating entity <Register_D> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <KeyBufferControl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <SLCDC> (architecture <Structural>) from library <work>.
+
+Elaborating entity <SerialReceiver> (architecture <Structural>) from library <work>.
+
+Elaborating entity <SerialControl> (architecture <Structural>) from library <work>.
+
+Elaborating entity <ParityCheck> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Register_D> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Counter3bit> (architecture <Structural>) from library <work>.
+
+Elaborating entity <ShiftRegister> (architecture <Behavioral>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SpaceInvaderWrapper>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SpaceInvaderWrapper.vhd".
+    Summary:
+	no macro.
+Unit <SpaceInvaderWrapper> synthesized.
+
+Synthesizing Unit <KeyboardReader>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyboardReader.vhd".
+    Summary:
+	no macro.
+Unit <KeyboardReader> synthesized.
+
+Synthesizing Unit <KeyDecoder>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyDecoder.vhd".
+    Summary:
+	no macro.
+Unit <KeyDecoder> synthesized.
+
+Synthesizing Unit <KeyControl>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyControl.vhd".
+    Found 2-bit register for signal <CS>.
+    Found finite state machine <FSM_0> for signal <CS>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | state_idle                                     |
+    | Power Up State     | state_idle                                     |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <KeyControl> synthesized.
+
+Synthesizing Unit <KeyScan>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyScan.vhd".
+    Summary:
+	no macro.
+Unit <KeyScan> synthesized.
+
+Synthesizing Unit <Counter2bit>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Counter2bit.vhd".
+    Summary:
+	no macro.
+Unit <Counter2bit> synthesized.
+
+Synthesizing Unit <Register_T>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Register_T.vhd".
+        WIDTH = 1
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Register_T> synthesized.
+
+Synthesizing Unit <Register_D_1>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Register_D.vhd".
+        WIDTH = 2
+    Found 2-bit register for signal <Q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <Register_D_1> synthesized.
+
+Synthesizing Unit <Decoder>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Decoder.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <O<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <O<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <O<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Latch(s).
+	inferred   2 Multiplexer(s).
+Unit <Decoder> synthesized.
+
+Synthesizing Unit <PriorityEnconder>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\PriorityEnconder.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <PriorityEnconder> synthesized.
+
+Synthesizing Unit <KeyBuffer>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyBuffer.vhd".
+    Summary:
+	no macro.
+Unit <KeyBuffer> synthesized.
+
+Synthesizing Unit <Register_D_2>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Register_D.vhd".
+        WIDTH = 4
+    Found 4-bit register for signal <Q>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <Register_D_2> synthesized.
+
+Synthesizing Unit <KeyBufferControl>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\KeyBufferControl.vhd".
+    Found 2-bit register for signal <CS>.
+    Found finite state machine <FSM_1> for signal <CS>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | state_idle                                     |
+    | Power Up State     | state_idle                                     |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <KeyBufferControl> synthesized.
+
+Synthesizing Unit <SLCDC>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SLCDC.vhd".
+    Summary:
+	no macro.
+Unit <SLCDC> synthesized.
+
+Synthesizing Unit <SerialReceiver>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SerialReceiver.vhd".
+    Summary:
+	no macro.
+Unit <SerialReceiver> synthesized.
+
+Synthesizing Unit <SerialControl>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SerialControl.vhd".
+    Found 3-bit register for signal <CS>.
+    Found finite state machine <FSM_2> for signal <CS>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | state_idle                                     |
+    | Power Up State     | state_idle                                     |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <SerialControl> synthesized.
+
+Synthesizing Unit <ParityCheck>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\ParityCheck.vhd".
+        WIDTH = 1
+    Summary:
+Unit <ParityCheck> synthesized.
+
+Synthesizing Unit <Register_D_3>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Register_D.vhd".
+        WIDTH = 1
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Register_D_3> synthesized.
+
+Synthesizing Unit <Counter3bit>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Counter3bit.vhd".
+    Summary:
+	no macro.
+Unit <Counter3bit> synthesized.
+
+Synthesizing Unit <ShiftRegister>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\ShiftRegister.vhd".
+        WIDTH = 5
+    Found 5-bit register for signal <IQ>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <ShiftRegister> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 9
+ 1-bit register                                        : 6
+ 2-bit register                                        : 1
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 3
+# Multiplexers                                         : 4
+ 1-bit 2-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 3
+# Xors                                                 : 6
+ 1-bit xor2                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 17
+ Flip-Flops                                            : 17
+# Multiplexers                                         : 4
+ 1-bit 2-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 3
+# Xors                                                 : 6
+ 1-bit xor2                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_1> on signal <CS[1:2]> with user encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ state_idle    | 00
+ state_dav_on  | 01
+ state_dav_off | 10
+ state_ack_on  | 11
+---------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_2> on signal <CS[1:3]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ state_idle      | 000
+ state_key_enrx  | 001
+ state_dflag_on  | 011
+ state_no_error  | 010
+ state_accept_on | 110
+-----------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <CS[1:2]> with gray encoding.
+-------------------------------
+ State             | Encoding
+-------------------------------
+ state_idle        | 00
+ state_key_pressed | 01
+ state_key_ack     | 11
+-------------------------------
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    O_2 in unit <Decoder>
+    O_1 in unit <Decoder>
+    O_0 in unit <Decoder>
+
+
+Optimizing unit <SpaceInvaderWrapper> ...
+
+Optimizing unit <KeyScan> ...
+
+Optimizing unit <Decoder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SpaceInvaderWrapper, actual ratio is 0.
+FlipFlop SLCD/SerialReceive/ShiftReg/IQ_4 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 25
+ Flip-Flops                                            : 25
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SpaceInvaderWrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 31
+#      INV                         : 5
+#      LUT2                        : 14
+#      LUT3                        : 4
+#      LUT4                        : 2
+#      LUT5                        : 3
+#      LUT6                        : 2
+#      MUXF7                       : 1
+# FlipFlops/Latches                : 28
+#      FDC                         : 19
+#      FDCE                        : 6
+#      LD                          : 3
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 22
+#      IBUF                        : 8
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              23  out of  126800     0%  
+ Number of Slice LUTs:                   30  out of  63400     0%  
+    Number used as Logic:                30  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     34
+   Number with an unused Flip Flop:      11  out of     34    32%  
+   Number with an unused LUT:             4  out of     34    11%  
+   Number of fully used LUT-FF pairs:    19  out of     34    55%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of    210    11%  
+    IOB Flip Flops/Latches:               5
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------------------------------------+---------------------------------------------------------+-------+
+Clock Signal                                                                              | Clock buffer(FF name)                                   | Load  |
+------------------------------------------------------------------------------------------+---------------------------------------------------------+-------+
+KeyboardRead/INTERNAL_ACK(KeyboardRead/KeyBuff/KeyBufferCtrl/CS_DAC1:O)                   | NONE(*)(KeyboardRead/KeyBuff/OutputRegister/Q_3)        | 4     |
+OUTPORT_2                                                                                 | BUFGP                                                   | 10    |
+CLK                                                                                       | BUFGP                                                   | 9     |
+KeyboardRead/KeyDecode/KScan<0>(KeyboardRead/KeyDecode/KeyCtrl/CS_KVal1:O)                | NONE(*)(KeyboardRead/KeyDecode/KeyScanner/RegisterD/Q_0)| 2     |
+KeyboardRead/KeyDecode/KeyScanner/DEC/O_0_G(KeyboardRead/KeyDecode/KeyScanner/DEC/O_0_G:O)| NONE(*)(KeyboardRead/KeyDecode/KeyScanner/DEC/O_2)      | 3     |
+------------------------------------------------------------------------------------------+---------------------------------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.579ns (Maximum Frequency: 633.473MHz)
+   Minimum input arrival time before clock: 1.082ns
+   Maximum output required time after clock: 1.276ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OUTPORT_2'
+  Clock period: 1.059ns (frequency: 943.842MHz)
+  Total number of paths / destination ports: 11 / 8
+-------------------------------------------------------------------------
+Delay:               1.059ns (Levels of Logic = 1)
+  Source:            SLCD/SerialReceive/Counter3/RegisterT1/Q_0 (FF)
+  Destination:       SLCD/SerialReceive/Counter3/RegisterT1/Q_0 (FF)
+  Source Clock:      OUTPORT_2 rising
+  Destination Clock: OUTPORT_2 rising
+
+  Data Path: SLCD/SerialReceive/Counter3/RegisterT1/Q_0 to SLCD/SerialReceive/Counter3/RegisterT1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.361   0.298  SLCD/SerialReceive/Counter3/RegisterT1/Q_0 (SLCD/SerialReceive/Counter3/RegisterT1/Q_0)
+     INV:I->O              1   0.113   0.279  SLCD/SerialReceive/Counter3/RegisterT1/Mxor_Q[0]_T[0]_XOR_3_o_xo<0>1_INV_0 (SLCD/SerialReceive/Counter3/RegisterT1/Q[0]_T[0]_XOR_3_o)
+     FDC:D                     0.008          SLCD/SerialReceive/Counter3/RegisterT1/Q_0
+    ----------------------------------------
+    Total                      1.059ns (0.482ns logic, 0.577ns route)
+                                       (45.5% logic, 54.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 1.579ns (frequency: 633.473MHz)
+  Total number of paths / destination ports: 29 / 9
+-------------------------------------------------------------------------
+Delay:               0.789ns (Levels of Logic = 1)
+  Source:            KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd2 (FF)
+  Destination:       KeyboardRead/KeyDecode/KeyScanner/CounterBit/RegisterT1/Q_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK falling
+
+  Data Path: KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd2 to KeyboardRead/KeyDecode/KeyScanner/CounterBit/RegisterT1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.361   0.323  KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd2 (KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd2)
+     LUT3:I2->O            1   0.097   0.000  KeyboardRead/KeyDecode/KeyScanner/CounterBit/RegisterT2/Mxor_Q[0]_T[0]_XOR_3_o_xo<0>1 (KeyboardRead/KeyDecode/KeyScanner/CounterBit/RegisterT2/Q[0]_T[0]_XOR_3_o)
+     FDC:D                     0.008          KeyboardRead/KeyDecode/KeyScanner/CounterBit/RegisterT2/Q_0
+    ----------------------------------------
+    Total                      0.789ns (0.466ns logic, 0.323ns route)
+                                       (59.0% logic, 41.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'KeyboardRead/INTERNAL_ACK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              0.720ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       KeyboardRead/KeyBuff/OutputRegister/Q_3 (FF)
+  Destination Clock: KeyboardRead/INTERNAL_ACK rising
+
+  Data Path: RST to KeyboardRead/KeyBuff/OutputRegister/Q_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   0.001   0.370  RST_IBUF (RST_IBUF)
+     FDC:CLR                   0.349          KeyboardRead/KeyBuff/OutputRegister/Q_0
+    ----------------------------------------
+    Total                      0.720ns (0.350ns logic, 0.370ns route)
+                                       (48.6% logic, 51.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OUTPORT_2'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              0.720ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       SLCD/SerialReceive/ShiftReg/IQ_4 (FF)
+  Destination Clock: OUTPORT_2 rising
+
+  Data Path: RST to SLCD/SerialReceive/ShiftReg/IQ_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   0.001   0.370  RST_IBUF (RST_IBUF)
+     FDCE:CLR                  0.349          SLCD/SerialReceive/ShiftReg/IQ_0
+    ----------------------------------------
+    Total                      0.720ns (0.350ns logic, 0.370ns route)
+                                       (48.6% logic, 51.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 21 / 15
+-------------------------------------------------------------------------
+Offset:              1.082ns (Levels of Logic = 3)
+  Source:            OUTPORT_3 (PAD)
+  Destination:       SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: OUTPORT_3 to SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.697  OUTPORT_3_IBUF (OUTPORT_3_IBUF)
+     LUT6:I0->O            1   0.097   0.000  SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2-In_G (N5)
+     MUXF7:I1->O           1   0.279   0.000  SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2-In (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2-In)
+     FDC:D                     0.008          SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2
+    ----------------------------------------
+    Total                      1.082ns (0.385ns logic, 0.697ns route)
+                                       (35.6% logic, 64.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'KeyboardRead/KeyDecode/KScan<0>'
+  Total number of paths / destination ports: 7 / 4
+-------------------------------------------------------------------------
+Offset:              0.720ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       KeyboardRead/KeyDecode/KeyScanner/RegisterD/Q_0 (FF)
+  Destination Clock: KeyboardRead/KeyDecode/KScan<0> rising
+
+  Data Path: RST to KeyboardRead/KeyDecode/KeyScanner/RegisterD/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   0.001   0.370  RST_IBUF (RST_IBUF)
+     FDC:CLR                   0.349          KeyboardRead/KeyDecode/KeyScanner/RegisterD/Q_0
+    ----------------------------------------
+    Total                      0.720ns (0.350ns logic, 0.370ns route)
+                                       (48.6% logic, 51.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'KeyboardRead/INTERNAL_ACK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 1)
+  Source:            KeyboardRead/KeyBuff/OutputRegister/Q_0 (FF)
+  Destination:       INPORT_0 (PAD)
+  Source Clock:      KeyboardRead/INTERNAL_ACK rising
+
+  Data Path: KeyboardRead/KeyBuff/OutputRegister/Q_0 to INPORT_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.361   0.279  KeyboardRead/KeyBuff/OutputRegister/Q_0 (KeyboardRead/KeyBuff/OutputRegister/Q_0)
+     OBUF:I->O                 0.000          INPORT_0_OBUF (INPORT_0)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 5 / 2
+-------------------------------------------------------------------------
+Offset:              1.276ns (Levels of Logic = 2)
+  Source:            SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 (FF)
+  Destination:       J4_9 (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 to J4_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.361   0.534  SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2)
+     LUT3:I0->O            2   0.097   0.283  SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2-In21 (J4_9_OBUF)
+     OBUF:I->O                 0.000          J4_9_OBUF (J4_9)
+    ----------------------------------------
+    Total                      1.276ns (0.458ns logic, 0.818ns route)
+                                       (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'KeyboardRead/KeyDecode/KeyScanner/DEC/O_0_G'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              1.144ns (Levels of Logic = 2)
+  Source:            KeyboardRead/KeyDecode/KeyScanner/DEC/O_2 (LATCH)
+  Destination:       J2_9 (PAD)
+  Source Clock:      KeyboardRead/KeyDecode/KeyScanner/DEC/O_0_G falling
+
+  Data Path: KeyboardRead/KeyDecode/KeyScanner/DEC/O_2 to J2_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.279  KeyboardRead/KeyDecode/KeyScanner/DEC/O_2 (KeyboardRead/KeyDecode/KeyScanner/DEC/O_2)
+     INV:I->O              1   0.113   0.279  KeyboardRead/KeyDecode/KeyScanner/DEC_OUT<2>1_INV_0 (J2_9_OBUF)
+     OBUF:I->O                 0.000          J2_9_OBUF (J2_9)
+    ----------------------------------------
+    Total                      1.144ns (0.585ns logic, 0.559ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OUTPORT_2'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 1)
+  Source:            SLCD/SerialReceive/ShiftReg/IQ_1 (FF)
+  Destination:       J4_11 (PAD)
+  Source Clock:      OUTPORT_2 rising
+
+  Data Path: SLCD/SerialReceive/ShiftReg/IQ_1 to J4_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.361   0.283  SLCD/SerialReceive/ShiftReg/IQ_1 (SLCD/SerialReceive/ShiftReg/IQ_1)
+     OBUF:I->O                 0.000          J4_11_OBUF (J4_11)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    1.451|         |    1.000|         |
+OUTPORT_2      |    1.315|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock KeyboardRead/INTERNAL_ACK
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+CLK                            |         |    0.676|         |         |
+KeyboardRead/KeyDecode/KScan<0>|    0.648|         |         |         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock KeyboardRead/KeyDecode/KeyScanner/DEC/O_0_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    0.865|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock OUTPORT_2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    1.498|         |         |         |
+OUTPORT_2      |    1.059|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.13 secs
+ 
+--> 
+
+Total memory usage is 4625816 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
