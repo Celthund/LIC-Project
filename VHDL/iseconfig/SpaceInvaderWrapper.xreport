@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-06-10T19:21:13</DateModified>
+  <DateModified>2020-06-14T14:58:00</DateModified>
   <ModuleName>SpaceInvaderWrapper</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/iseconfig/SpaceInvaderWrapper.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL\</ImplementationReportsDirectory>
   <DateInitialized>2020-06-10T19:21:13</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

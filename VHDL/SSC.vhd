@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    21:12:03 06/03/2020 
+-- Create Date:    15:21:38 06/14/2020 
 -- Design Name: 
--- Module Name:    SLCDC - Behavioral 
+-- Module Name:    SSC - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,19 +29,31 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity SLCDC is
+entity SSC is
 	Port ( 
-			  CLK : in STD_LOGIC;
-			  RST : in STD_LOGIC;
-	        SDX : in  STD_LOGIC;
-           SCLK : in  STD_LOGIC;
-           SS : in  STD_LOGIC;
-           Dout : out  STD_LOGIC_VECTOR (4 downto 0);
-           WrL : out  STD_LOGIC);
-end SLCDC;
+		  CLK : in STD_LOGIC;
+		  RST : in STD_LOGIC;
+		  SDX : in  STD_LOGIC;
+		  SCLK : in  STD_LOGIC;
+		  SS : in  STD_LOGIC;
+		  sid : out std_logic_vector(1 downto 0);
+		  vol : out std_logic_vector(1 downto 0);
+		  Play : out STD_LOGIC);
+end SSC;
 
-architecture Structural of SLCDC is
-	COMPONENT SerialReceiver
+architecture Structural of SSC is
+	COMPONENT SoundController 
+	Port ( 
+		CLK : in STD_LOGIC;
+		RST : in STD_LOGIC;
+		Dval : in STD_LOGIC;
+      Din : in  std_logic_vector(3 downto 0);
+      sid : out std_logic_vector(1 downto 0);
+		vol : out std_logic_vector(1 downto 0);
+		Play : out STD_LOGIC;
+      done : out STD_LOGIC);
+	END COMPONENT;
+	COMPONENT SerialReceiverSound
 		Port ( 
 			  CLK : in STD_LOGIC;
 			  RST : in STD_LOGIC;
@@ -49,23 +61,13 @@ architecture Structural of SLCDC is
            SCLK : in  STD_LOGIC;
            SS : in  STD_LOGIC;
            accept : in  STD_LOGIC;
-           D : out  STD_LOGIC_VECTOR (4 downto 0);
+           D : out  STD_LOGIC_VECTOR (3 downto 0);
            DXval : out  STD_LOGIC);
 	END COMPONENT;
-	COMPONENT LCDDispatcher
-		Port ( 
-			  CLK : in STD_LOGIC;
-			  RST : in STD_LOGIC;
-			  Dval : in STD_LOGIC;
-           Din : in  std_logic_vector(4 downto 0);
-           Dout : out std_logic_vector(4 downto 0);
-			  WRL : out STD_LOGIC;
-           done : out STD_LOGIC);
-	END COMPONENT;
 	SIGNAL DXValDVal, doneAccept : STD_LOGIC;
-	SIGNAL dataInternal : std_logic_vector(4 downto 0);
+	SIGNAL dataInternal : std_logic_vector(3 downto 0);
 begin
-	SerialReceive : SerialReceiver
+	SerialReceiverSoun : SerialReceiverSound
 	PORT MAP ( 
 			RST => RST,
 			CLK => CLK,
@@ -76,16 +78,17 @@ begin
 			D => dataInternal,
 			DXval => DXValDVal
 	 );
-	 
-	 LCDDispatch : LCDDispatcher
-	 PORT MAP (
+	SoundControll : SoundController
+	PORT MAP ( 
 			RST => RST,
 			CLK => CLK,
 			Dval => DXValDVal,
 			Din => dataInternal,
-			Dout => Dout,
-			WRL => WrL,
+			sid => sid,
+			vol => vol,
+			Play => Play,
 			done => doneAccept
 	 );
+
 end Structural;
 

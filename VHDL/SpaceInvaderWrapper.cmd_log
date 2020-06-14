@@ -13,3 +13,4 @@ xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/Spac
 xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
 xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
 xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 

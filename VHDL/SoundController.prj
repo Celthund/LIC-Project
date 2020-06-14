@@ -1,0 +1,4 @@
+vhdl work "SoundCtrl.vhd"
+vhdl work "SoundCMDDecoder.vhd"
+vhdl work "Register_D.vhd"
+vhdl work "SoundController.vhd"
