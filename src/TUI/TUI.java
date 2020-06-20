@@ -2,6 +2,8 @@ package TUI;
 
 import KBD.KBD;
 import LCD.LCD;
+import SoundGenerator.SoundGenerator;
+import Statistics.Statistics;
 import isel.leic.utils.Time;
 
 public class TUI {
@@ -252,7 +254,6 @@ public class TUI {
         }
         curCol = col;
         curLine = line;
-        System.out.printf("Moving cursor %s %s \n", line, col);
         LCD.cursor(curLine, curCol);
     }
 
@@ -372,4 +373,33 @@ public class TUI {
         alignCenter(TUI.TOPLINE, "GAME OVER!");
     }
 
+    public static void drawMaintenance() {
+        clear();
+        alignCenter(TUI.TOPLINE, "On Maintenance");
+        alignLeft(TUI.BOTTOMLINE,"*-Count #-shutD");
+        
+    }
+
+    public static void drawStatistics(Statistics statistics) {
+        clear();
+        alignLeft(TUI.TOPLINE, "Games:" + statistics.games);
+        alignLeft(TUI.BOTTOMLINE,"Coins:" + statistics.coins);
+    }
+
+    public static void drawShutdown() {
+        clear();
+        alignCenter(TUI.TOPLINE, "Shutdown");
+        alignLeft(TUI.BOTTOMLINE,"5-Yes other-No");
+    }
+
+    public static void drawClearCounters() {
+        clear();
+        alignCenter(TUI.TOPLINE, "Clear Counters");
+        alignLeft(TUI.BOTTOMLINE,"5-Yes other-No");
+    }
+
+    public static void drawAvailableCredits(int credits) {
+        clearLine(BOTTOMLINE);
+        alignCenter(BOTTOMLINE, "Credits:"+credits+"$");
+    }
 }

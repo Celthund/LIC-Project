@@ -204,14 +204,37 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ShiftRegister_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ShiftRegister_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ShiftRegister_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="SoundController.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="SoundController.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="SoundController.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="SoundController.ncd" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="SoundController.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="SoundController.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="SoundController.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="SoundController.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="SoundController.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="SoundController.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SoundController.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="SoundController.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="SoundController.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="SoundController.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="SoundController.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="SoundController.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="SoundController.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="SoundController_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="SoundController_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="SoundController_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="SoundController_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="SoundController_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="SoundController_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SoundController_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SoundController_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="SoundController_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="SoundController_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SoundController_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="SoundController_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="SoundController_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="SoundController_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SoundController_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="SoundCtrl.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="SoundCtrl.lso"/>
@@ -318,55 +341,100 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1592148943" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3987130547203515476" xil_pn:start_ts="1592148943">
+    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2720449843560563540" xil_pn:start_ts="1592424506">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1592148943" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-4091984098831689604" xil_pn:start_ts="1592148943">
+    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="570767726975973116" xil_pn:start_ts="1592424506">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1592148943" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1592148943">
+    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1592424506">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1592148943" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="8456996971008308598" xil_pn:start_ts="1592148943">
+    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-4980029607399450762" xil_pn:start_ts="1592424506">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1592148943" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1592148943">
+    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1592424506">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1592148943" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-1891037327430481402" xil_pn:start_ts="1592148943">
+    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7926924471674402938" xil_pn:start_ts="1592424506">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1592149032" xil_pn:in_ck="3882694360604532217" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-1577609060371629191" xil_pn:start_ts="1592149019">
+    <transform xil_pn:end_ts="1592671245" xil_pn:in_ck="-5572802308407925052" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="8005420656363294969" xil_pn:start_ts="1592671231">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="SSC.lso"/>
-      <outfile xil_pn:name="SSC.ngc"/>
-      <outfile xil_pn:name="SSC.ngr"/>
-      <outfile xil_pn:name="SSC.prj"/>
-      <outfile xil_pn:name="SSC.stx"/>
-      <outfile xil_pn:name="SSC.syr"/>
-      <outfile xil_pn:name="SSC.xst"/>
-      <outfile xil_pn:name="SSC_xst.xrpt"/>
-      <outfile xil_pn:name="ShiftRegister.ngr"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="SoundController.lso"/>
+      <outfile xil_pn:name="SoundController.ngc"/>
       <outfile xil_pn:name="SoundController.ngr"/>
+      <outfile xil_pn:name="SoundController.prj"/>
+      <outfile xil_pn:name="SoundController.stx"/>
+      <outfile xil_pn:name="SoundController.syr"/>
+      <outfile xil_pn:name="SoundController.xst"/>
+      <outfile xil_pn:name="SoundController_xst.xrpt"/>
       <outfile xil_pn:name="SoundCtrl.ngr"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1591220734" xil_pn:in_ck="-3874558288190001747" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4588938252601579090" xil_pn:start_ts="1591220734">
+    <transform xil_pn:end_ts="1592671245" xil_pn:in_ck="-3874558288190001747" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3479079296220031777" xil_pn:start_ts="1592671245">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1592671254" xil_pn:in_ck="7264983556216263609" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6066484529484099795" xil_pn:start_ts="1592671245">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="SoundController.bld"/>
+      <outfile xil_pn:name="SoundController.ngd"/>
+      <outfile xil_pn:name="SoundController_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1592671287" xil_pn:in_ck="229019510296099207" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1592671254">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="SoundController.pcf"/>
+      <outfile xil_pn:name="SoundController_map.map"/>
+      <outfile xil_pn:name="SoundController_map.mrp"/>
+      <outfile xil_pn:name="SoundController_map.ncd"/>
+      <outfile xil_pn:name="SoundController_map.ngm"/>
+      <outfile xil_pn:name="SoundController_map.xrpt"/>
+      <outfile xil_pn:name="SoundController_summary.xml"/>
+      <outfile xil_pn:name="SoundController_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1592671308" xil_pn:in_ck="6762800804765627578" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1592671287">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="SoundController.ncd"/>
+      <outfile xil_pn:name="SoundController.pad"/>
+      <outfile xil_pn:name="SoundController.par"/>
+      <outfile xil_pn:name="SoundController.ptwx"/>
+      <outfile xil_pn:name="SoundController.unroutes"/>
+      <outfile xil_pn:name="SoundController.xpi"/>
+      <outfile xil_pn:name="SoundController_pad.csv"/>
+      <outfile xil_pn:name="SoundController_pad.txt"/>
+      <outfile xil_pn:name="SoundController_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:name="TRAN_postRouteTrce">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
     </transform>
   </transforms>
 

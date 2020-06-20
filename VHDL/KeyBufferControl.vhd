@@ -65,7 +65,7 @@ begin
 	end process;
 	WReg <= '1' when (CS = STATE_DAV_ON) else '0';
 	DAC <= '1' when (CS = STATE_DAV_ON) else '0';
-	DVAL <= '1' when (CS = STATE_DAV_ON or CS = STATE_DAV_OFF) else '0';
+	DVAL <= '1' when (CS = STATE_DAV_OFF) else '0';
 end Behavioral;
 
 

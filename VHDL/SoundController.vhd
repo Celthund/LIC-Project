@@ -70,6 +70,14 @@ architecture Structural of SoundController is
 			Q : OUT std_logic_vector(WIDTH-1 downto 0)
 		);
 	END COMPONENT;
+	COMPONENT LatchSR
+		PORT( 
+			CLK : in  STD_LOGIC;
+			RST : in  STD_LOGIC;
+			SET : in  STD_LOGIC;
+			Q : out  STD_LOGIC
+		);
+	END COMPONENT;
 	SIGNAL setPlay, clearPlay, setSound, setVolume, enable : STD_LOGIC;
 begin
 	SoundDecoder : SoundCMDDecoder 
@@ -90,15 +98,12 @@ begin
 			Enable => enable,
 			done => done
 	);
-	RegisterPlay : Register_D 
-	GENERIC MAP(
-		WIDTH => 1
-	)
+	LatchPlay : LatchSR 
 	PORT MAP(
-			CLK => setPlay,
+			CLK => CLK,
 			RST => clearPlay,
-			D => "1",
-			Q(0) => Play
+			SET => setPlay,
+			Q => Play
 	);
 	RegisterVolume : Register_D 
 	GENERIC MAP(

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 public class Scores {
 
+    private int maxEntries = 20;
+
     class Entry {
         /**
          Class used for arraylist to keep each entry of the leaderboard.
@@ -38,7 +40,7 @@ public class Scores {
         return new Entry(arrString[1], Integer.parseInt(arrString[0]));
     }
 
-    public void saveScore(){
+    public void save(){
         /**
             Saves the current leaderboard to a file.
          **/
@@ -53,6 +55,12 @@ public class Scores {
         /**
             Add a given name and score to the leaderboard, this will be saved in order of the score.
          **/
+        if (leaderBoard.size() == maxEntries){
+            if (leaderBoard.get(maxEntries - 1).score > score)
+                return;
+            else
+                leaderBoard.remove(maxEntries - 1);
+        }
         for(Entry entry: leaderBoard){
             if (score > entry.score) {
                 leaderBoard.add(leaderBoard.indexOf(entry), new Entry(name, score));

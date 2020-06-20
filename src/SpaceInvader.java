@@ -1,37 +1,135 @@
+import CoinAcceptor.CoinAcceptor;
 import Scores.Scores;
+import KBD.KBD;
+import Statistics.Statistics;
 import TUI.TUI;
+import SoundGenerator.SoundGenerator;
+import M.M;
 import isel.leic.utils.Time;
 
-public class SpaceInvader {
+public class SpaceInvader{
+    private static final int MENU_TIMEOUT = 3000, SCORE_CHANGE = 3000;
     private static int score = 0;
     private static char[] enemyState = new char[TUI.COLUMNS - 2];
     private static final char cannonChar = ']';
     private static final char shipChar = 0;
     private static char cannon = cannonChar;
     private static Scores leaderboard = new Scores();
-    private static int scoreCounter = 1;
+    private static Statistics statistics = new Statistics();
+    private static int scoreCounter = 1, credits = 0;
 
+    private enum Menus {
+        MAIN_MENU, MAINTENANCE, STATISTIC, CLEAR, SHUTDOWN
+    };
 
     public static void main(String[] args) {
         /**
          Main cycle that handles the initial menu of the application.
          **/
-        long time = Time.getTimeInMillis();
         TUI.init();
-        TUI.drawMainMenu();
+        SoundGenerator.init();
+        SoundGenerator.setVolume(3);
+
+        Menus currMenu = Menus.MAIN_MENU;
+        long timeScore = Time.getTimeInMillis();
+        long timeReturn = Integer.MIN_VALUE;
+        boolean showScore = true;
         char key;
+        TUI.drawMainMenu();
         while (true) {
             key = TUI.readUserInput(100);
-            if (key == '*') {
-                startGame();
-                saveScore();
-                TUI.drawMainMenu();
-            }
-            if (Time.getTimeInMillis() - time >= 2000) {
-                showScore();
-                time = Time.getTimeInMillis();
+            if (timeReturn != Integer.MIN_VALUE){
+                if (Time.getTimeInMillis() - timeReturn >= MENU_TIMEOUT) {
+                    timeReturn = Integer.MIN_VALUE;
+                    if (M.checkMButton()){
+                        currMenu = Menus.MAINTENANCE;
+                        TUI.drawMaintenance();
+                    }
+                    else {
+                        currMenu = Menus.MAIN_MENU;
+                        TUI.drawMainMenu();
+                    }
+                }
+                if (currMenu == Menus.CLEAR){
+                    if (key == '5') {
+                        statistics.reset();
+                        timeReturn -= MENU_TIMEOUT;
+                    } else if (key != KBD.NONE) {
+                        timeReturn -= MENU_TIMEOUT;
+                    }
+                }
+                if (currMenu == Menus.STATISTIC){
+                    if (key == '#') {
+                        TUI.drawClearCounters();
+                        currMenu = Menus.CLEAR;
+                        timeReturn = Time.getTimeInMillis();
+                    } else if (key != KBD.NONE) {
+                        timeReturn -= MENU_TIMEOUT;
+                    }
+                }
+                if (currMenu == Menus.SHUTDOWN){
+                    if (key == '5') {
+                        statistics.save();
+                        leaderboard.save();
+                        System.exit(0);
+                    } else if (key != KBD.NONE) {
+                        timeReturn -= MENU_TIMEOUT;
+                    }
+                }
+            } else {
+                if (M.checkMButton()){
+                    if (currMenu == Menus.MAIN_MENU){
+                        currMenu = Menus.MAINTENANCE;
+                        TUI.drawMaintenance();
+                    }
+                    if (key == '*') {
+                        currMenu = Menus.STATISTIC;
+                        TUI.drawStatistics(statistics);
+                        timeReturn = Time.getTimeInMillis();
+                    } else if (key == '#') {
+                        currMenu = Menus.SHUTDOWN;
+                        TUI.drawShutdown();
+                        timeReturn = Time.getTimeInMillis();
+                    } else if (key != KBD.NONE){
+                        startGame();
+                    }
+                } else {
+                    if (CoinAcceptor.waitCoin(100)){
+                        statistics.coins++;
+                        credits += 2;
+                        TUI.drawAvailableCredits(credits);
+                        showScore = true;
+                    }
+                    if (currMenu == Menus.MAINTENANCE){
+                        currMenu = Menus.MAIN_MENU;
+                        TUI.drawMainMenu();
+                    }
+                    if (key == '*') {
+                        if (credits > 0){
+                            startGame();
+                            saveScore();
+                            statistics.games++;
+                            credits--;
+                        }
+                    }
+                    if (Time.getTimeInMillis() - timeScore >= SCORE_CHANGE) {
+                        if (showScore){
+                            showScore();
+                            showScore = false;
+                        } else {
+                            TUI.drawAvailableCredits(credits);
+                            showScore = true;
+                        }
+                        timeScore = Time.getTimeInMillis();
+                    }
+                }
+
             }
         }
+    }
+
+    private static void handleSubMenus(){
+
     }
 
     public static void parseKeyPress(char key) {
@@ -70,6 +168,7 @@ public class SpaceInvader {
     public static void saveScore() {
         String name = TUI.readUsername();
         leaderboard.add(name, score);
+        TUI.drawMainMenu();
     }
 
 
@@ -125,7 +224,9 @@ public class SpaceInvader {
             }
         }
         TUI.drawGameOver();
-        Time.sleep(1500);
+        SoundGenerator.play(1);
+        Time.sleep(1000);
+        SoundGenerator.stop();
     }
 
     private static boolean checkGameOver() {

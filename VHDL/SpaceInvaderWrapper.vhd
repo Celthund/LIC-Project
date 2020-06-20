@@ -89,6 +89,25 @@ architecture Behavioral of SpaceInvaderWrapper is
            Dout : out  STD_LOGIC_VECTOR (4 downto 0);
            WrL : out  STD_LOGIC);
 	END COMPONENT;
+	COMPONENT SSC 
+	PORT ( 
+		  CLK : in STD_LOGIC;
+		  RST : in STD_LOGIC;
+		  SDX : in  STD_LOGIC;
+		  SCLK : in  STD_LOGIC;
+		  SS : in  STD_LOGIC;
+		  sid : out std_logic_vector(1 downto 0);
+		  vol : out std_logic_vector(1 downto 0);
+		  Play : out STD_LOGIC);
+	END COMPONENT;
+	COMPONENT CoinAcceptor 
+	Port ( 
+	        CLK : in STD_LOGIC;
+			  RST : in STD_LOGIC;
+			  accept : in  STD_LOGIC;
+           cointIn : in  STD_LOGIC;
+           coinOut : out  STD_LOGIC);
+	END COMPONENT;
 begin
 
 	KeyboardRead : KeyboardReader

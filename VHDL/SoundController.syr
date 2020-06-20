@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: SoundController.prj
 
@@ -114,6 +114,9 @@ Parsing architecture <Behavioral> of entity <soundcmddecoder>.
 Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Register_D.vhd" into library work
 Parsing entity <Register_D>.
 Parsing architecture <Behavioral> of entity <register_d>.
+Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\LatchSR.vhd" into library work
+Parsing entity <LatchSR>.
+Parsing architecture <Behavioral> of entity <latchsr>.
 Parsing VHDL file "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\SoundController.vhd" into library work
 Parsing entity <SoundController>.
 Parsing architecture <Structural> of entity <soundcontroller>.
@@ -128,7 +131,7 @@ Elaborating entity <SoundCMDDecoder> (architecture <Behavioral>) from library <w
 
 Elaborating entity <SoundCtrl> (architecture <Behavioral>) from library <work>.
 
-Elaborating entity <Register_D> (architecture <Behavioral>) with generics from library <work>.
+Elaborating entity <LatchSR> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <Register_D> (architecture <Behavioral>) with generics from library <work>.
 
@@ -169,21 +172,20 @@ Synthesizing Unit <SoundCtrl>.
 	inferred   1 Finite State Machine(s).
 Unit <SoundCtrl> synthesized.
 
-Synthesizing Unit <Register_D_1>.
-    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Register_D.vhd".
-        WIDTH = 1
+Synthesizing Unit <LatchSR>.
+    Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\LatchSR.vhd".
     Found 1-bit register for signal <Q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <Register_D_1> synthesized.
+Unit <LatchSR> synthesized.
 
-Synthesizing Unit <Register_D_2>.
+Synthesizing Unit <Register_D>.
     Related source file is "C:\Users\tiago\OneDrive\Documentos\Universidade\LIC\SpaceInvader\VHDL\Register_D.vhd".
         WIDTH = 2
     Found 2-bit register for signal <Q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <Register_D_2> synthesized.
+Unit <Register_D> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -260,11 +262,12 @@ Top Level Output File Name         : SoundController.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 7
-#      LUT3                        : 6
-#      VCC                         : 1
+# BELS                             : 5
+#      LUT3                        : 4
+#      LUT4                        : 1
 # FlipFlops/Latches                : 7
-#      FDC                         : 7
+#      FD                          : 1
+#      FDC                         : 6
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 12
@@ -278,21 +281,21 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:               2  out of  126800     0%  
- Number of Slice LUTs:                    6  out of  63400     0%  
-    Number used as Logic:                 6  out of  63400     0%  
+ Number of Slice Registers:               3  out of  126800     0%  
+ Number of Slice LUTs:                    5  out of  63400     0%  
+    Number used as Logic:                 5  out of  63400     0%  
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:      8
-   Number with an unused Flip Flop:       6  out of      8    75%  
-   Number with an unused LUT:             2  out of      8    25%  
+   Number with an unused Flip Flop:       5  out of      8    62%  
+   Number with an unused LUT:             3  out of      8    37%  
    Number of fully used LUT-FF pairs:     0  out of      8     0%  
    Number of unique control sets:         4
 
 IO Utilization: 
  Number of IOs:                          13
  Number of bonded IOBs:                  13  out of    210     6%  
-    IOB Flip Flops/Latches:               5
+    IOB Flip Flops/Latches:               4
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -320,10 +323,9 @@ Clock Signal                        | Clock buffer(FF name)      | Load  |
 ------------------------------------+----------------------------+-------+
 setSound(SoundDecoder/setSound1:O)  | NONE(*)(RegisterSound/Q_1) | 2     |
 setVolume(SoundDecoder/setVolume1:O)| NONE(*)(RegisterVolume/Q_1)| 2     |
-setPlay(SoundDecoder/Play1:O)       | NONE(*)(RegisterPlay/Q_0)  | 1     |
-CLK                                 | BUFGP                      | 2     |
+CLK                                 | BUFGP                      | 3     |
 ------------------------------------+----------------------------+-------+
-(*) These 3 clock signal(s) are generated by combinatorial logic,
+(*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -336,8 +338,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 0.868ns (Maximum Frequency: 1151.543MHz)
-   Minimum input arrival time before clock: 1.120ns
+   Minimum period: 0.864ns (Maximum Frequency: 1157.140MHz)
+   Minimum input arrival time before clock: 0.672ns
    Maximum output required time after clock: 0.650ns
    Maximum combinational path delay: No path found
 
@@ -347,10 +349,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 0.868ns (frequency: 1151.543MHz)
-  Total number of paths / destination ports: 4 / 2
+  Clock period: 0.864ns (frequency: 1157.140MHz)
+  Total number of paths / destination ports: 6 / 3
 -------------------------------------------------------------------------
-Delay:               0.868ns (Levels of Logic = 1)
+Delay:               0.864ns (Levels of Logic = 1)
   Source:            SoundASM/CS_FSM_FFd2 (FF)
   Destination:       SoundASM/CS_FSM_FFd2 (FF)
   Source Clock:      CLK rising
@@ -360,12 +362,12 @@ Delay:               0.868ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              6   0.361   0.402  SoundASM/CS_FSM_FFd2 (SoundASM/CS_FSM_FFd2)
+     FDC:C->Q              5   0.361   0.398  SoundASM/CS_FSM_FFd2 (SoundASM/CS_FSM_FFd2)
      LUT3:I1->O            1   0.097   0.000  SoundASM/CS_FSM_FFd2-In1 (SoundASM/CS_FSM_FFd2-In)
      FDC:D                     0.008          SoundASM/CS_FSM_FFd2
     ----------------------------------------
-    Total                      0.868ns (0.466ns logic, 0.402ns route)
-                                       (53.7% logic, 46.3% route)
+    Total                      0.864ns (0.466ns logic, 0.398ns route)
+                                       (53.9% logic, 46.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'setSound'
@@ -406,43 +408,24 @@ Offset:              0.652ns (Levels of Logic = 1)
                                        (53.6% logic, 46.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'setPlay'
-  Total number of paths / destination ports: 2 / 1
--------------------------------------------------------------------------
-Offset:              1.120ns (Levels of Logic = 2)
-  Source:            Din<0> (PAD)
-  Destination:       RegisterPlay/Q_0 (FF)
-  Destination Clock: setPlay rising
-
-  Data Path: Din<0> to RegisterPlay/Q_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             4   0.001   0.393  Din_0_IBUF (Din_0_IBUF)
-     LUT3:I1->O            1   0.097   0.279  SoundDecoder/Stop1 (clearPlay)
-     FDC:CLR                   0.349          RegisterPlay/Q_0
-    ----------------------------------------
-    Total                      1.120ns (0.447ns logic, 0.673ns route)
-                                       (39.9% logic, 60.1% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 6 / 5
 -------------------------------------------------------------------------
-Offset:              0.652ns (Levels of Logic = 1)
-  Source:            RST (PAD)
-  Destination:       SoundASM/CS_FSM_FFd2 (FF)
+Offset:              0.672ns (Levels of Logic = 2)
+  Source:            Din<0> (PAD)
+  Destination:       LatchPlay/Q (FF)
   Destination Clock: CLK rising
 
-  Data Path: RST to SoundASM/CS_FSM_FFd2
+  Data Path: Din<0> to LatchPlay/Q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             6   0.001   0.302  RST_IBUF (RST_IBUF)
-     FDC:CLR                   0.349          SoundASM/CS_FSM_FFd2
+     IBUF:I->O             3   0.001   0.566  Din_0_IBUF (Din_0_IBUF)
+     LUT4:I0->O            1   0.097   0.000  LatchPlay/Q_rstpot (LatchPlay/Q_rstpot)
+     FD:D                      0.008          LatchPlay/Q
     ----------------------------------------
-    Total                      0.652ns (0.350ns logic, 0.302ns route)
-                                       (53.6% logic, 46.4% route)
+    Total                      0.672ns (0.106ns logic, 0.566ns route)
+                                       (15.8% logic, 84.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'setSound'
@@ -483,27 +466,8 @@ Offset:              0.640ns (Levels of Logic = 1)
                                        (56.4% logic, 43.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'setPlay'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              0.640ns (Levels of Logic = 1)
-  Source:            RegisterPlay/Q_0 (FF)
-  Destination:       Play (PAD)
-  Source Clock:      setPlay rising
-
-  Data Path: RegisterPlay/Q_0 to Play
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              1   0.361   0.279  RegisterPlay/Q_0 (RegisterPlay/Q_0)
-     OBUF:I->O                 0.000          Play_OBUF (Play)
-    ----------------------------------------
-    Total                      0.640ns (0.361ns logic, 0.279ns route)
-                                       (56.4% logic, 43.6% route)
-
-=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
 Offset:              0.650ns (Levels of Logic = 1)
   Source:            SoundASM/CS_FSM_FFd1 (FF)
@@ -530,26 +494,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    0.868|         |         |         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock setPlay
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |    1.621|         |         |         |
+CLK            |    0.864|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.17 secs
+Total CPU time to Xst completion: 10.51 secs
  
 --> 
 
-Total memory usage is 4625904 kilobytes
+Total memory usage is 4625884 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
