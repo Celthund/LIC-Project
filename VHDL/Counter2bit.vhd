@@ -49,6 +49,8 @@ architecture Structural of Counter2bit is
 		);
 	END COMPONENT;
 	Signal IQ: STD_LOGIC_VECTOR (1 downto 0);
+	Signal T1: STD_LOGIC;
+	
 begin
 	RegisterT1 : Register_T 
 	GENERIC MAP(
@@ -67,9 +69,10 @@ begin
 	PORT MAP(
 			CLK => CLK,
 			RST => RST,
-			T(0) => CE and IQ(0),
+			T(0) => T1,
 			Q(0) => IQ(1)
 	);
+	T1 <= CE and IQ(0);
 	Q <= IQ;
 end Structural;
 

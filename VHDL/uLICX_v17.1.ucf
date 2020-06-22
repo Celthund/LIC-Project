@@ -44,8 +44,8 @@ NET "INPORT_4"  LOC = "P56";
 NET "OUTPORT_1"   LOC = "P91";
 NET "OUTPORT_2"   LOC = "P92";
 NET "OUTPORT_3"   LOC = "P93";
-// NET "OUTPORT_4"   LOC = "P94";
-// NET "OUTPORT_5"   LOC = "P95";
+NET "OUTPORT_4"   LOC = "P94";
+NET "OUTPORT_5"   LOC = "P95";
 // NET "OUTPORT_6"   LOC = "P96";
 NET "OUTPORT_7"   LOC = "P97";
 
@@ -110,8 +110,8 @@ NET "J2_13"      LOC = "P28";
 NET "J2_14"      LOC = "P37";
 NET "J2_15"      LOC = "P29";
 // NET "J2_16"      LOC = "P39";
-// NET "J2_17"      LOC = "P32";
-// NET "J2_18"      LOC = "P40";
+ NET "J2_17"      LOC = "P32";
+ NET "J2_18"      LOC = "P40";
 
 ##### Connector J3 (Header C)
 // NET "J3_1"       LOC = "P1";    # Connected to the global GTS3 pin

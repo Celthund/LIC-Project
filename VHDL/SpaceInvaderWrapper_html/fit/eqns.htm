@@ -1,0 +1,573 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "SpaceInvaderWrapper";
+      var device = "XC95144XL";
+      signals = new Array("INPORT_0","INPORT_1","INPORT_2","INPORT_3","INPORT_4","J2_10","J2_11","J2_9","J4_10","J4_11","J4_12","J4_13","J4_14","J4_9","KeyboardReadINTERNAL_K0_SPECSIG","KeyboardReadINTERNAL_K1_SPECSIG","KeyboardReadINTERNAL_K2_SPECSIG","KeyboardReadINTERNAL_K3_SPECSIG","KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG","KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG","KeyboardReadKeyDecodeKeyScannerNOT_DECOUT0_SPECSIG","KeyboardReadKeyDecodeKeyScannerNOT_DECOUT1_SPECSIG","KeyboardReadKeyDecodeKeyScannerNOT_DECOUT2_SPECSIG","KeyboardReadVAL_SPECSIG","OUTPORT_4","OUTPORT_5","SLCDSerialReceiveParityChkQ_SPECSIG","SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG","SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG","SLCDSerialReceivecounterOut0_SPECSIG","SLCDSerialReceivecounterOut1_SPECSIG","SLCDSerialReceivecounterOut2_SPECSIG","SLCDdoneAccept_SPECSIG");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("D","D","D","D","","","","","D","D","D","D","D","D","D","D","T","T","T","D","T","","","","D","","","T","D","D","D","T","T","T","D");
+
+      
+        specSig["b_SPECSIG"]=new Array("(b)");
+      
+        specSig["KeyboardReadKeyDecodeKeyScannerNOT_DECOUT1_SPECSIG"]=new Array("KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT<1>");
+      
+        specSig["KeyboardReadINTERNAL_K1_SPECSIG"]=new Array("KeyboardRead/INTERNAL_K<1>");
+      
+        specSig["KeyboardReadVAL_SPECSIG"]=new Array("KeyboardRead/VAL");
+      
+        specSig["SLCDSerialReceivecounterOut0_SPECSIG"]=new Array("SLCD/SerialReceive/counterOut<0>");
+      
+        specSig["KeyboardReadINTERNAL_K3_SPECSIG"]=new Array("KeyboardRead/INTERNAL_K<3>");
+      
+        specSig["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG"]=new Array("KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2");
+      
+        specSig["SLCDdoneAccept_SPECSIG"]=new Array("SLCD/doneAccept");
+      
+        specSig["SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG"]=new Array("SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2");
+      
+        specSig["SLCDSerialReceiveParityChkQ_SPECSIG"]=new Array("SLCD/SerialReceive/ParityChk/Q");
+      
+        specSig["SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG"]=new Array("SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd1");
+      
+        specSig["SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG"]=new Array("SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3");
+      
+        specSig["SLCDSerialReceivecounterOut1_SPECSIG"]=new Array("SLCD/SerialReceive/counterOut<1>");
+      
+        specSig["SLCDSerialReceivecounterOut2_SPECSIG"]=new Array("SLCD/SerialReceive/counterOut<2>");
+      
+        specSig["KeyboardReadKeyDecodeKeyScannerNOT_DECOUT2_SPECSIG"]=new Array("KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT<2>");
+      
+        specSig["KeyboardReadKeyDecodeKeyScannerNOT_DECOUT0_SPECSIG"]=new Array("KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT<0>");
+      
+        specSig["KeyboardReadINTERNAL_K0_SPECSIG"]=new Array("KeyboardRead/INTERNAL_K<0>");
+      
+        specSig["KeyboardReadINTERNAL_K2_SPECSIG"]=new Array("KeyboardRead/INTERNAL_K<2>");
+      
+        specSig["KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG"]=new Array("KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd1");
+      
+        specSig["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG"]=new Array("KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1");
+      
+            pterms["FB1_17_1"]=new Array("SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/OUTPORT_3","SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG","SLCDSerialReceiveParityChkQ_SPECSIG");
+          
+            pterms["FB1_17_2"]=new Array("/OUTPORT_3","SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG","SLCDSerialReceivecounterOut0_SPECSIG","/SLCDSerialReceivecounterOut1_SPECSIG","SLCDSerialReceivecounterOut2_SPECSIG");
+          
+            pterms["FB1_18_1"]=new Array("SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG","SLCDdoneAccept_SPECSIG");
+          
+            pterms["FB1_18_2"]=new Array("SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG");
+          
+            pterms["FB1_18_3"]=new Array("SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/OUTPORT_3","SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG","SLCDSerialReceivecounterOut0_SPECSIG");
+          
+            pterms["FB1_18_4"]=new Array("SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/OUTPORT_3","SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG","/SLCDSerialReceivecounterOut1_SPECSIG");
+          
+            pterms["FB1_18_5"]=new Array("SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/OUTPORT_3","SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG","/SLCDSerialReceivecounterOut2_SPECSIG");
+          
+            pterms["FB3_5_1"]=new Array("/KeyboardReadKeyDecodeKeyScannerNOT_DECOUT2_SPECSIG");
+          
+            pterms["FB3_6_1"]=new Array("/KeyboardReadKeyDecodeKeyScannerNOT_DECOUT0_SPECSIG");
+          
+            pterms["FB3_14_1"]=new Array("/KeyboardReadINTERNAL_K2_SPECSIG","KeyboardReadINTERNAL_K3_SPECSIG");
+          
+            pterms["FB3_14_2"]=new Array("KeyboardReadINTERNAL_K3_SPECSIG","KeyboardReadKeyDecodeKeyScannerNOT_DECOUT2_SPECSIG");
+          
+            pterms["FB3_15_1"]=new Array("KeyboardReadKeyDecodeKeyScannerNOT_DECOUT1_SPECSIG","KeyboardReadINTERNAL_K2_SPECSIG");
+          
+            pterms["FB3_15_2"]=new Array("KeyboardReadINTERNAL_K2_SPECSIG","/KeyboardReadINTERNAL_K3_SPECSIG");
+          
+            pterms["FB3_16_1"]=new Array("/KeyboardReadINTERNAL_K2_SPECSIG","/KeyboardReadINTERNAL_K3_SPECSIG");
+          
+            pterms["FB3_16_2"]=new Array("KeyboardReadINTERNAL_K2_SPECSIG","KeyboardReadINTERNAL_K3_SPECSIG","KeyboardReadKeyDecodeKeyScannerNOT_DECOUT0_SPECSIG");
+          
+            pterms["FB3_17_1"]=new Array("J2_13","J2_12");
+          
+            pterms["FB3_17_2"]=new Array("KeyboardReadVAL_SPECSIG");
+          
+            pterms["FB3_18_1"]=new Array("/J2_12");
+          
+            pterms["FB3_18_2"]=new Array("/J2_14","J2_13");
+          
+            pterms["FB3_18_3"]=new Array("KeyboardReadVAL_SPECSIG");
+          
+            pterms["FB4_12_1"]=new Array("J2_17");
+          
+            pterms["FB4_14_1"]=new Array("J2_18");
+          
+            pterms["FB5_2_1"]=new Array("/KeyboardReadKeyDecodeKeyScannerNOT_DECOUT1_SPECSIG");
+          
+            pterms["FB5_17_1"]=new Array("/KeyboardReadVAL_SPECSIG","KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG");
+          
+            pterms["FB5_17_2"]=new Array("KeyboardReadVAL_SPECSIG","/KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG");
+          
+            pterms["FB5_17_3"]=new Array("J2_15","J2_14","J2_13","J2_12","/KeyboardReadVAL_SPECSIG");
+          
+            pterms["FB5_18_1"]=new Array("KeyboardReadVAL_SPECSIG","/KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG","/KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG");
+          
+            pterms["FB5_18_2"]=new Array("J2_15","J2_14","J2_13","J2_12","KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG");
+          
+            pterms["FB5_18_3"]=new Array("J2_15","J2_14","J2_13","J2_12","/KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG","KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG");
+          
+            pterms["FB6_5_1"]=new Array("J4_12");
+          
+            pterms["FB6_5_2"]=new Array("OUTPORT_2");
+          
+            pterms["FB6_5_3"]=new Array("/SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG");
+          
+            pterms["FB6_6_1"]=new Array("J4_14");
+          
+            pterms["FB6_6_2"]=new Array("OUTPORT_2");
+          
+            pterms["FB6_6_3"]=new Array("/SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG");
+          
+            pterms["FB6_12_1"]=new Array("/SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG");
+          
+            pterms["FB6_12_2"]=new Array("OUTPORT_2");
+          
+            pterms["FB6_13_1"]=new Array("SLCDSerialReceivecounterOut0_SPECSIG","SLCDSerialReceivecounterOut1_SPECSIG");
+          
+            pterms["FB6_13_2"]=new Array("/SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG");
+          
+            pterms["FB6_13_3"]=new Array("OUTPORT_2");
+          
+            pterms["FB6_14_1"]=new Array("J4_11");
+          
+            pterms["FB6_14_2"]=new Array("OUTPORT_2");
+          
+            pterms["FB6_14_3"]=new Array("/SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG");
+          
+            pterms["FB6_15_1"]=new Array("J4_13");
+          
+            pterms["FB6_15_2"]=new Array("OUTPORT_2");
+          
+            pterms["FB6_15_3"]=new Array("/SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG");
+          
+            pterms["FB6_16_1"]=new Array("SLCDSerialReceivecounterOut0_SPECSIG");
+          
+            pterms["FB6_16_2"]=new Array("/SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG");
+          
+            pterms["FB6_16_3"]=new Array("OUTPORT_2");
+          
+            pterms["FB6_17_1"]=new Array("OUTPORT_1");
+          
+            pterms["FB6_17_2"]=new Array("OUTPORT_2");
+          
+            pterms["FB6_17_3"]=new Array("/SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG");
+          
+            pterms["FB6_18_1"]=new Array("OUTPORT_1");
+          
+            pterms["FB6_18_2"]=new Array("/SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG");
+          
+            pterms["FB6_18_3"]=new Array("OUTPORT_2");
+          
+            pterms["FB7_5_1"]=new Array("KeyboardReadINTERNAL_K0_SPECSIG");
+          
+            pterms["FB7_5_2"]=new Array("/KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG");
+          
+            pterms["FB7_6_1"]=new Array("KeyboardReadINTERNAL_K1_SPECSIG");
+          
+            pterms["FB7_6_2"]=new Array("/KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG");
+          
+            pterms["FB7_8_1"]=new Array("KeyboardReadINTERNAL_K2_SPECSIG");
+          
+            pterms["FB7_8_2"]=new Array("/KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG");
+          
+            pterms["FB7_9_1"]=new Array("KeyboardReadINTERNAL_K3_SPECSIG");
+          
+            pterms["FB7_9_2"]=new Array("/KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG");
+          
+            pterms["FB7_11_1"]=new Array("KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","/KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG");
+          
+            pterms["FB7_15_1"]=new Array("/KeyboardReadVAL_SPECSIG","KeyboardReadINTERNAL_K2_SPECSIG","/KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG");
+          
+            pterms["FB7_16_1"]=new Array("/KeyboardReadVAL_SPECSIG","/KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG");
+          
+            pterms["FB7_17_1"]=new Array("KeyboardReadVAL_SPECSIG","/KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG");
+          
+            pterms["FB7_17_2"]=new Array("KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","OUTPORT_7");
+          
+            pterms["FB7_18_1"]=new Array("/KeyboardReadVAL_SPECSIG","/KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG");
+          
+            pterms["FB7_18_2"]=new Array("KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG","KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG","/OUTPORT_7");
+          
+            pterms["FB8_15_1"]=new Array("J4_9");
+          
+            pterms["FB8_15_2"]=new Array("SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG","SLCDdoneAccept_SPECSIG");
+          
+            pterms["FB8_16_1"]=new Array("SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG","SLCDdoneAccept_SPECSIG");
+          
+            pterms["FB8_16_2"]=new Array("SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG","SLCDdoneAccept_SPECSIG");
+          
+            pterms["FB8_17_1"]=new Array("/J4_9","SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG","/SLCDdoneAccept_SPECSIG");
+          
+            pterms["FB8_18_1"]=new Array("OUTPORT_3");
+          
+            pterms["FB8_18_2"]=new Array("SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG");
+          
+            pterms["FB8_18_3"]=new Array("SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG","/SLCDSerialReceivecounterOut0_SPECSIG","SLCDSerialReceivecounterOut1_SPECSIG","SLCDSerialReceivecounterOut2_SPECSIG");
+          
+          d2["SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG"]=new Array("FB1_18_1","FB1_18_2","FB1_18_3","FB1_18_4","FB1_18_5","FB1_17_1","FB1_17_2");
+          
+            d2imp["SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG"]=new Array("1","1","1","1","1","1","1");
+          
+              gblclk["SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG"]=new Array("CLK");
+            
+              gblrst["SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG"]=new Array("RST");
+            prld["SLCDSerialReceiveSerialCtrlCS_FSM_FFd2_SPECSIG"]="GND";
+          d2["J2_9"]=new Array("FB3_5_1");
+          
+            d2imp["J2_9"]=new Array("1");
+          
+          d2["J2_11"]=new Array("FB3_6_1");
+          
+            d2imp["J2_11"]=new Array("1");
+          
+          d2["KeyboardReadKeyDecodeKeyScannerNOT_DECOUT2_SPECSIG"]=new Array("FB3_14_1","FB3_14_2");
+          
+            d2imp["KeyboardReadKeyDecodeKeyScannerNOT_DECOUT2_SPECSIG"]=new Array("1","1");
+          
+          d2["KeyboardReadKeyDecodeKeyScannerNOT_DECOUT1_SPECSIG"]=new Array("FB3_15_1","FB3_15_2");
+          
+            d2imp["KeyboardReadKeyDecodeKeyScannerNOT_DECOUT1_SPECSIG"]=new Array("1","1");
+          
+          d2["KeyboardReadKeyDecodeKeyScannerNOT_DECOUT0_SPECSIG"]=new Array("FB3_16_1","FB3_16_2");
+          
+            d2imp["KeyboardReadKeyDecodeKeyScannerNOT_DECOUT0_SPECSIG"]=new Array("1","1");
+          
+          d2["KeyboardReadINTERNAL_K1_SPECSIG"]=new Array("FB3_17_1");
+          
+            d2imp["KeyboardReadINTERNAL_K1_SPECSIG"]=new Array("1");
+          
+              clk["KeyboardReadINTERNAL_K1_SPECSIG"]=new Array("FB3_17_2");
+              
+                clkimp["KeyboardReadINTERNAL_K1_SPECSIG"]=new Array("1");
+              
+              gblrst["KeyboardReadINTERNAL_K1_SPECSIG"]=new Array("RST");
+            prld["KeyboardReadINTERNAL_K1_SPECSIG"]="GND";
+          d2["KeyboardReadINTERNAL_K0_SPECSIG"]=new Array("FB3_18_1","FB3_18_2");
+          
+            d2imp["KeyboardReadINTERNAL_K0_SPECSIG"]=new Array("1","1");
+          
+              clk["KeyboardReadINTERNAL_K0_SPECSIG"]=new Array("FB3_18_3");
+              
+                clkimp["KeyboardReadINTERNAL_K0_SPECSIG"]=new Array("1");
+              
+              gblrst["KeyboardReadINTERNAL_K0_SPECSIG"]=new Array("RST");
+            prld["KeyboardReadINTERNAL_K0_SPECSIG"]="GND";
+          d2["OUTPORT_4"]=new Array("FB4_12_1");
+          
+            d2imp["OUTPORT_4"]=new Array("1");
+          
+          d2["OUTPORT_5"]=new Array("FB4_14_1");
+          
+            d2imp["OUTPORT_5"]=new Array("1");
+          
+          d2["J2_10"]=new Array("FB5_2_1");
+          
+            d2imp["J2_10"]=new Array("1");
+          
+          d2["KeyboardReadVAL_SPECSIG"]=new Array("FB5_17_1","FB5_17_2","FB5_17_3");
+          
+            d2imp["KeyboardReadVAL_SPECSIG"]=new Array("1","1","1");
+          
+              gblclk["KeyboardReadVAL_SPECSIG"]=new Array("CLK");
+            
+              gblrst["KeyboardReadVAL_SPECSIG"]=new Array("RST");
+            prld["KeyboardReadVAL_SPECSIG"]="GND";
+          d2["KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG"]=new Array("FB5_18_1","FB5_18_2","FB5_18_3");
+          
+            d2imp["KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG"]=new Array("1","1","1");
+          
+              gblclk["KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG"]=new Array("CLK");
+            
+              gblrst["KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG"]=new Array("RST");
+            prld["KeyboardReadKeyDecodeKeyCtrlCS_FSM_FFd1_SPECSIG"]="GND";
+          d2["J4_11"]=new Array("FB6_5_1");
+          
+            d2imp["J4_11"]=new Array("1");
+          
+              clk["J4_11"]=new Array("FB6_5_2");
+              
+                clkimp["J4_11"]=new Array("1");
+              
+              gblrst["J4_11"]=new Array("RST");
+            
+          ce["J4_11"]=new Array("FB6_5_3");
+          
+            ceimp["J4_11"]=new Array("1");
+          prld["J4_11"]="GND";
+          d2["J4_13"]=new Array("FB6_6_1");
+          
+            d2imp["J4_13"]=new Array("1");
+          
+              clk["J4_13"]=new Array("FB6_6_2");
+              
+                clkimp["J4_13"]=new Array("1");
+              
+              gblrst["J4_13"]=new Array("RST");
+            
+          ce["J4_13"]=new Array("FB6_6_3");
+          
+            ceimp["J4_13"]=new Array("1");
+          prld["J4_13"]="GND";
+          d2["SLCDSerialReceivecounterOut0_SPECSIG"]=new Array("VCC");
+          
+            d2imp["SLCDSerialReceivecounterOut0_SPECSIG"]=new Array("1");
+          
+              clk["SLCDSerialReceivecounterOut0_SPECSIG"]=new Array("FB6_12_2");
+              
+                clkimp["SLCDSerialReceivecounterOut0_SPECSIG"]=new Array("1");
+              
+              rst["SLCDSerialReceivecounterOut0_SPECSIG"]=new Array("FB6_12_1");
+              
+                rstimp["SLCDSerialReceivecounterOut0_SPECSIG"]=new Array("1");
+              prld["SLCDSerialReceivecounterOut0_SPECSIG"]="GND";
+          d2["SLCDSerialReceivecounterOut2_SPECSIG"]=new Array("FB6_13_1");
+          
+            d2imp["SLCDSerialReceivecounterOut2_SPECSIG"]=new Array("1");
+          
+              clk["SLCDSerialReceivecounterOut2_SPECSIG"]=new Array("FB6_13_3");
+              
+                clkimp["SLCDSerialReceivecounterOut2_SPECSIG"]=new Array("1");
+              
+              rst["SLCDSerialReceivecounterOut2_SPECSIG"]=new Array("FB6_13_2");
+              
+                rstimp["SLCDSerialReceivecounterOut2_SPECSIG"]=new Array("1");
+              prld["SLCDSerialReceivecounterOut2_SPECSIG"]="GND";
+          d2["J4_10"]=new Array("FB6_14_1");
+          
+            d2imp["J4_10"]=new Array("1");
+          
+              clk["J4_10"]=new Array("FB6_14_2");
+              
+                clkimp["J4_10"]=new Array("1");
+              
+              gblrst["J4_10"]=new Array("RST");
+            
+          ce["J4_10"]=new Array("FB6_14_3");
+          
+            ceimp["J4_10"]=new Array("1");
+          prld["J4_10"]="GND";
+          d2["J4_12"]=new Array("FB6_15_1");
+          
+            d2imp["J4_12"]=new Array("1");
+          
+              clk["J4_12"]=new Array("FB6_15_2");
+              
+                clkimp["J4_12"]=new Array("1");
+              
+              gblrst["J4_12"]=new Array("RST");
+            
+          ce["J4_12"]=new Array("FB6_15_3");
+          
+            ceimp["J4_12"]=new Array("1");
+          prld["J4_12"]="GND";
+          d2["SLCDSerialReceivecounterOut1_SPECSIG"]=new Array("FB6_16_1");
+          
+            d2imp["SLCDSerialReceivecounterOut1_SPECSIG"]=new Array("1");
+          
+              clk["SLCDSerialReceivecounterOut1_SPECSIG"]=new Array("FB6_16_3");
+              
+                clkimp["SLCDSerialReceivecounterOut1_SPECSIG"]=new Array("1");
+              
+              rst["SLCDSerialReceivecounterOut1_SPECSIG"]=new Array("FB6_16_2");
+              
+                rstimp["SLCDSerialReceivecounterOut1_SPECSIG"]=new Array("1");
+              prld["SLCDSerialReceivecounterOut1_SPECSIG"]="GND";
+          d2["J4_14"]=new Array("FB6_17_1");
+          
+            d2imp["J4_14"]=new Array("1");
+          
+              clk["J4_14"]=new Array("FB6_17_2");
+              
+                clkimp["J4_14"]=new Array("1");
+              
+              gblrst["J4_14"]=new Array("RST");
+            
+          ce["J4_14"]=new Array("FB6_17_3");
+          
+            ceimp["J4_14"]=new Array("1");
+          prld["J4_14"]="GND";
+          d2["SLCDSerialReceiveParityChkQ_SPECSIG"]=new Array("FB6_18_1");
+          
+            d2imp["SLCDSerialReceiveParityChkQ_SPECSIG"]=new Array("1");
+          
+              clk["SLCDSerialReceiveParityChkQ_SPECSIG"]=new Array("FB6_18_3");
+              
+                clkimp["SLCDSerialReceiveParityChkQ_SPECSIG"]=new Array("1");
+              
+              rst["SLCDSerialReceiveParityChkQ_SPECSIG"]=new Array("FB6_18_2");
+              
+                rstimp["SLCDSerialReceiveParityChkQ_SPECSIG"]=new Array("1");
+              prld["SLCDSerialReceiveParityChkQ_SPECSIG"]="GND";
+          d2["INPORT_0"]=new Array("FB7_5_1");
+          
+            d2imp["INPORT_0"]=new Array("1");
+          
+              clk["INPORT_0"]=new Array("FB7_5_2");
+              
+                clkimp["INPORT_0"]=new Array("1");
+              
+              gblrst["INPORT_0"]=new Array("RST");
+            prld["INPORT_0"]="GND";
+          d2["INPORT_1"]=new Array("FB7_6_1");
+          
+            d2imp["INPORT_1"]=new Array("1");
+          
+              clk["INPORT_1"]=new Array("FB7_6_2");
+              
+                clkimp["INPORT_1"]=new Array("1");
+              
+              gblrst["INPORT_1"]=new Array("RST");
+            prld["INPORT_1"]="GND";
+          d2["INPORT_2"]=new Array("FB7_8_1");
+          
+            d2imp["INPORT_2"]=new Array("1");
+          
+              clk["INPORT_2"]=new Array("FB7_8_2");
+              
+                clkimp["INPORT_2"]=new Array("1");
+              
+              gblrst["INPORT_2"]=new Array("RST");
+            prld["INPORT_2"]="GND";
+          d2["INPORT_3"]=new Array("FB7_9_1");
+          
+            d2imp["INPORT_3"]=new Array("1");
+          
+              clk["INPORT_3"]=new Array("FB7_9_2");
+              
+                clkimp["INPORT_3"]=new Array("1");
+              
+              gblrst["INPORT_3"]=new Array("RST");
+            prld["INPORT_3"]="GND";
+          d2["INPORT_4"]=new Array("FB7_11_1");
+          
+            d2imp["INPORT_4"]=new Array("1");
+          
+          d2["KeyboardReadINTERNAL_K3_SPECSIG"]=new Array("FB7_15_1");
+          
+            d2imp["KeyboardReadINTERNAL_K3_SPECSIG"]=new Array("1");
+          clkNegs["KeyboardReadINTERNAL_K3_SPECSIG"]=1;
+              gblclk["KeyboardReadINTERNAL_K3_SPECSIG"]=new Array("CLK");
+            
+              gblrst["KeyboardReadINTERNAL_K3_SPECSIG"]=new Array("RST");
+            prld["KeyboardReadINTERNAL_K3_SPECSIG"]="GND";
+          d2["KeyboardReadINTERNAL_K2_SPECSIG"]=new Array("FB7_16_1");
+          
+            d2imp["KeyboardReadINTERNAL_K2_SPECSIG"]=new Array("1");
+          clkNegs["KeyboardReadINTERNAL_K2_SPECSIG"]=1;
+              gblclk["KeyboardReadINTERNAL_K2_SPECSIG"]=new Array("CLK");
+            
+              gblrst["KeyboardReadINTERNAL_K2_SPECSIG"]=new Array("RST");
+            prld["KeyboardReadINTERNAL_K2_SPECSIG"]="GND";
+          d2["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG"]=new Array("FB7_17_1","FB7_17_2");
+          
+            d2imp["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG"]=new Array("1","1");
+          
+              gblclk["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG"]=new Array("CLK");
+            
+              gblrst["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG"]=new Array("RST");
+            prld["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd2_SPECSIG"]="GND";
+          d2["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG"]=new Array("FB7_18_1","FB7_18_2");
+          
+            d2imp["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG"]=new Array("1","1");
+          
+              gblclk["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG"]=new Array("CLK");
+            
+              gblrst["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG"]=new Array("RST");
+            prld["KeyboardReadKeyBuffKeyBufferCtrlCS_FSM_FFd1_SPECSIG"]="GND";
+          d2["SLCDdoneAccept_SPECSIG"]=new Array("FB8_15_1","FB8_15_2");
+          
+            d2imp["SLCDdoneAccept_SPECSIG"]=new Array("1","1");
+          
+              gblclk["SLCDdoneAccept_SPECSIG"]=new Array("CLK");
+            
+              gblrst["SLCDdoneAccept_SPECSIG"]=new Array("RST");
+            prld["SLCDdoneAccept_SPECSIG"]="GND";
+          d2["SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG"]=new Array("FB8_16_1","FB8_16_2");
+          
+            d2imp["SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG"]=new Array("1","1");
+          
+              gblclk["SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG"]=new Array("CLK");
+            
+              gblrst["SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG"]=new Array("RST");
+            prld["SLCDSerialReceiveSerialCtrlCS_FSM_FFd1_SPECSIG"]="GND";
+          d2["J4_9"]=new Array("FB8_17_1");
+          
+            d2imp["J4_9"]=new Array("1");
+          
+              gblclk["J4_9"]=new Array("CLK");
+            
+              gblrst["J4_9"]=new Array("RST");
+            prld["J4_9"]="GND";
+          d2["SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG"]=new Array("FB8_18_1","FB8_18_2","FB8_18_3");
+          
+            d2imp["SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG"]=new Array("1","1","1");
+          
+              gblclk["SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG"]=new Array("CLK");
+            
+              gblrst["SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG"]=new Array("RST");
+            prld["SLCDSerialReceiveSerialCtrlCS_FSM_FFd3_SPECSIG"]="GND";
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

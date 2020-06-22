@@ -227,14 +227,10 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="SoundController_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="SoundController_map.ncd" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="SoundController_map.ngm" xil_pn:subbranch="Map"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SoundController_map.xrpt"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SoundController_ngdbuild.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="SoundController_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="SoundController_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SoundController_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="SoundController_summary.html"/>
-    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="SoundController_summary.xml"/>
-    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="SoundController_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SoundController_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="SoundCtrl.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="SoundCtrl.lso"/>
@@ -245,16 +241,36 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="SoundCtrl.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="SoundCtrl.xst"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SoundCtrl_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="SpaceInvaderWrapper.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="SpaceInvaderWrapper.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="SpaceInvaderWrapper.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="SpaceInvaderWrapper.jed"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="SpaceInvaderWrapper.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="SpaceInvaderWrapper.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="SpaceInvaderWrapper.nga"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="SpaceInvaderWrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="SpaceInvaderWrapper.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="SpaceInvaderWrapper.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="SpaceInvaderWrapper.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="SpaceInvaderWrapper.pnx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SpaceInvaderWrapper.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="SpaceInvaderWrapper.rpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="SpaceInvaderWrapper.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="SpaceInvaderWrapper.syr"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="SpaceInvaderWrapper.tim"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="SpaceInvaderWrapper.tspec"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="SpaceInvaderWrapper.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="SpaceInvaderWrapper.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="SpaceInvaderWrapper.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="SpaceInvaderWrapper_build.xml"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="SpaceInvaderWrapper_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="SpaceInvaderWrapper_html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="SpaceInvaderWrapper_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="SpaceInvaderWrapper_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SpaceInvaderWrapper_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="SpaceInvaderWrapper_pad.csv"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="SpaceInvaderWrapper_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SpaceInvaderWrapper_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SpaceInvaderWrapper_xst.xrpt"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -277,164 +293,80 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1590948476" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1590948476">
+    <transform xil_pn:end_ts="1592856114" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1592856114">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1592856114" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="6550574355610496083" xil_pn:start_ts="1592856114">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1590954193" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1590954193">
+    <transform xil_pn:end_ts="1592856121" xil_pn:in_ck="-5572802308407925052" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-3314058223437181049" xil_pn:start_ts="1592856114">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1590954281" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5335778898273263870" xil_pn:start_ts="1590954281">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1590954281" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8654231127661914084" xil_pn:start_ts="1590954281">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1590949709" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8942498445791641820" xil_pn:start_ts="1590949709">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-    </transform>
-    <transform xil_pn:end_ts="1590954193" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1590954193">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1590954286" xil_pn:in_ck="-5466485930885191538" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6068084861026006151" xil_pn:start_ts="1590954281">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1590954286" xil_pn:in_ck="8276559481791299554" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3458376307856332324" xil_pn:start_ts="1590954286">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1590949180" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1590949180">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2720449843560563540" xil_pn:start_ts="1592424506">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="570767726975973116" xil_pn:start_ts="1592424506">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1592424506">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-4980029607399450762" xil_pn:start_ts="1592424506">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1592424506">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1592424506" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7926924471674402938" xil_pn:start_ts="1592424506">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1592671245" xil_pn:in_ck="-5572802308407925052" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="8005420656363294969" xil_pn:start_ts="1592671231">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="SoundController.lso"/>
-      <outfile xil_pn:name="SoundController.ngc"/>
-      <outfile xil_pn:name="SoundController.ngr"/>
-      <outfile xil_pn:name="SoundController.prj"/>
-      <outfile xil_pn:name="SoundController.stx"/>
-      <outfile xil_pn:name="SoundController.syr"/>
-      <outfile xil_pn:name="SoundController.xst"/>
-      <outfile xil_pn:name="SoundController_xst.xrpt"/>
-      <outfile xil_pn:name="SoundCtrl.ngr"/>
+      <outfile xil_pn:name="KeyBuffer.ngr"/>
+      <outfile xil_pn:name="KeyDecoder.ngr"/>
+      <outfile xil_pn:name="KeyScan.ngr"/>
+      <outfile xil_pn:name="KeyboardReader.ngr"/>
+      <outfile xil_pn:name="SLCDC.ngr"/>
+      <outfile xil_pn:name="SerialReceiver.ngr"/>
+      <outfile xil_pn:name="ShiftRegister.ngr"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.lso"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.ngc"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.ngr"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.prj"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.stx"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.syr"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.xst"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper_vhdl.prj"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1592671245" xil_pn:in_ck="-3874558288190001747" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3479079296220031777" xil_pn:start_ts="1592671245">
+    <transform xil_pn:end_ts="1592856121" xil_pn:in_ck="-3874558288190001747" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4588938252601579090" xil_pn:start_ts="1592856121">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1592671254" xil_pn:in_ck="7264983556216263609" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6066484529484099795" xil_pn:start_ts="1592671245">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="SoundController.bld"/>
-      <outfile xil_pn:name="SoundController.ngd"/>
-      <outfile xil_pn:name="SoundController_ngdbuild.xrpt"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-    </transform>
-    <transform xil_pn:end_ts="1592671287" xil_pn:in_ck="229019510296099207" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1592671254">
+    <transform xil_pn:end_ts="1592856127" xil_pn:in_ck="7264983556216263609" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="1893441463969615248" xil_pn:start_ts="1592856121">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="SoundController.pcf"/>
-      <outfile xil_pn:name="SoundController_map.map"/>
-      <outfile xil_pn:name="SoundController_map.mrp"/>
-      <outfile xil_pn:name="SoundController_map.ncd"/>
-      <outfile xil_pn:name="SoundController_map.ngm"/>
-      <outfile xil_pn:name="SoundController_map.xrpt"/>
-      <outfile xil_pn:name="SoundController_summary.xml"/>
-      <outfile xil_pn:name="SoundController_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.bld"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.ngd"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1592671308" xil_pn:in_ck="6762800804765627578" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1592671287">
+    <transform xil_pn:end_ts="1592856138" xil_pn:in_ck="7287172861492437143" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-4041643756198713665" xil_pn:start_ts="1592856127">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.gyd"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.mfd"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.nga"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.pad"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.pnx"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.rpt"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.tim"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.tspec"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.vm6"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.xml"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper_build.xml"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper_html"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1592856140" xil_pn:in_ck="-1450665823829295779" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1592856138">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="SoundController.ncd"/>
-      <outfile xil_pn:name="SoundController.pad"/>
-      <outfile xil_pn:name="SoundController.par"/>
-      <outfile xil_pn:name="SoundController.ptwx"/>
-      <outfile xil_pn:name="SoundController.unroutes"/>
-      <outfile xil_pn:name="SoundController.xpi"/>
-      <outfile xil_pn:name="SoundController_pad.csv"/>
-      <outfile xil_pn:name="SoundController_pad.txt"/>
-      <outfile xil_pn:name="SoundController_par.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="SpaceInvaderWrapper.jed"/>
     </transform>
-    <transform xil_pn:name="TRAN_postRouteTrce">
+    <transform xil_pn:end_ts="1592852470" xil_pn:in_ck="-1450665823829295779" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1592852467">
       <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
 

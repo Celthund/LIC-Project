@@ -64,7 +64,13 @@ entity SpaceInvaderWrapper is
 			J4_11 : out STD_LOGIC;
 			J4_12 : out STD_LOGIC;
 			J4_13 : out STD_LOGIC;
-			J4_14 : out STD_LOGIC
+			J4_14 : out STD_LOGIC;
+			---
+			OUTPORT_4 : out  STD_LOGIC;
+			OUTPORT_5 : out STD_LOGIC;
+			J2_17: in  STD_LOGIC;
+			J2_18: in  STD_LOGIC
+			
 		);
 end SpaceInvaderWrapper;
 architecture Behavioral of SpaceInvaderWrapper is
@@ -142,6 +148,9 @@ begin
 			Dout(4) => J4_14,
 			WrL => J4_9
 	 );
-
+	 
+		OUTPORT_4 <= J2_17;
+		OUTPORT_5 <= J2_18;
+			
 end Behavioral;
 

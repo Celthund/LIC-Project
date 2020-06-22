@@ -8,10 +8,20 @@ public class KBD {
     private static final int VAL = 0x10;
     private static final int DATA = 0x0F;
     public static final char NONE = 0;
-    private static final char[] keys = {'1', '4', '7',
+    private static final char[] keys = {
+            '1', '4', '7',
             '*', '2', '5',
             '8', '0', '3',
             '6', '9', '#'};
+
+    public static void main(String[] args) {
+        init();
+        while(true){
+            char c = waitKey(100);
+            if(c != NONE)
+                System.out.println("TECLA = " + c);
+        }
+    }
 
     public static void init() {
         HAL.init();
@@ -57,4 +67,5 @@ public class KBD {
         }
         return NONE;
     }
+
 }

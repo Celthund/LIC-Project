@@ -1,0 +1,202 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+FDCPE_INPORT_0: FDCPE port map (INPORT_0,KeyboardRead/INTERNAL_K(0),INPORT_0_C,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INPORT_0_C <= (NOT KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_INPORT_1: FDCPE port map (INPORT_1,KeyboardRead/INTERNAL_K(1),INPORT_1_C,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INPORT_1_C <= (NOT KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_INPORT_2: FDCPE port map (INPORT_2,KeyboardRead/INTERNAL_K(2),INPORT_2_C,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INPORT_2_C <= (NOT KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_INPORT_3: FDCPE port map (INPORT_3,KeyboardRead/INTERNAL_K(3),INPORT_3_C,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INPORT_3_C <= (NOT KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+INPORT_4 <= (KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+J2_10 <= NOT KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT(1);
+</td></tr><tr><td>
+</td></tr><tr><td>
+J2_11 <= NOT KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT(0);
+</td></tr><tr><td>
+</td></tr><tr><td>
+J2_9 <= NOT KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT(2);
+</td></tr><tr><td>
+FDCPE_J4_10: FDCPE port map (J4_10,J4_11,OUTPORT_2,RST,'0',J4_10_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J4_10_CE <= (NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3);
+</td></tr><tr><td>
+FDCPE_J4_11: FDCPE port map (J4_11,J4_12,OUTPORT_2,RST,'0',J4_11_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J4_11_CE <= (NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3);
+</td></tr><tr><td>
+FDCPE_J4_12: FDCPE port map (J4_12,J4_13,OUTPORT_2,RST,'0',J4_12_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J4_12_CE <= (NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3);
+</td></tr><tr><td>
+FDCPE_J4_13: FDCPE port map (J4_13,J4_14,OUTPORT_2,RST,'0',J4_13_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J4_13_CE <= (NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3);
+</td></tr><tr><td>
+FDCPE_J4_14: FDCPE port map (J4_14,OUTPORT_1,OUTPORT_2,RST,'0',J4_14_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J4_14_CE <= (NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3);
+</td></tr><tr><td>
+FDCPE_J4_9: FDCPE port map (J4_9,J4_9_D,CLK,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J4_9_D <= (NOT J4_9 AND SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3 AND NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/doneAccept);
+</td></tr><tr><td>
+FDCPE_KeyboardRead/INTERNAL_K0: FDCPE port map (KeyboardRead/INTERNAL_K(0),KeyboardRead/INTERNAL_K_D(0),KeyboardRead/VAL,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyboardRead/INTERNAL_K_D(0) <= ((NOT J2_12)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT J2_14 AND J2_13));
+</td></tr><tr><td>
+FDCPE_KeyboardRead/INTERNAL_K1: FDCPE port map (KeyboardRead/INTERNAL_K(1),KeyboardRead/INTERNAL_K_D(1),KeyboardRead/VAL,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyboardRead/INTERNAL_K_D(1) <= (J2_13 AND J2_12);
+</td></tr><tr><td>
+FTCPE_KeyboardRead/INTERNAL_K2: FTCPE port map (KeyboardRead/INTERNAL_K(2),KeyboardRead/INTERNAL_K_T(2),NOT CLK,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyboardRead/INTERNAL_K_T(2) <= (NOT KeyboardRead/VAL AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd1);
+</td></tr><tr><td>
+FTCPE_KeyboardRead/INTERNAL_K3: FTCPE port map (KeyboardRead/INTERNAL_K(3),KeyboardRead/INTERNAL_K_T(3),NOT CLK,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyboardRead/INTERNAL_K_T(3) <= (NOT KeyboardRead/VAL AND KeyboardRead/INTERNAL_K(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd1);
+</td></tr><tr><td>
+FTCPE_KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1: FTCPE port map (KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1,KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1_T,CLK,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1_T <= ((NOT KeyboardRead/VAL AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1 AND KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2 AND NOT OUTPORT_7));
+</td></tr><tr><td>
+FDCPE_KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2: FDCPE port map (KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2,KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2_D,CLK,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2_D <= ((KeyboardRead/VAL AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OUTPORT_7));
+</td></tr><tr><td>
+FTCPE_KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd1: FTCPE port map (KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd1,KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd1_T,CLK,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd1_T <= ((KeyboardRead/VAL AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1 AND KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (J2_15 AND J2_14 AND J2_13 AND J2_12 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1 AND KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (J2_15 AND J2_14 AND J2_13 AND J2_12 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2 AND KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT(0) <= ((NOT KeyboardRead/INTERNAL_K(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/INTERNAL_K(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (KeyboardRead/INTERNAL_K(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	KeyboardRead/INTERNAL_K(3) AND KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT(1) <= ((KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	KeyboardRead/INTERNAL_K(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (KeyboardRead/INTERNAL_K(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/INTERNAL_K(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT(2) <= ((NOT KeyboardRead/INTERNAL_K(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	KeyboardRead/INTERNAL_K(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (KeyboardRead/INTERNAL_K(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	KeyboardRead/KeyDecode/KeyScanner/NOT_DECOUT(2)));
+</td></tr><tr><td>
+FDCPE_KeyboardRead/VAL: FDCPE port map (KeyboardRead/VAL,KeyboardRead/VAL_D,CLK,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyboardRead/VAL_D <= ((NOT KeyboardRead/VAL AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	KeyboardRead/KeyDecode/KeyCtrl/CS_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (KeyboardRead/VAL AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd1 AND KeyboardRead/KeyBuff/KeyBufferCtrl/CS_FSM_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (J2_15 AND J2_14 AND J2_13 AND J2_12 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT KeyboardRead/VAL));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OUTPORT_4 <= J2_17;
+</td></tr><tr><td>
+</td></tr><tr><td>
+OUTPORT_5 <= J2_18;
+</td></tr><tr><td>
+FTCPE_SLCD/SerialReceive/ParityChk/Q: FTCPE port map (SLCD/SerialReceive/ParityChk/Q,OUTPORT_1,OUTPORT_2,SLCD/SerialReceive/ParityChk/Q_CLR,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLCD/SerialReceive/ParityChk/Q_CLR <= (NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3);
+</td></tr><tr><td>
+FDCPE_SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd1: FDCPE port map (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd1,SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd1_D,CLK,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd1_D <= ((SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/doneAccept)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3 AND SLCD/doneAccept));
+</td></tr><tr><td>
+FDCPE_SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2: FDCPE port map (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2,SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2_D,CLK,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2_D <= ((SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT OUTPORT_3 AND SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/SerialReceive/ParityChk/Q)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT OUTPORT_3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3 AND SLCD/SerialReceive/counterOut(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/counterOut(1) AND SLCD/SerialReceive/counterOut(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/doneAccept)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3 AND NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT OUTPORT_3 AND SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/SerialReceive/counterOut(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT OUTPORT_3 AND SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/counterOut(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT OUTPORT_3 AND SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/counterOut(2)));
+</td></tr><tr><td>
+FDCPE_SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3: FDCPE port map (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3,SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3_D,CLK,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3_D <= ((OUTPORT_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/counterOut(0) AND SLCD/SerialReceive/counterOut(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/SerialReceive/counterOut(2)));
+</td></tr><tr><td>
+FTCPE_SLCD/SerialReceive/counterOut0: FTCPE port map (SLCD/SerialReceive/counterOut(0),'1',OUTPORT_2,SLCD/SerialReceive/counterOut_CLR(0),'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLCD/SerialReceive/counterOut_CLR(0) <= (NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3);
+</td></tr><tr><td>
+FTCPE_SLCD/SerialReceive/counterOut1: FTCPE port map (SLCD/SerialReceive/counterOut(1),SLCD/SerialReceive/counterOut(0),OUTPORT_2,SLCD/SerialReceive/counterOut_CLR(1),'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLCD/SerialReceive/counterOut_CLR(1) <= (NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3);
+</td></tr><tr><td>
+FTCPE_SLCD/SerialReceive/counterOut2: FTCPE port map (SLCD/SerialReceive/counterOut(2),SLCD/SerialReceive/counterOut_T(2),OUTPORT_2,SLCD/SerialReceive/counterOut_CLR(2),'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLCD/SerialReceive/counterOut_T(2) <= (SLCD/SerialReceive/counterOut(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/SerialReceive/counterOut(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLCD/SerialReceive/counterOut_CLR(2) <= (NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3);
+</td></tr><tr><td>
+FDCPE_SLCD/doneAccept: FDCPE port map (SLCD/doneAccept,SLCD/doneAccept_D,CLK,RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SLCD/doneAccept_D <= ((J4_9)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd3 AND NOT SLCD/SerialReceive/SerialCtrl/CS_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SLCD/doneAccept));
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

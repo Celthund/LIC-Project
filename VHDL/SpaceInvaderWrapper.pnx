@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE ibis [
+<!ELEMENT ibis (part, pin+)>
+<!ELEMENT part EMPTY>
+<!ELEMENT pin EMPTY>
+<!ATTLIST part
+  arch   CDATA #REQUIRED
+  device CDATA #REQUIRED
+  spg    CDATA #REQUIRED
+  pkg    CDATA #REQUIRED>
+<!ATTLIST pin
+  nm     CDATA #REQUIRED
+  no     CDATA #REQUIRED
+  iostd  (TTL|LVTTL|LVCMOS2|NA) "NA"
+  sr     (SLOW|FAST|slow|fast) "SLOW"
+  dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
+]>
+<ibis><part arch="xc9500xl" device="XC95144XL" pkg="TQ100" spg="-10"/><pin dir="input" nm="OUTPORT_2" no="92"/><pin dir="input" nm="RST" no="99"/><pin dir="input" nm="OUTPORT_1" no="91"/><pin dir="input" nm="J2_15" no="29"/><pin dir="input" nm="J2_14" no="37"/><pin dir="input" nm="J2_13" no="28"/><pin dir="input" nm="J2_12" no="36"/><pin dir="input" nm="CLK" no="22"/><pin dir="input" nm="OUTPORT_3" no="93"/><pin dir="input" nm="OUTPORT_7" no="97"/><pin dir="input" nm="J2_17" no="32"/><pin dir="input" nm="J2_18" no="40"/><pin dir="output" nm="J4_11" no="76" sr="fast"/><pin dir="output" nm="J4_12" no="85" sr="fast"/><pin dir="output" nm="J4_13" no="77" sr="fast"/><pin dir="output" nm="J4_14" no="86" sr="fast"/><pin dir="output" nm="J4_10" no="82" sr="fast"/><pin dir="output" nm="J4_9" no="73" sr="fast"/><pin dir="output" nm="INPORT_0" no="52" sr="fast"/><pin dir="output" nm="INPORT_1" no="53" sr="fast"/><pin dir="output" nm="INPORT_2" no="54" sr="fast"/><pin dir="output" nm="INPORT_3" no="55" sr="fast"/><pin dir="output" nm="INPORT_4" no="56" sr="fast"/><pin dir="output" nm="J2_10" no="35" sr="fast"/><pin dir="output" nm="J2_11" no="25" sr="fast"/><pin dir="output" nm="J2_9" no="24" sr="fast"/><pin dir="output" nm="OUTPORT_4" no="94" sr="fast"/><pin dir="output" nm="OUTPORT_5" no="95" sr="fast"/></ibis>

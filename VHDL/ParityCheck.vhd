@@ -51,7 +51,10 @@ architecture Behavioral of ParityCheck is
 			Q : OUT std_logic_vector(WIDTH-1 downto 0)
 		);
 	END COMPONENT;
+	
 	SIGNAL Q : std_logic_vector(WIDTH-1 downto 0);
+	SIGNAL D1 : std_logic_vector(WIDTH-1 downto 0);
+	
 begin
 	RegisterD : Register_D 
 	GENERIC MAP(
@@ -60,9 +63,10 @@ begin
 	PORT MAP(
 			CLK => CLK,
 			RST => RST,
-			D => Q xor Data,
+			D => D1,
 			Q => Q
 	);
 	Err <= NOT Q;
+	D1 <= Q xor Data;
 end Behavioral;
 

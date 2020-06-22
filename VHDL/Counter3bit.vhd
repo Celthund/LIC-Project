@@ -49,6 +49,9 @@ architecture Structural of Counter3bit is
 		);
 	END COMPONENT;
 	Signal IQ: STD_LOGIC_VECTOR (2 downto 0);
+	Signal T2: STD_LOGIC;
+	Signal T3: STD_LOGIC;
+
 begin
 	RegisterT1 : Register_T 
 	GENERIC MAP(
@@ -67,9 +70,10 @@ begin
 	PORT MAP(
 			CLK => CLK,
 			RST => RST,
-			T(0) => CE and IQ(0),
+			T(0) => T2,
 			Q(0) => IQ(1)
 	);
+	
 	RegisterT3 : Register_T 
 	GENERIC MAP(
 		WIDTH => 1
@@ -77,9 +81,11 @@ begin
 	PORT MAP(
 			CLK => CLK,
 			RST => RST,
-			T(0) => (CE and IQ(0)) and IQ(1),
+			T(0) => T3,
 			Q(0) => IQ(2)
 	);
 	Q <= IQ;
+	T3 <= (CE and IQ(0)) and IQ(1);
+	T2 <= CE and IQ(0);
 end Structural;
 

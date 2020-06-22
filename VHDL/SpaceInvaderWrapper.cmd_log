@@ -14,3 +14,54 @@ xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/Spac
 xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
 xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
 xst -intstyle ise -ifn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/tiago/OneDrive/Documentos/Universidade/LIC/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc uLICX_v17.1.ucf -p xc7a100t-csg324-3 SpaceInvaderWrapper.ngc SpaceInvaderWrapper.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o SpaceInvaderWrapper_map.ncd SpaceInvaderWrapper.ngd SpaceInvaderWrapper.pcf 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc uLICX_v17.1.ucf -p xc7a100t-csg324-3 SpaceInvaderWrapper.ngc SpaceInvaderWrapper.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o SpaceInvaderWrapper_map.ncd SpaceInvaderWrapper.ngd SpaceInvaderWrapper.pcf 
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o SpaceInvaderWrapper_map.ncd SpaceInvaderWrapper.ngd SpaceInvaderWrapper.pcf 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc uLICX_v17.1.ucf -p xc95144-TQ100-10 SpaceInvaderWrapper.ngc SpaceInvaderWrapper.ngd  
+cpldfit -intstyle ise -p xc95144-10-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk SpaceInvaderWrapper.ngd 
+tsim -intstyle ise SpaceInvaderWrapper SpaceInvaderWrapper.nga 
+taengine -intstyle ise -f SpaceInvaderWrapper -w --format html1 -l SpaceInvaderWrapper_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n SpaceInvaderWrapper -i SpaceInvaderWrapper 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc uLICX_v17.1.ucf -p xc95144xl-TQ100-10 SpaceInvaderWrapper.ngc SpaceInvaderWrapper.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper SpaceInvaderWrapper.ngd 
+tsim -intstyle ise SpaceInvaderWrapper SpaceInvaderWrapper.nga 
+taengine -intstyle ise -f SpaceInvaderWrapper -w --format html1 -l SpaceInvaderWrapper_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n SpaceInvaderWrapper -i SpaceInvaderWrapper 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc uLICX_v17.1.ucf -p xc95144xl-TQ100-10 SpaceInvaderWrapper.ngc SpaceInvaderWrapper.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper SpaceInvaderWrapper.ngd 
+tsim -intstyle ise SpaceInvaderWrapper SpaceInvaderWrapper.nga 
+hprep6 -s IEEE1149 -n SpaceInvaderWrapper -i SpaceInvaderWrapper 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc uLICX_v17.1.ucf -p xc95144xl-TQ100-10 SpaceInvaderWrapper.ngc SpaceInvaderWrapper.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper SpaceInvaderWrapper.ngd 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc uLICX_v17.1.ucf -p xc95144xl-TQ100-10 SpaceInvaderWrapper.ngc SpaceInvaderWrapper.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper SpaceInvaderWrapper.ngd 
+xst -intstyle ise -ifn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.xst" -ofn "C:/Users/marti/Documents/Projects/Isel/SpaceInvader/VHDL/SpaceInvaderWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc uLICX_v17.1.ucf -p xc95144xl-TQ100-10 SpaceInvaderWrapper.ngc SpaceInvaderWrapper.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper SpaceInvaderWrapper.ngd 
+tsim -intstyle ise SpaceInvaderWrapper SpaceInvaderWrapper.nga 
+hprep6 -s IEEE1149 -n SpaceInvaderWrapper -i SpaceInvaderWrapper 
