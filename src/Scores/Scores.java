@@ -46,7 +46,7 @@ public class Scores {
          **/
         ArrayList<String> text = new ArrayList();
         for(Entry entry: leaderBoard){
-            text.add(entry.score + ";" + entry.name + "\n");
+            text.add(entry.score + ";" + entry.name);
         }
         file.write(text);
     }
