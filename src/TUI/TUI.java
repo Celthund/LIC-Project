@@ -402,4 +402,8 @@ public class TUI {
         clearLine(BOTTOMLINE);
         alignCenter(BOTTOMLINE, "Credits:"+credits+"$");
     }
+
+    public static void shutdown() {
+        LCD.shutdown();
+    }
 }

@@ -29,7 +29,6 @@ public class SpaceInvader{
         TUI.init();
         SoundGenerator.init();
         SoundGenerator.setVolume(3);
-
         Menus currMenu = Menus.MAIN_MENU;
         long timeScore = Time.getTimeInMillis();
         long timeReturn = Integer.MIN_VALUE;
@@ -71,6 +70,7 @@ public class SpaceInvader{
                     if (key == '5') {
                         statistics.save();
                         leaderboard.save();
+                        TUI.shutdown();
                         System.exit(0);
                     } else if (key != KBD.NONE) {
                         timeReturn -= MENU_TIMEOUT;

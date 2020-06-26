@@ -46,6 +46,7 @@ public class LCD {
             writeNibbleSerial(rs, data);
         else
             writeNibbleParallel(rs, data);
+        Time.sleep(1);
     }
 
     private static void writeByte(boolean rs, int data) {
@@ -170,5 +171,9 @@ public class LCD {
             writeCMD(0x0F);
         else
             writeCMD(0x0C);
+    }
+
+    public static void shutdown() {
+        writeCMD(0x08);
     }
 }
