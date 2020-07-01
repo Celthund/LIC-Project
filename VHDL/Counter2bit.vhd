@@ -58,7 +58,7 @@ begin
 	)
 	PORT MAP(
 			CLK => CLK,
-			RST => RST,
+			RST => RST_INTERNAL,
 			T(0) =>  CE,
 			Q(0) => IQ(0)
 	);
@@ -68,11 +68,12 @@ begin
 	)
 	PORT MAP(
 			CLK => CLK,
-			RST => RST,
+			RST => RST_INTERNAL,
 			T(0) => T1,
 			Q(0) => IQ(1)
 	);
 	T1 <= CE and IQ(0);
 	Q <= IQ;
+	RST_INTERNAL <= RST or (IQ(1) and IQ(0));
 end Structural;
 
