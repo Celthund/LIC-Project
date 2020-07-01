@@ -92,6 +92,11 @@ public class SpaceInvader{
                         timeReturn = Time.getTimeInMillis();
                     } else if (key != KBD.NONE){
                         startGame();
+                        if (M.checkMButton()){
+                            TUI.drawMaintenance();
+                        } else {
+                            TUI.drawMainMenu();
+                        }
                     }
                 } else {
                     if (CoinAcceptor.waitCoin(100)){
@@ -126,10 +131,6 @@ public class SpaceInvader{
 
             }
         }
-    }
-
-    private static void handleSubMenus(){
-
     }
 
     public static void parseKeyPress(char key) {

@@ -29,8 +29,12 @@ public class FileAccess {
             System.out.println("Unable to save: " + file);
             System.exit(-2);
         }
-        for (String text : lines) {
-            out.println(text);
+        for (int i = 0; i < lines.size(); i++){
+            if (i < lines.size() - 1){
+                out.println(lines.get(i));
+            } else {
+                out.print(lines.get(i));
+            }
         }
         out.flush();
         out.close();

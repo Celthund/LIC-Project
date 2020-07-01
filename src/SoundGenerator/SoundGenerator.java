@@ -1,7 +1,6 @@
 package SoundGenerator;
 
 import SerialEmitter.SerialEmitter;
-import isel.leic.utils.Time;
 
 public class SoundGenerator {
     private static int DATA_SIZE = 4;
@@ -9,15 +8,14 @@ public class SoundGenerator {
 
     public static void main(String[] args) {
         init();
-        Time.sleep(1000);
-        SerialEmitter.send(SerialEmitter.Destination.SSC, DATA_SIZE, 0);
-        setVolume(0);
-        play(1);
     }
 
     // Inicia a classe, estabelecendo os valores iniciais.
     public static void init(){
         SerialEmitter.init();
+        setVolume(0);
+        setSound(0);
+        stop();
     }
 
     // Envia comando para definir o volume do som
@@ -27,8 +25,12 @@ public class SoundGenerator {
 
     // Envia comando para reproduzir um som, com a identificação deste
     public static void play(int sound){
-        SerialEmitter.send(SerialEmitter.Destination.SSC, DATA_SIZE, SOUND_CMD | (sound << 2 & DATA_MASK));
+        setSound(sound);
         SerialEmitter.send(SerialEmitter.Destination.SSC, DATA_SIZE, PLAY_CMD);
+    }
+
+    private static void setSound(int sound){
+        SerialEmitter.send(SerialEmitter.Destination.SSC, DATA_SIZE, SOUND_CMD | (sound << 2 & DATA_MASK));
     }
 
     // Envia comando para parar o som

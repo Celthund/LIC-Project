@@ -40,14 +40,14 @@ public class KBD {
         if (!val) {
             return NONE;
         }
-        if (key > keys.length - 1)
-            return NONE;
         // Send ACK signal
         HAL.setBits(ACK);
         while (HAL.isBit(VAL)) {
             Time.sleep(10);
         }
         HAL.clrBits(ACK);
+        if (key > keys.length - 1)
+            return NONE;
         return keys[key];
     }
 
