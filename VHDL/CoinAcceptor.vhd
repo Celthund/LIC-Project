@@ -34,7 +34,7 @@ entity CoinAcceptor is
 	        CLK : in STD_LOGIC;
 			  RST : in STD_LOGIC;
 			  accept : in  STD_LOGIC;
-           cointIn : in  STD_LOGIC;
+           coinIn : in  STD_LOGIC;
            coinOut : out  STD_LOGIC);
 end CoinAcceptor;
 
@@ -51,12 +51,12 @@ begin
 		end if;
 	end process;
 	
-	Next_State_Evaluation : process(CS,  cointIn, accept)
+	Next_State_Evaluation : process(CS,  coinIn, accept)
 	begin
 		case (CS) is 
-			when STATE_IDLE => if (cointIn = '1') then NS <= STATE_COIN_IN; else NS <= STATE_IDLE; end if;
+			when STATE_IDLE => if (coinIn = '1') then NS <= STATE_COIN_IN; else NS <= STATE_IDLE; end if;
 			when STATE_COIN_IN => if (accept = '1') then NS <= STATE_ACCEPT; else NS <= STATE_COIN_IN; end if;
-			when STATE_ACCEPT => if (accept = '0') then NS <= STATE_IDLE; else NS <= STATE_ACCEPT; end if;
+			when STATE_ACCEPT => if (accept = '0' AND coinIn = '0') then NS <= STATE_IDLE; else NS <= STATE_ACCEPT; end if;
 		end case;
 	end process;
 	coinOut <= '1' when (CS = STATE_COIN_IN) else '0';

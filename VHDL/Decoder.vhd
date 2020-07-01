@@ -38,7 +38,8 @@ end Decoder;
 architecture Behavioral of Decoder is
 
 begin
-		O <= "001" when S0 = '0' and S1 = '0' else
+		O <= "000" when S0 = '1' and S1 = '1' else
+			  "001" when S0 = '0' and S1 = '0' else
 			  "010" when S0 = '1' and S1 = '0' else
 			  "100" when S0 = '0' and S1 = '1';
 end Behavioral;

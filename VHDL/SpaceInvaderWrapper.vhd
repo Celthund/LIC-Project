@@ -60,17 +60,25 @@ entity SpaceInvaderWrapper is
 			-- SLCDC WrL
 		   J4_9 : out  STD_LOGIC;
 			-- SLCDC Dout
-			J4_10 : out STD_LOGIC;
-			J4_11 : out STD_LOGIC;
+			J4_10 : out STD_LOGIC; --RS
+			J4_11 : out STD_LOGIC; --B0
 			J4_12 : out STD_LOGIC;
 			J4_13 : out STD_LOGIC;
-			J4_14 : out STD_LOGIC;
-			---
-			OUTPORT_4 : out  STD_LOGIC;
-			OUTPORT_5 : out STD_LOGIC;
-			J2_17: in  STD_LOGIC;
-			J2_18: in  STD_LOGIC
-			
+			J4_14 : out STD_LOGIC; --B3
+			---COIN ACCEPTOR
+			J2_17: in  STD_LOGIC;--Coin in
+			OUTPORT_6 : in  STD_LOGIC;--Coin out
+			INPORT_6 : out STD_LOGIC;--Accept
+			--M
+			INPORT_7 : out STD_LOGIC;
+			J2_18: in  STD_LOGIC;
+			-- SSC
+			OUTPORT_4 : in  STD_LOGIC;
+			J3_7 : out  STD_LOGIC; --sid(0)
+		   J3_9 : out  STD_LOGIC; -- sid(1)
+		   J3_3 : out  STD_LOGIC; -- vol(0)
+		   J3_5 : out  STD_LOGIC; -- vol(1)
+		   J3_1 : out  STD_LOGIC  -- Play
 		);
 end SpaceInvaderWrapper;
 architecture Behavioral of SpaceInvaderWrapper is
@@ -111,7 +119,7 @@ architecture Behavioral of SpaceInvaderWrapper is
 	        CLK : in STD_LOGIC;
 			  RST : in STD_LOGIC;
 			  accept : in  STD_LOGIC;
-           cointIn : in  STD_LOGIC;
+           coinIn : in  STD_LOGIC;
            coinOut : out  STD_LOGIC);
 	END COMPONENT;
 begin
@@ -148,9 +156,30 @@ begin
 			Dout(4) => J4_14,
 			WrL => J4_9
 	 );
+	 SSController: SSC 
+	 PORT MAP ( 
+		  CLK => CLK,
+		  RST => RST,
+		  SDX => OUTPORT_1,
+		  SCLK => OUTPORT_2,
+		  SS => OUTPORT_4,
+		  sid(0) => J3_7,
+		  sid(1) => J3_9,
+		  vol(0) => J3_3,
+		  vol(1) => J3_5,
+		  Play => J3_1
+	 );
 	 
-		OUTPORT_4 <= J2_17;
-		OUTPORT_5 <= J2_18;
-			
+	 
+	 Coin : CoinAcceptor
+	 PORT MAP( 
+	        CLK => CLK,
+			  RST => RST,
+			  accept => OUTPORT_6,
+           coinIn => J2_17,
+           coinOut => INPORT_6
+	 );
+	 
+	INPORT_7 <= J2_18;
 end Behavioral;
 

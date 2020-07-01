@@ -50,6 +50,7 @@ architecture Structural of Counter2bit is
 	END COMPONENT;
 	Signal IQ: STD_LOGIC_VECTOR (1 downto 0);
 	Signal T1: STD_LOGIC;
+	Signal RST_INTERNAL: STD_LOGIC;
 	
 begin
 	RegisterT1 : Register_T 
