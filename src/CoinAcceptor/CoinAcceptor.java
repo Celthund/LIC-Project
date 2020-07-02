@@ -7,6 +7,9 @@ public class CoinAcceptor {
     private static int COIN_MASK = 0x40, ACCEPT_MASK = 0x40;
 
     public static boolean getCoin() {
+        /**
+         Check if coin there was a coin inserted.
+         **/
         boolean hasCoin = HAL.isBit(COIN_MASK);
         if (!hasCoin)
             return false;
@@ -20,6 +23,9 @@ public class CoinAcceptor {
     }
 
     public static boolean waitCoin(long timeout) {
+        /**
+         Wait for a coin to be inserted.
+         **/
         long start = Time.getTimeInMillis();
         while (true) {
             if (getCoin()) {
