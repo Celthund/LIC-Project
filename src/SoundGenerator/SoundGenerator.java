@@ -5,6 +5,19 @@ import SerialEmitter.SerialEmitter;
 public class SoundGenerator {
     private static int DATA_SIZE = 4;
     private static int STOP_CMD = 0x0, PLAY_CMD = 0x1, SOUND_CMD = 0x2, VOLUME_CMD = 0x3, DATA_MASK = 0xC;
+/*
+* srs.Dxval   -> sC.Dval
+    srs.D[0-3]  -> sC.Din[0-3]
+    sC.done     -> srs.accept
+    sC.Play     -> sG.Play
+    sC.sid[0-1] -> sG.sound[0-1]
+    sC.vol[0-1] -> sG.volume[0-1]
+*
+*
+* */
+
+
+
 
     public static void main(String[] args) {
         init();

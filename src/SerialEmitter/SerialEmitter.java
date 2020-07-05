@@ -16,24 +16,28 @@ public class SerialEmitter { // Envia tramas para os diferentes módulos Serial 
         }
     }
 
-
-    private static int SDX_MASK = 0x02, SHIFT_REQUIRED = 1, SCLK_MASK = 0x04; //TODO porque sao estes valores especificos?
-
-    private static int DESTINATION_MASKS[] = {0x08, 0x10}; //TODO porque sao estes valores especificos?
+    private static int SDX_MASK = 0x02, SHIFT_REQUIRED = 1, SCLK_MASK = 0x04;
+    private static int DESTINATION_MASKS[] = {0x08, 0x10};
+    /*
+         0x08   -  0 0 0 0 1 0 0 0
+         0x10   -  0 0 0 1 0 0 0 0
+         usbOUT -  7 6 5 4 3 2 1 0
+         kit.O3 -> srl./SS LCD
+         kit.O4 -> srs./SS SSC
+    * */
 
     public static void main(String[] args) {
         init();
         SerialEmitter.send(SerialEmitter.Destination.SLCD, 5, 0x1F);
     }
 
-    //dá disable low dos modulos LCD e SSC
     public static void init() {
         /**
          Initialize SerialEmitter by initializing HAL and set to one every Mask in DESTINATION_MASKS to
          disable all modules since the modules are active low.
          **/
         HAL.init();
-        for (int addr : DESTINATION_MASKS) {
+        for (int addr : DESTINATION_MASKS) {  //dá disable LOW dos modulos LCD e SSC
             HAL.setBits(addr);
         }
     }
@@ -45,19 +49,14 @@ public class SerialEmitter { // Envia tramas para os diferentes módulos Serial 
          Bits are sent one at a time.
          Parity bit is the odd variant.
 
-         0x08 = 0000 1000 - Bit selecionado O4
-         0x10 = 0001 0000 - Bit selecionado O5
-         kit.O3 -> srl./SS LCD - 0001 0000
-         kit.O4 -> srs./SS SSC - 00
-
-         0x08   -  0 0 0 0 1 0 0 0
-         usbOUT  - 7 6 5 4 3 2 1 0
          **/
 
         //EX: DATA = 0x1F -> 0001 1111
         int parityBit = 0;
         HAL.clrBits(DESTINATION_MASKS[addr.getPosition()]);  //ENABLE low DO ENDEREÇO A ENTREGAR TRAMA
-        data = data << SHIFT_REQUIRED;  //TODO porque é que o primeiro bit a enviar para o Serial receiver é 0?
+        data = data << SHIFT_REQUIRED;  // Este shift se deve há MASK = 0000 0010
+                                        // Data = 1 11X1 Vamos fazendo shift right para que os valores calhem no "burado" 0000 0010
+                                        // se nao fizessemos o left shift, no i = 0  o valor passado para SDX seria o X
         for(int i = 0; i < size; i++){
             int a = (data >> i);
             parityBit ^= (SDX_MASK & data >> i); // ACUMULA BIT PARIDADE A MEDIDA QUE FAZ XOR DOS BITS DE DATA(length = size)

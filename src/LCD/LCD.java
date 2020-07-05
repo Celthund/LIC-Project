@@ -78,19 +78,19 @@ public class LCD {
          Initialize LCD with a 4 bit communication, with display on, display cursor off and blinking of cursor off.
          **/
         if (SERIAL_INTERFACE)
-            SerialEmitter.init();
+            SerialEmitter.init();  //power on
         else
             HAL.init();
-        Time.sleep(40);
+        Time.sleep(40);              //Wait for more than 40ms after VCC rises to 2.7V
         writeNibble(false, 0x03); // Sets to 4-bit operation
-        Time.sleep(5);
+        Time.sleep(5);               //Wait for more than 4.1 ms
         writeNibble(false, 0x03); // Sets to 4-bit operation
-        Time.sleep(1);
-        writeCMD(0x32);
-        writeCMD(0x28);
-        writeCMD(0x0C); // Display ON/OFF
-        writeCMD(0x01);
-        writeCMD(0x06);
+        Time.sleep(1);               // Wait for more than 100 NANO sec
+        writeCMD(0x32);              //??
+        writeCMD(0x28);              //??
+        writeCMD(0x0C);              // Display ON/OFF
+        writeCMD(0x01);              //??
+        writeCMD(0x06);              //??
         createShip();
     }
 
