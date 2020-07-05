@@ -41,7 +41,19 @@ public class SerialEmitter { // Envia tramas para os diferentes módulos Serial 
          Sends the number of bits in data based on the size, to the given addr.
          Bits are sent one at a time.
          Parity bit is the odd variant.
+
+         0x08 = 0000 1000 - Bit selecionado O4
+         0x10 = 0001 0000 - Bit selecionado O5
+
+         kit.O3 -> srl./SS LCD - 0001 0000
+         kit.O4 -> srs./SS SSC - 00
+
+         Ou OUTPUTUSB vai de O0-O7
+
+         0x08   -  0 0 0 0 1 0 0 0
+         usbOUT  - 7 6 5 4 3 2 1 0
          **/
+
         int parityBit = 0;
         HAL.clrBits(DESTINATION_MASKS[addr.getPosition()]);
         data = data << SHIFT_REQUIRED;
