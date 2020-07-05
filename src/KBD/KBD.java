@@ -37,7 +37,7 @@ public class KBD {
          **/
         boolean val = HAL.isBit(VAL); //Obtem VAL do KeyBuffer INPORT
         int key = HAL.readBits(DATA); //Obtem DATA Q0:3 do KeyBuffer INPORT
-        if (!val) {                     // se VAL for false nao retorna porque nao ha nada no buffer
+        if (!val) {                   // se VAL for false nao retorna porque nao ha nada no buffer
             return NONE;
         }
         // Entrou aqui significa que VAL = true e há DATA para o Control consumir!
@@ -46,7 +46,7 @@ public class KBD {
         while (HAL.isBit(VAL)) { //Enquanto o VAL KeyBuffer for true
             Time.sleep(10); // TODO - Serve para garantir que o Keybuffer devolva uma nova tecla?
         }
-        HAL.clrBits(ACK);   //Limpa o ACK - KeyBuffer recebe ACK = 0
+        HAL.clrBits(ACK);            //Limpa o ACK - KeyBuffer recebe ACK = 0
         if (key > keys.length - 1) // Garante que le um valor valido entre 0-11 (12 teclas)
             return NONE;
         return keys[key]; //devolve a tecla correspondente à tradução em bits recebida no INPORT
