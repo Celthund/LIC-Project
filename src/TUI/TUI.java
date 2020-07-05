@@ -16,6 +16,12 @@ public class TUI {
     private static final char NEXT_LETTER_KEY = '2', PREVIOUS_LETTER_KEY = '8',
     SHIFT_RIGHT_KEY ='6', SHIFT_LEFT_KEY = '4', ACCEPT_KEY = '5', DELETE_CHAR_KEY = '*';
 
+
+    public static void main(String[] args) {
+        init();
+        drawSaveScoreInput();
+    }
+
     public static void init() {
         /**
          Initialize Keyboard and LCD classes.
@@ -124,7 +130,6 @@ public class TUI {
         write(letter);
         moveCursor(line, col);
     }
-
 
     public static char readUserInput(long timeout) {
         /**
@@ -257,7 +262,6 @@ public class TUI {
         LCD.cursor(curLine, curCol);
     }
 
-
     public static void drawLeaderBoard(String name, String score){
         /**
          Draw leaderboard line. Used in main menu.
@@ -282,7 +286,7 @@ public class TUI {
          **/
         alignRight(TUI.TOPLINE, enemies);
     }
-
+    //DESENHA CHAR NA POSIÇAO CANHAO
     public static void drawCannon(char key){
         /**
          Draw cannon char
@@ -293,7 +297,7 @@ public class TUI {
          **/
         alignLeft(TUI.TOPLINE, key);
     }
-
+    //DESENHA CHAR NA POSIÇAO SHIP
     public static void drawShip(char key){
         /**
          Draw ship char

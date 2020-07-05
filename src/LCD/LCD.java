@@ -14,7 +14,8 @@ public class LCD {
 
     public static void main(String[] args) {
         init();
-        easterEgg();
+        write('.');
+
     }
 
     private static void writeNibbleParallel(boolean rs, int data) {
