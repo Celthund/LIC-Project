@@ -4,10 +4,10 @@ import isel.leic.UsbPort;
 
 public class HAL {
     private static final int ZEROS = 0xFF;
-    private static int state = 0xF0;
+    private static int state = 0xAF;
 
     // CONSIGO LER INPUT E SABER SE SAO BITS COM BASE NA MASCARA
-    // CONSIGO ESCREVER NO OUTPUT COM FARTURA
+    // CONSIGO ESCREVER NO OUTPUT DE VARIAS FORMAS
     public static void main(String[] args) {
 //        System.out.println("INPORT = " + readBits(0x0F));
 //        setBits(0xF0);

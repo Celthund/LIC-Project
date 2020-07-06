@@ -17,7 +17,7 @@ public class KBD {
     public static void main(String[] args) {
         init();
         while(true){
-            char c = waitKey(10000);
+            char c = waitKey(100);
             if(c != NONE)
                 System.out.println("TECLA = " + c);
         }
