@@ -20,14 +20,14 @@ public class SpaceInvader{
 
     private enum Menus {
         MAIN_MENU, MAINTENANCE, STATISTIC, CLEAR, SHUTDOWN
-    };
+    }
 
     public static void main(String[] args) {
         /**
          Main cycle that handles the initial menu of the application.
          **/
-        TUI.init();
-        SoundGenerator.init();
+        TUI.init(); // inicializa TUI
+        SoundGenerator.init(); // inicializa SOUNDGENERATOR
         SoundGenerator.setVolume(3);
         Menus currMenu = Menus.MAIN_MENU;
         long timeScore = Time.getTimeInMillis();
@@ -35,20 +35,30 @@ public class SpaceInvader{
         boolean showScore = true;
         char key;
         TUI.drawMainMenu();
+       //   |_Space_Invaders_|
+       //   |________________|
+
         while (true) {
-            key = TUI.readUserInput(100);
-            if (timeReturn != Integer.MIN_VALUE){
+            key = TUI.readUserInput(100); // LE TECLA
+            if (timeReturn != Integer.MIN_VALUE){ // SE
+
+                //QUAL O MENU A DESENHAR M OR MAIN MENU
                 if (Time.getTimeInMillis() - timeReturn >= MENU_TIMEOUT) {
                     timeReturn = Integer.MIN_VALUE;
                     if (M.checkMButton()){
                         currMenu = Menus.MAINTENANCE;
                         TUI.drawMaintenance();
+                         //  |__On Maintenance __|
+                         //  |__*-Count #-shutD__|
                     }
                     else {
                         currMenu = Menus.MAIN_MENU;
                         TUI.drawMainMenu();
+                        //   |__Space_Invaders__|
+                        //   |__________________|
                     }
                 }
+                //SE O MENU FOR CLEAR
                 if (currMenu == Menus.CLEAR){
                     if (key == '5') {
                         statistics.reset();
@@ -57,21 +67,27 @@ public class SpaceInvader{
                         timeReturn -= MENU_TIMEOUT;
                     }
                 }
+                //SE O MENU FOR STATISTICAS
                 if (currMenu == Menus.STATISTIC){
                     if (key == '#') {
                         TUI.drawClearCounters();
+                        //  |__Clear Counters__|
+                        //  |__5-Yes other-No__|
                         currMenu = Menus.CLEAR;
                         timeReturn = Time.getTimeInMillis();
                     } else if (key != KBD.NONE) {
                         timeReturn -= MENU_TIMEOUT;
                     }
                 }
+                //SE O MENU FOR SHUTDOWN
                 if (currMenu == Menus.SHUTDOWN){
                     if (key == '5') {
                         statistics.save();
                         leaderboard.save();
                         TUI.shutdown();
                         System.exit(0);
+                        // |____Shutdown______|
+                        // |__5-Yes_other-No__|
                     } else if (key != KBD.NONE) {
                         timeReturn -= MENU_TIMEOUT;
                     }
@@ -81,14 +97,21 @@ public class SpaceInvader{
                     if (currMenu == Menus.MAIN_MENU){
                         currMenu = Menus.MAINTENANCE;
                         TUI.drawMaintenance();
+                        //  |__On Maintenance __|
+                        //  |__*-Count #-shutD__|
                     }
                     if (key == '*') {
                         currMenu = Menus.STATISTIC;
                         TUI.drawStatistics(statistics);
+                        //  |Games: _______|
+                        //  |Coins:________|
+
                         timeReturn = Time.getTimeInMillis();
                     } else if (key == '#') {
                         currMenu = Menus.SHUTDOWN;
                         TUI.drawShutdown();
+                        //  |_____Shutdown_____|
+                        //  |__5-Yes_other-No _|
                         timeReturn = Time.getTimeInMillis();
                     } else if (key != KBD.NONE){
                         startGame();
@@ -103,6 +126,8 @@ public class SpaceInvader{
                         statistics.coins++;
                         credits += 2;
                         TUI.drawAvailableCredits(credits);
+                        // |________________|
+                        // |__Credits:X$":__|
                         showScore = true;
                     }
                     if (currMenu == Menus.MAINTENANCE){
@@ -111,7 +136,7 @@ public class SpaceInvader{
                     }
                     if (key == '*') {
                         if (credits > 0){
-                            startGame();
+                            startGame(); //INICIALIZA JOGO
                             saveScore();
                             statistics.games++;
                             credits--;
@@ -153,13 +178,13 @@ public class SpaceInvader{
          Remove the first char different from ' ' and removes if it matches with method parameter enemy.
          After removing increase score by a specific amount and call drawScoreLine and drawEnemies.
          **/
-        for (int i = 0; i < enemyState.length; i++) {
-            if (enemyState[i] != ' ') {
-                if (enemyState[i] == enemy) {
-                    enemyState[i] = ' ';
-                    score += 1 + (enemy - '0');
-                    TUI.drawScoreLine(score);
-                    TUI.paddingLeft(TUI.TOPLINE, ' ', i + 2);
+        for (int i = 0; i < enemyState.length; i++) { //Para cada pos de enemy da esquerda para a direita
+            if (enemyState[i] != ' ') {               // Se a pos tiver um numero
+                if (enemyState[i] == enemy) {         // Se essa pos tiver o mesmo nome que a tecla
+                    enemyState[i] = ' ';              // Limpa esse enemy
+                    score += 1 + (enemy - '0');       // Aumenta o Score
+                    TUI.drawScoreLine(score);         // Actualiza Score
+                    TUI.paddingLeft(TUI.TOPLINE, ' ', i + 2); //Mete ' ' apos a SHIP
                 }
                 break;
             }
@@ -171,7 +196,6 @@ public class SpaceInvader{
         leaderboard.add(name, score);
         TUI.drawMainMenu();
     }
-
 
     public static void showScore() {
         /**
@@ -206,25 +230,33 @@ public class SpaceInvader{
          **/
         long time = Time.getTimeInMillis();
         TUI.drawGame(cannonChar, shipChar);
+        //  |]}_________________|
+        //  |Score:0____________|
         clearEnemyState();
         boolean gameOver = false;
         char key;
         while (!gameOver) {
             key = TUI.readUserInput(100);
             if (key != 0) {
-                parseKeyPress(key);
+                parseKeyPress(key); //Actualiza num da tecla pressionada, faz seek and destroy
+                //Seek and destroy - Remove the first char different from ' ' and removes if it matches with method parameter enemy.
+                //After removing increase score by a specific amount and call drawScoreLine and drawEnemies.
                 Time.sleep(100);
             }
             if (Time.getTimeInMillis() - time >= 1000) {
                 gameOver = checkGameOver();
                 time = Time.getTimeInMillis();
-                shiftGameState();
+                shiftGameState(); // Shifts to the left all chars in enemyState array, discarding the first position.
                 if (Math.random() < 0.5)
-                    addEnemy();
+                    addEnemy();  //Add a random number between 0-9 to the end of the enemyState array.
                 TUI.drawEnemies(String.valueOf(enemyState));
+                //  |____2315901710410928|
+                //  |____________________|
             }
         }
         TUI.drawGameOver();
+        //  |_____GAME OVER! ____|
+        //  |____________________|
         SoundGenerator.play(1);
         Time.sleep(1000);
         SoundGenerator.stop();
