@@ -19,7 +19,12 @@ public class TUI {
 
     public static void main(String[] args) {
         init();
-        drawSaveScoreInput();
+//        drawSaveScoreInput();
+        clearLine(curLine);
+        moveCursor(1,1);
+        write("123456789ABCDEFDDDDD");
+        moveCursor(2,1);
+        write("ZZZZZZ");
     }
 
     public static void init() {
@@ -66,7 +71,9 @@ public class TUI {
          // 8 chars max
          **/
         StringBuilder name = new StringBuilder().append('A');
-        drawSaveScoreInput();
+        drawSaveScoreInput();/*
+        |Name:_______________|
+        |____________________|*/
         paddingLeft(TOPLINE, name.toString(), savePrefix.length());
         int cursorPosition = savePrefix.length() + name.length();
         int currChar = name.length() - 1;

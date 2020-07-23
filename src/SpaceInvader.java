@@ -40,9 +40,11 @@ public class SpaceInvader{
 
         while (true) {
             key = TUI.readUserInput(100); // LE TECLA
-            if (timeReturn != Integer.MIN_VALUE){ // SE
 
-                //QUAL O MENU A DESENHAR M OR MAIN MENU
+            //
+            if (timeReturn != Integer.MIN_VALUE){
+
+                //QUAL O MENU A DESENHAR M OR MAIN MENU APOS O TIMEOUT INICIAL DO SPACEINVADERS 3SEC
                 if (Time.getTimeInMillis() - timeReturn >= MENU_TIMEOUT) {
                     timeReturn = Integer.MIN_VALUE;
                     if (M.checkMButton()){
@@ -93,6 +95,7 @@ public class SpaceInvader{
                     }
                 }
             } else {
+                //M SWITCH ESTA ACTIVO
                 if (M.checkMButton()){
                     if (currMenu == Menus.MAIN_MENU){
                         currMenu = Menus.MAINTENANCE;
@@ -100,19 +103,23 @@ public class SpaceInvader{
                         //  |__On Maintenance __|
                         //  |__*-Count #-shutD__|
                     }
+                    // *-Count
                     if (key == '*') {
                         currMenu = Menus.STATISTIC;
                         TUI.drawStatistics(statistics);
                         //  |Games: _______|
                         //  |Coins:________|
-
                         timeReturn = Time.getTimeInMillis();
+
+                        //#-shutD
                     } else if (key == '#') {
                         currMenu = Menus.SHUTDOWN;
                         TUI.drawShutdown();
                         //  |_____Shutdown_____|
                         //  |__5-Yes_other-No _|
                         timeReturn = Time.getTimeInMillis();
+
+                        //Outra tecla faz iniciar um JOGO GRATUITO
                     } else if (key != KBD.NONE){
                         startGame();
                         if (M.checkMButton()){
@@ -121,7 +128,9 @@ public class SpaceInvader{
                             TUI.drawMainMenu();
                         }
                     }
+                    //M SWITCH NAO ESTA ACTIVO
                 } else {
+                    // SE DURANTE 100ms caiu moeda ACTUALIZA CREDITOS
                     if (CoinAcceptor.waitCoin(100)){
                         statistics.coins++;
                         credits += 2;
@@ -130,10 +139,12 @@ public class SpaceInvader{
                         // |__Credits:X$":__|
                         showScore = true;
                     }
+                    // SE AINDA TIVER MAINTENANCE PASSA PARA MAIN MENU
                     if (currMenu == Menus.MAINTENANCE){
                         currMenu = Menus.MAIN_MENU;
                         TUI.drawMainMenu();
                     }
+                    // INICIA O JOGO USANDO 1 CREDITO E CONTABILIZA NUMERO DE JOGOS
                     if (key == '*') {
                         if (credits > 0){
                             startGame(); //INICIALIZA JOGO
@@ -142,6 +153,7 @@ public class SpaceInvader{
                             credits--;
                         }
                     }
+                    // ALTERNA ENTRE MOSTRAR OS SCORES E OS CREDITOS DISPONIVEIS
                     if (Time.getTimeInMillis() - timeScore >= SCORE_CHANGE) {
                         if (showScore){
                             showScore();

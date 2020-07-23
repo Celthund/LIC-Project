@@ -14,10 +14,56 @@ public class LCD {
 
     public static void main(String[] args) {
         init();
-        easterEgg();
+//        easterEgg();
+
+        cursor(1,40);
+        write('a');
+        write('b');
+        write('a');
+        write('b');
+        write('a');
+        cursor(1,40);
+
+
 
     }
 
+    public static void init() {
+        /**
+         Initialize LCD with a 4 bit communication, with display on, display cursor off and blinking of cursor off.
+         **/
+        if (SERIAL_INTERFACE)
+            SerialEmitter.init();  //power on
+        else
+            HAL.init();
+        Time.sleep(40);              //Wait for more than 40ms after VCC rises to 2.7V.
+        // RS R/!W DB7 DB6 DB5 DB4
+        writeNibble(false, 0x03); // 0 0 0 0 1 1 - Sets to 4-bit operation
+        Time.sleep(5);               // Wait for more than 4.1 ms
+        writeNibble(false, 0x03); // Sets to 4-bit operation
+        Time.sleep(1);               // Wait for more than 100 NANO sec
+        writeCMD(0x32);              // 0 0 1 1  0 0 1 0 - ENVIA SEMPRE PRIMEIRO NIBBLE MSB
+
+
+/*              DB -  RS R/W 7 6 5 4  3 2 1 0
+        Function set -   "0 0  0 0 1 DL N F — —"
+        N = 1: 2 lines, N = 0: 1 line && F = 1: 5 X 10 dots, F = 0: 5 X 8 dots*/
+        writeCMD(0x28);// 0 0 1 0  1 0 0 0
+        /*
+
+        Display ON/OFF - "0 0  0 0 0 0  1 D C B"
+        D - Sets entire display (D) on/off C - cursor on/off (C) B = blinking of cursor position*/
+        writeCMD(0x0C);// 0 0 0 0  1 1 0 0
+
+        // Clears entire display and sets DDRAM address to 0
+        writeCMD(0x01);              // 0 0 0 0  0 0 0 1
+
+        /* Entry mode set - 0 0  0 0 0 0  0 1 I/D S -
+        I/D = 1 ? +1:-1    S = 1 Acompanha display shift
+        */
+        writeCMD(0x06);  // 0 0 0 0  0 1 1 0
+        createShip();
+    }
     private static void writeNibbleParallel(boolean rs, int data) {
         /**
          Uses HAL class to send the data in parallel.
@@ -49,7 +95,7 @@ public class LCD {
             writeNibbleParallel(rs, data);
         Time.sleep(1);
     }
-
+    //ENVIA BYTES PRIMEIRO DB7:4 e depois trama de DB3:0
     private static void writeByte(boolean rs, int data) {
         /**
          Write a byte by using writeNibble to send 4 bits at time.
@@ -57,14 +103,14 @@ public class LCD {
         writeNibble(rs, (data >> 4));
         writeNibble(rs, data);
     }
-
+    //Executar instruções RS = 0
     private static void writeCMD(int data) {
         /**
          Send a byte as command to the LCD.
          **/
         writeByte(false, data);
     }
-
+    //Enviar DATA RS = 1
     private static void writeDATA(int data) {
         /**
          Sends a byte of data and shifts the position of the cursor.
@@ -73,26 +119,7 @@ public class LCD {
         writeByte(true, data);
     }
 
-    public static void init() {
-        /**
-         Initialize LCD with a 4 bit communication, with display on, display cursor off and blinking of cursor off.
-         **/
-        if (SERIAL_INTERFACE)
-            SerialEmitter.init();  //power on
-        else
-            HAL.init();
-        Time.sleep(40);              //Wait for more than 40ms after VCC rises to 2.7V
-        writeNibble(false, 0x03); // Sets to 4-bit operation
-        Time.sleep(5);               //Wait for more than 4.1 ms
-        writeNibble(false, 0x03); // Sets to 4-bit operation
-        Time.sleep(1);               // Wait for more than 100 NANO sec
-        writeCMD(0x32);              //??
-        writeCMD(0x28);              //??
-        writeCMD(0x0C);              // Display ON/OFF
-        writeCMD(0x01);              //??
-        writeCMD(0x06);              //??
-        createShip();
-    }
+
 
     public static void write(char c) {
         /**
@@ -154,27 +181,32 @@ public class LCD {
         /**
          Creates a custom Char at first position of CGRAM.
          **/
-        writeCMD(0x40);
-        writeDATA(0x1E);
-        writeDATA(0x18);
-        writeDATA(0x1C);
-        writeDATA(0x1F);
-        writeDATA(0x1C);
-        writeDATA(0x18);
-        writeDATA(0x1E);
+        //Set CGRAM Address 00 01 ACG 5:0 - Sets CGRAM address to ACG. CGRAM data is sent and received after this setting.
+        writeCMD(0x40);  // 00 0100 0000 ACG = 0
+        writeDATA(0x1E);      // 10 0001 1110
+        writeDATA(0x18);      // 10 0001 1000
+        writeDATA(0x1C);      // 10 0001 1100
+        writeDATA(0x1F);      // 10 0001 1111
+        writeDATA(0x1C);      // 10 0001 1100
+        writeDATA(0x18);      // 10 0001 1000
+        writeDATA(0x1E);      // 10 0001 1110
     }
 
     public static void enableCursor(boolean enable) {
         /**
          Enable/Disable display of the cursor.
          **/
+        /*Display ON/OFF - "0 0  0 0 0 0  1 D C B"
+        D - Sets entire display (D) on/off C - cursor on/off (C) B = blinking of cursor position*/
         if (enable)
-            writeCMD(0x0F);
+            writeCMD(0x0F); // 00 0000 1111
         else
-            writeCMD(0x0C);
+            writeCMD(0x0C); // 00 0000 1100
     }
 
     public static void shutdown() {
-        writeCMD(0x08);
+        /*Display ON/OFF - "0 0  0 0 0 0  1 D C B"
+        D - Sets entire display (D) on/off C - cursor on/off (C) B = blinking of cursor position*/
+        writeCMD(0x08);     // 00 0000 1000
     }
 }
